@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Ian&#39;s place to write">
+<meta property="og:type" content="website">
+<meta property="og:title" content="吾将上下而求索">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="吾将上下而求索">
+<meta property="og:description" content="Ian&#39;s place to write">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Ian Wang">
+<meta property="article:tag" content="computational science, machine learning">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/page/2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>吾将上下而求索</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">吾将上下而求索</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Keep young, keep on</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/uncategorized/2020-10-08-How-to-deploy-hexo-blog-on-two-machines.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/uncategorized/2020-10-08-How-to-deploy-hexo-blog-on-two-machines.html" class="post-title-link" itemprop="url">How to deploy hexo blog on two machines</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 10-04-2020 22:04:39" itemprop="dateCreated datePublished" datetime="2020-10-04T22:04:39-06:00">10-04-2020</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 10-08-2020 22:48:41" itemprop="dateModified" datetime="2020-10-08T22:48:41-06:00">10-08-2020</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="Why-we-need-this"><a href="#Why-we-need-this" class="headerlink" title="Why we need this?"></a>Why we need this?</h3><p>Yes, Hexo is able to deploy with <code>npm install hexo-deployer-git --save</code> for us by simply setting up <code>_config.yml</code> file. It looks like normally: </p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/uncategorized/2020-10-08-How-to-deploy-hexo-blog-on-two-machines.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Math/2020-10-08-All-about-floating-point-numbers.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/Math/2020-10-08-All-about-floating-point-numbers.html" class="post-title-link" itemprop="url">All about floating-point numbers</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 10-02-2020 20:57:08" itemprop="dateCreated datePublished" datetime="2020-10-02T20:57:08-06:00">10-02-2020</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 02-13-2021 19:45:05" itemprop="dateModified" datetime="2021-02-13T19:45:05-07:00">02-13-2021</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index"><span itemprop="name">Math</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="How-Floating-point-number-are-represented-in-IEEE-754-standard"><a href="#How-Floating-point-number-are-represented-in-IEEE-754-standard" class="headerlink" title="How Floating-point number are represented in IEEE-754 standard"></a>How Floating-point number are represented in IEEE-754 standard</h3><p><img src="/images/UnderstandingFloatingpointnumberrepresentationslide_14.jpg" alt="IEEE754FP"><br>The maximal and minimal number </p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/Math/2020-10-08-All-about-floating-point-numbers.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/uncategorized/2020-10-08-Leetcode-booking.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/uncategorized/2020-10-08-Leetcode-booking.html" class="post-title-link" itemprop="url">Booking of my Leetcode</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 10-02-2020 09:41:32" itemprop="dateCreated datePublished" datetime="2020-10-02T09:41:32-06:00">10-02-2020</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 10-08-2020 22:48:41" itemprop="dateModified" datetime="2020-10-08T22:48:41-06:00">10-08-2020</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="pencil2-Leetcode-Solutions-with-Python-Javascript"><a href="#pencil2-Leetcode-Solutions-with-Python-Javascript" class="headerlink" title=":pencil2: Leetcode Solutions with Python,Javascript"></a>:pencil2: Leetcode Solutions with Python,Javascript</h1><p>Update time:  2020-10-02 07:30:29</p>
+<p>Auto created by <a target="_blank" rel="noopener" href="https://github.com/wenscarl/leetcode">leetcode_generate</a></p>
+<p>I have solved <strong>159   /   1459</strong> problems<br>while there are <strong>230</strong> problems still locked.</p>
+<p>If you want to use this tool please follow this <a target="_blank" rel="noopener" href="https://github.com/wenscarl/leetcode/blob/master/README_leetcode_generate.md">Usage Guide</a></p>
+<p>If you have any question, please give me an <a target="_blank" rel="noopener" href="https://github.com/wenscarl/leetcode/issues">issue</a>.</p>
+<p>If you are loving solving problems in leetcode, please contact me to enjoy it together!</p>
+<p>(Notes: :lock: means you need to buy a book from Leetcode to unlock the problem)</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/uncategorized/2020-10-08-Leetcode-booking.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/uncategorized/2020-10-08-Large-scale-inversion.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/uncategorized/2020-10-08-Large-scale-inversion.html" class="post-title-link" itemprop="url">Large Scale Inversion of Subsurface Flow</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 07-26-2020 00:00:00" itemprop="dateCreated datePublished" datetime="2020-07-26T00:00:00-06:00">07-26-2020</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 10-08-2020 22:48:41" itemprop="dateModified" datetime="2020-10-08T22:48:41-06:00">10-08-2020</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="When-was-this-work-done"><a href="#When-was-this-work-done" class="headerlink" title="When was this work done?"></a>When was this work done?</h2><p>This is a intern project(<a target="_blank" rel="noopener" href="https://www.lanl.gov/projects/national-security-education-center/information-science-technology/summer-schools/parallelcomputing/2018/2018-projects.php"><strong>PCRSI</strong></a>) at Los Alamos National Lab(LANL) summer 2018. My mentor was Dr. Satish Karra and co-author is Dr. Daniel O’Malley. My sincere thanks to them. </p>
+<p>This project dealt with a typical inversion problem arised in computational geophysics. The goal is to infer the distribution of permeability from observation data of pressure. This project is coded in Fortran and C++(lots of binding), under the framework of <a target="_blank" rel="noopener" href="https://www.mcs.anl.gov/petsc/">PETSc</a>. This code is highlighted by hybrid of MPI and openMP in its FEM solver. Actually PETSc doesn’t support hybridization by then. The scaling was tested on over 2400 cores. PDF verion is listed <a href="/docs/Inversion/1906.01132.pdf">here</a> and also accessible by this <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1906.01132">link</a>. Also come with a <a target="_blank" rel="noopener" href="https://www.lanl.gov/projects/national-security-education-center/information-science-technology/summer-schools/parallelcomputing/_assets/images/2018projects/Shu.pdf">poster</a>.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/cem/2020-10-08-Vector-fitting.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/cem/2020-10-08-Vector-fitting.html" class="post-title-link" itemprop="url">Vector fitting for matching microstrip line with cap capacitor</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 07-25-2020 00:00:00" itemprop="dateCreated datePublished" datetime="2020-07-25T00:00:00-06:00">07-25-2020</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 10-08-2020 22:48:41" itemprop="dateModified" datetime="2020-10-08T22:48:41-06:00">10-08-2020</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/cem/" itemprop="url" rel="index"><span itemprop="name">cem</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>This document describes how to generate equivalent circuit model for microstrip line  example (Fig 4) in paper <em>Integration of Arbitrary Lumped Multiport Circuit Networks Into the Discontinuous Galerkin Time-Domain Analysis</em>. (A <strong>typo</strong> in paper: [L<sub>s</sub> =0.102nH]. </p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/cem/2020-10-08-Vector-fitting.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/uncategorized/2020-07-11-blog_info.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/uncategorized/2020-07-11-blog_info.html" class="post-title-link" itemprop="url">博客模板功能介绍</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 07-11-2020 00:00:00" itemprop="dateCreated datePublished" datetime="2020-07-11T00:00:00-06:00">07-11-2020</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 07-13-2020 03:45:27" itemprop="dateModified" datetime="2020-07-13T03:45:27-06:00">07-13-2020</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在此之前我有写过一篇<a target="_blank" rel="noopener" href="http://leopardpan.cn/2016/10/jekyll_tutorials1/">如何使用我博客模板的文章</a> 请先看这篇基础集成，这篇文章主要讲的是如何使用和修改我的博客主题，文章内容含以下几点：</p>
+<h2 id="博客特性"><a href="#博客特性" class="headerlink" title="博客特性"></a>博客特性</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> 适配电脑、手机、平板等各屏幕</li>
+<li><input checked="" disabled="" type="checkbox"> 响应式设计</li>
+<li><input checked="" disabled="" type="checkbox"> 个性化头像</li>
+<li><input checked="" disabled="" type="checkbox"> 每篇文章自动添加打赏功能</li>
+<li><input checked="" disabled="" type="checkbox"> 支持Disqus、livere评论系统</li>
+<li><input checked="" disabled="" type="checkbox"> 支持站点总数访问统计，每篇文章访问统计</li>
+<li><input checked="" disabled="" type="checkbox"> 支持文章自动生成目录</li>
+<li><input checked="" disabled="" type="checkbox"> 支持标签分类</li>
+<li><input checked="" disabled="" type="checkbox"> 支持代码高亮</li>
+<li><input checked="" disabled="" type="checkbox"> 支持文章H1、H2、H3、H4标题样式多样化</li>
+<li><input checked="" disabled="" type="checkbox"> 支持多种三方社交icon展示，能从博客直接跳转到自己的三方社交主页</li>
+<li><input checked="" disabled="" type="checkbox"> 支持三方社交分享(facebook、twitter)</li>
+</ul>
+<h2 id="博客主要模块介绍"><a href="#博客主要模块介绍" class="headerlink" title="博客主要模块介绍"></a>博客主要模块介绍</h2><h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><p><code>_config.yml</code> 是博客的配置文件，整个站点的信息都在这修改，想要把我的模板改成你自己的也需要修改<code>_config.yml</code> </p>
+<p><strong>重要字段说明</strong> </p>
+<ul>
+<li>enableToc: 是否开启文章自动生成目录，设置为false文章不会自动生成目录</li>
+<li>comment/livere: livere评论系统，支持微信、qq、微博、豆瓣、twitter等登录后可以直接评论</li>
+<li>comment/disqus: disqus评论系统，支持facebook、twitter等登录后可以直接评论</li>
+<li>social/weibo、github、zhihu、jianshu等: 个人站底部展示的微博等三方社交按钮，点击后直接跳转到个人微博或其他社交主页</li>
+<li>baidu/id: 百度统计，用来统计你个人站点的用户访问情况</li>
+<li>ga/id: google统计，用来统计你个人站点的用户访问情况</li>
+</ul>
+<p>_config.yml 文件除以上字段还有一些可以自行修改，例如title之类的字段</p>
+<h3 id="posts"><a href="#posts" class="headerlink" title="_posts"></a>_posts</h3><p><code>_posts</code> 目录是用来存放文章的目录，写新文章，直接放在这个目录即可</p>
+<p>使用博客模板时，请把博客自带的文章给去掉，如果想使用博客自带的文章请 <code>注明出处</code>。</p>
+<h3 id="自定义页面"><a href="#自定义页面" class="headerlink" title="自定义页面"></a>自定义页面</h3><p>about.md、support.md 等为自定义页面，如果你想添加自动以页面可以直接复制about.md 文件修改文件名和里面的内容即可。</p>
+<p>如果需要在导航显示你新增的页面，直接在<code>_config.yml</code> 文件的nav字段中添加你新页面配置即可</p>
+<h3 id="修改说明"><a href="#修改说明" class="headerlink" title="修改说明"></a>修改说明</h3><p>如果要修改博客模板信息建议只修改<code>_config.yml</code> 文件内容和 <code>_posts</code> 里面的文章信息。因为博客模板一直在更新迭代，改动多了以免你后期更新博客模板的时候不方便。</p>
+<p>如果你想改动模板的样式又想继续更新迭代博客模板，你可以提交在github上提交<code>pull request</code> 或者直接给我发邮件建议改成什么样，如果你的提议确实可以，我会采纳的，并且非常感谢你的建议。</p>
+<p>博客迭代信息请看<a target="_blank" rel="noopener" href="https://leopardpan.cn/2020/07/ReleaseNode/">ReleaseNode</a></p>
+<p>遇到解决不了的问题可以找 <a target="_blank" rel="noopener" href="https://leopardpan.cn/support/">技术支持</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/uncategorized/2020-07-10-ReleaseNode.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/uncategorized/2020-07-10-ReleaseNode.html" class="post-title-link" itemprop="url">博客迭代记录</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 07-10-2020 00:00:00" itemprop="dateCreated datePublished" datetime="2020-07-10T00:00:00-06:00">07-10-2020</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 07-13-2020 03:45:27" itemprop="dateModified" datetime="2020-07-13T03:45:27-06:00">07-13-2020</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>本博客首发时间为2015年，至今已经5个年头了。</p>
+<p>感觉之前更新迭代的有点乱，很多用户在使用的时候也没法确定是否要更新新版的博客，再次我专门用一篇文章来记录博客更新迭代的记录，如果你已经在使用我的博客模板的，你可以看看更新记录后确认下是否要更新。</p>
+<p>博客的全功能介绍请看<a target="_blank" rel="noopener" href="https://leopardpan.cn/2020/07/blog_info/">博客功能介绍</a></p>
+<h2 id="1-0-0"><a href="#1-0-0" class="headerlink" title="1.0.0"></a>1.0.0</h2><p>2016-11-25 第一版发布，红色主题</p>
+<h2 id="2-0-0-开发中"><a href="#2-0-0-开发中" class="headerlink" title="2.0.0 开发中"></a>2.0.0 开发中</h2><ul>
+<li>2016-11-25 修改博客风格为淡蓝色主题</li>
+<li>2016-12-16 增长404、about等页面</li>
+<li>2017-1-12 增加代码高亮</li>
+<li>2017-3-19 增加打赏公共</li>
+<li>2017-9-8 多说评论系统停服，切换到disqus评论（多说上的评论全没了😭）</li>
+<li>2019-1-25 增加博客底部社交链接</li>
+<li>2020-7-8 博客域名从 <a target="_blank" rel="noopener" href="http://baixin.io/">http://baixin.io</a> 迁移到 <a target="_blank" rel="noopener" href="https://leopardpan.cn/">https://leopardpan.cn</a> （baixin.io没法备案之前的统计也全没了😭）.</li>
+<li>2020-7-13 增加文章自动生成目录功能, 增加livere评论系统</li>
+</ul>
+<h2 id="博客更新手册"><a href="#博客更新手册" class="headerlink" title="博客更新手册"></a>博客更新手册</h2><p>如果你已经在使我的博客模板了，现在又想继续更新新版的博客，你下载博客后只需要修改两个各方</p>
+<ul>
+<li>_config.yml 文件</li>
+<li>_posts 目录</li>
+</ul>
+<p><code>_config.yml</code> 文件里面的内容设置成你自己的，也可以用你原来的，最好是更新版的字段做一下对比。</p>
+<p><code>_posts</code> 目录里面的文章全部删掉，把你自己的文章放进来</p>
+<p>修改以上两个地方新版的博客便更新完成，快看看效果吧！</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/uncategorized/2020-10-08-Markdown-tool.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/uncategorized/2020-10-08-Markdown-tool.html" class="post-title-link" itemprop="url">Markdown syntax supported by the document</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 11-20-2017 00:00:00" itemprop="dateCreated datePublished" datetime="2017-11-20T00:00:00-07:00">11-20-2017</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 10-08-2020 22:48:41" itemprop="dateModified" datetime="2020-10-08T22:48:41-06:00">10-08-2020</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="What-is-Markdown"><a href="#What-is-Markdown" class="headerlink" title="What is Markdown?"></a>What is Markdown?</h2><h2 id="What-Is-It"><a href="#What-Is-It" class="headerlink" title="What Is It?"></a>What Is It?</h2><p>Markdown is a plain text formatting syntax aimed at making writing  for the internet easier. The philosophy behind Markdown is that plain  text documents should be readable without tags mussing everything up,  but there should still be ways to add text modifiers like lists, bold,  italics, etc. It is an alternative to WYSIWYG (what you see is what you  get) editors, which use rich text that later gets converted to proper  HTML.</p>
+<p>It’s possible you’ve encountered Markdown without realizing it.  Facebook chat, Skype, and Reddit all let you use different flavors of  Markdown to format your messages.</p>
+<p>Here’s a quick example: to make words bold using Markdown, you simply enclose them in * (asterisks). So, <em>bold word</em> would look like <strong>bold word</strong> when everything is said and done.</p>
+<p>All told, Markdown is a great way to write for the web using plain text.</p>
+<h2 id="Basic-grammers"><a href="#Basic-grammers" class="headerlink" title="Basic grammers"></a>Basic grammers</h2><p>Title<br>H1 :# Header 1<br>H2 :## Header 2<br>H3 :### Header 3<br>H4 :#### Header 4<br>H5 :##### Header 5<br>H6 :###### Header 6<br>Link :<a href="URL">Title</a><br>Bold :<strong>Bold</strong><br>Italics :<em>Italics</em><br>*strikebreak :<del>text</del><br>inlines : <code>alert(&#39;Hello World&#39;);</code>        </p>
+<h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><ul>
+<li>list1</li>
+<li>list2</li>
+<li>list3</li>
+</ul>
+<h3 id="list-reference"><a href="#list-reference" class="headerlink" title="list reference"></a>list reference</h3><blockquote>
+<ul>
+<li>list1</li>
+<li>list2</li>
+<li>list3</li>
+</ul>
+</blockquote>
+<h2 id="Advanced-syntax"><a href="#Advanced-syntax" class="headerlink" title="Advanced syntax"></a>Advanced syntax</h2><h3 id="1-Todo-list"><a href="#1-Todo-list" class="headerlink" title="1. Todo list"></a>1. Todo list</h3><ul>
+<li><input disabled="" type="checkbox"> support for exporting the text in PDF format</li>
+<li><input disabled="" type="checkbox"> Improving the Cmd rendering algorithm to improve rendering efficiency using local rendering techniques</li>
+<li><input checked="" disabled="" type="checkbox"> New Todo List Feature</li>
+<li><input checked="" disabled="" type="checkbox"> Fix Icon function<h3 id="2-Highliget-a-snippet-of-code"><a href="#2-Highliget-a-snippet-of-code" class="headerlink" title="2. Highliget a snippet of code"></a>2. Highliget a snippet of code</h3></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># A comment</span></span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27;hello world&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="3-Table"><a href="#3-Table" class="headerlink" title="3. Table"></a>3. Table</h4><table>
+<thead>
+<tr>
+<th>item</th>
+<th align="right">price</th>
+<th align="center">quantity</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>computer</td>
+<td align="right">$1600</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td>cellphone</td>
+<td align="right">$12</td>
+<td align="center">12</td>
+</tr>
+<tr>
+<td>cable</td>
+<td align="right">$1</td>
+<td align="center">234</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/uncategorized/2017-10-08-Introduction-to-hexo.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/uncategorized/2017-10-08-Introduction-to-hexo.html" class="post-title-link" itemprop="url">Introduction to Hexo</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 10-02-2017 00:00:00" itemprop="dateCreated datePublished" datetime="2017-10-02T00:00:00-06:00">10-02-2017</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 10-18-2020 09:19:31" itemprop="dateModified" datetime="2020-10-18T09:19:31-06:00">10-18-2020</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/uncategorized/2016-11-20-markdownTool.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/uncategorized/2016-11-20-markdownTool.html" class="post-title-link" itemprop="url">文档支持的Markdown语法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 11-20-2016 00:00:00" itemprop="dateCreated datePublished" datetime="2016-11-20T00:00:00-07:00">11-20-2016</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 07-13-2020 03:45:27" itemprop="dateModified" datetime="2020-07-13T03:45:27-06:00">07-13-2020</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="什么是-Markdown"><a href="#什么是-Markdown" class="headerlink" title="什么是 Markdown"></a>什么是 Markdown</h2><p>Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：如您正在阅读的这篇文章。它使用简单的符号标记不同的标题，分割不同的段落，<strong>粗体</strong> 或者 <em>斜体</em> 某些文字.</p>
+<p>很多产品的文档也是用markdown编写的，并且以“README.MD”的文件名保存在软件的目录下面。
+　　</p>
+<h2 id="一些基本语法"><a href="#一些基本语法" class="headerlink" title="一些基本语法"></a>一些基本语法</h2><p>标题<br>H1 :# Header 1<br>H2 :## Header 2<br>H3 :### Header 3<br>H4 :#### Header 4<br>H5 :##### Header 5<br>H6 :###### Header 6<br>链接 :<a href="URL">Title</a><br>加粗 :<strong>Bold</strong><br>斜体字 :<em>Italics</em><br>*删除线 :<del>text</del><br>内嵌代码 : <code>alert(&#39;Hello World&#39;);</code>        </p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><ul>
+<li>列表1</li>
+<li>列表2</li>
+<li>列表3</li>
+</ul>
+<h3 id="列表引用"><a href="#列表引用" class="headerlink" title="列表引用"></a>列表引用</h3><blockquote>
+<ul>
+<li>列表1</li>
+<li>列表2</li>
+<li>列表3</li>
+</ul>
+</blockquote>
+<h3 id="插入一张图片"><a href="#插入一张图片" class="headerlink" title="插入一张图片"></a>插入一张图片</h3><p>打赏一个吧</p>
+<p><img src="/images/payimg/weipayimg.jpg"></p>
+<p>css 的大部分语法同样可以在 markdown 上使用，但不同的渲染器渲染出来的 markdown 内容样式也不一样，下面这些链接里面有 markdown 基本语法，你也可以在下面几个平台上尝试着写一些。</p>
+<h2 id="博客支持的高级语法"><a href="#博客支持的高级语法" class="headerlink" title="博客支持的高级语法"></a>博客支持的高级语法</h2><h3 id="1-制作一份待办事宜"><a href="#1-制作一份待办事宜" class="headerlink" title="1. 制作一份待办事宜"></a>1. 制作一份待办事宜</h3><ul>
+<li><input disabled="" type="checkbox"> 支持以 PDF 格式导出文稿</li>
+<li><input disabled="" type="checkbox"> 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率</li>
+<li><input checked="" disabled="" type="checkbox"> 新增 Todo 列表功能</li>
+<li><input checked="" disabled="" type="checkbox"> 修复 图标功能</li>
+</ul>
+<h3 id="2-高亮一段代码"><a href="#2-高亮一段代码" class="headerlink" title="2. 高亮一段代码"></a>2. 高亮一段代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># A comment</span></span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27;hello world&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="3-绘制表格"><a href="#3-绘制表格" class="headerlink" title="3. 绘制表格"></a>3. 绘制表格</h4><table>
+<thead>
+<tr>
+<th>项目</th>
+<th align="right">价格</th>
+<th align="center">数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>计算机</td>
+<td align="right">$1600</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td>手机</td>
+<td align="right">$12</td>
+<td align="center">12</td>
+</tr>
+<tr>
+<td>管线</td>
+<td align="right">$1</td>
+<td align="center">234</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ian Wang"
+      src="/images/nuanuan.jpg">
+  <p class="site-author-name" itemprop="name">Ian Wang</p>
+  <div class="site-description" itemprop="description">Ian's place to write</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wenscarl" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wenscarl" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:shuw12@outlook.com" title="E-Mail → mailto:shuw12@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ian Wang</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

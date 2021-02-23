@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="How Floating-point number are represented in IEEE-754 standardThe maximal and minimal number">
+<meta property="og:type" content="article">
+<meta property="og:title" content="All about floating-point numbers">
+<meta property="og:url" content="http://example.com/Math/2020-10-08-All-about-floating-point-numbers.html">
+<meta property="og:site_name" content="吾将上下而求索">
+<meta property="og:description" content="How Floating-point number are represented in IEEE-754 standardThe maximal and minimal number">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/UnderstandingFloatingpointnumberrepresentationslide_14.jpg">
+<meta property="article:published_time" content="2020-10-03T02:57:08.000Z">
+<meta property="article:modified_time" content="2021-02-14T02:45:05.806Z">
+<meta property="article:author" content="Ian Wang">
+<meta property="article:tag" content="Floating-point">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/UnderstandingFloatingpointnumberrepresentationslide_14.jpg">
+
+<link rel="canonical" href="http://example.com/Math/2020-10-08-All-about-floating-point-numbers.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>All about floating-point numbers | 吾将上下而求索</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">吾将上下而求索</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Keep young, keep on</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Math/2020-10-08-All-about-floating-point-numbers.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          All about floating-point numbers
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 10-02-2020 20:57:08" itemprop="dateCreated datePublished" datetime="2020-10-02T20:57:08-06:00">10-02-2020</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 02-13-2021 19:45:05" itemprop="dateModified" datetime="2021-02-13T19:45:05-07:00">02-13-2021</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index"><span itemprop="name">Math</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="How-Floating-point-number-are-represented-in-IEEE-754-standard"><a href="#How-Floating-point-number-are-represented-in-IEEE-754-standard" class="headerlink" title="How Floating-point number are represented in IEEE-754 standard"></a>How Floating-point number are represented in IEEE-754 standard</h3><p><img src="/images/UnderstandingFloatingpointnumberrepresentationslide_14.jpg" alt="IEEE754FP"><br>The maximal and minimal number </p>
+<a id="more"></a>
+
+<table>
+<thead>
+<tr>
+<th>FP</th>
+<th>maximal</th>
+<th>minimal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>32</td>
+<td>1.11111111111111111111111*2^127^=3.4028234663852886e038</td>
+<td>1.0000 0000 0000 0000 0000 001*2^-126^= 1.1754944909521339e-038</td>
+</tr>
+<tr>
+<td>64</td>
+<td>1.7976931348623157e308</td>
+<td>2.2250738585072014e−308</td>
+</tr>
+<tr>
+<td>For details please check <a target="_blank" rel="noopener" href="https://blog.csdn.net/whzhaochao/article/details/12887779">this</a>. Never forget the exponent bits cannot be all 1s, otherwise it’s regarded as NaN or Inf. Also note the difference between subnormal double and <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">normal double</a>.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="Some-facts"><a href="#Some-facts" class="headerlink" title="Some facts"></a>Some facts</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ python</span><br><span class="line">&gt;&gt;&gt; 0.1+0.2</span><br><span class="line">0.30000000000000004</span><br><span class="line">&gt;&gt;&gt; e = 0.5**24</span><br><span class="line">&gt;&gt;&gt; a,b,c,d=1+d,-1-d,1-d,-1+d</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(a+c+b+d, a+b+c+d)</span><br><span class="line">&gt;&gt;&gt; 0.0 0.0</span><br><span class="line">&gt;&gt;&gt; a1=np.float32(a); b1=np.float32(b); c1=np.float32(c); d1=np.float32(d)</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(a1+c1+b1+d1, a1+b1+c1+d1)</span><br><span class="line">&gt;&gt;&gt; 5.9604645e-08 0.0</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="string">&quot;%.26f, %.26f, %.26f, %.26f&quot;</span> %(a,b,c,d))</span><br><span class="line">1.00000005960464477539062500, -1.00000005960464477539062500, 0.99999994039535522460937500, -0.99999994039535522460937500</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="string">&quot;%.26f, %.26f, %.26f, %.26f&quot;</span> % (a1,b1,c1,d1))</span><br><span class="line">&gt;&gt;&gt; 1.00000000000000000000000000, -1.00000000000000000000000000, 0.99999994039535522460937500, -0.99999994039535522460937500</span><br></pre></td></tr></table></figure>
+<p>It’s a known fact that associativity of FP’s addition does NOT hold and that’s why we see <code>a1+c1+b1+d1</code>, <code>a1+b1+c1+d1</code> give distinct results. Another important fact is the rounding from FP64 to FP32 behaves differently between <code>1+e</code> and <code>1-e</code>. Clearly, rounding for <code>1-e</code> is more accurate than another.  It can be explained by following table.</p>
+<hr>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span>: 1-e</span><br><span class="line">  FP64 representation:</span><br><span class="line">    _decimal: 0.9999999403954</span><br><span class="line">    ____sign: 0</span><br><span class="line">    exponent: 01111111110</span><br><span class="line">    mantissa: 1111111111111111111111100000000000000000000000000000</span><br><span class="line">  FP32 representation:</span><br><span class="line">    _decimal: 0.9999999403954</span><br><span class="line">    ____sign: 0</span><br><span class="line">    exponent: 01111110</span><br><span class="line">    mantissa: 11111111111111111111111</span><br><span class="line"><span class="keyword">case</span>: 1+e</span><br><span class="line">  FP64 representation:</span><br><span class="line">    _decimal: 1.0000000596046</span><br><span class="line">    ____sign: 0</span><br><span class="line">    exponent: 01111111111</span><br><span class="line">    mantissa: 0000000000000000000000010000000000000000000000000000</span><br><span class="line">  FP32 representation:</span><br><span class="line">    _decimal: 1.0000000000000</span><br><span class="line">    ____sign: 0</span><br><span class="line">    exponent: 01111111</span><br><span class="line">    mantissa: 00000000000000000000000</span><br></pre></td></tr></table></figure>
+<hr>
+<p>At rounding stage, the last 29 bits are rounded based on whether greater than <code>10...0</code>(29 bits). It’s not hard to infer that the smallest(in abs value) number FP32 can represent without rounding error is <code>2^-24</code>. Likewise, <code>2^-53</code> for FP64. </p>
+<h3 id="Largest-continuously-representable-integer"><a href="#Largest-continuously-representable-integer" class="headerlink" title="Largest continuously representable integer"></a>Largest continuously representable integer</h3><p>Precision is solely determined by number of bits for mantissa. Assume the exponent is 23, let’s look at number</p>
+<p><code>a = 1.11...1*2^23</code>, here there are 23 bits of 1s followed by decimal. Any positive integer less than a is precisely representable in FP32. The next integer on real axis is <code>b=a+1</code> and don’t worry about exponent for this moment, since it can goes way beyond 23. The mantissa for 1 is all 0s. Thus <code>b=1.00..0*2^24=(16777216)~10</code>. For the next one in binary sense, we have <code>c=1.00..1*2^24</code>,  but unfortunately this is number 16777218 where 16777217 is missing. The same induction can be carried through and not hard to imagine that there leaves more blank spaces when numbers go large.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; np.float32(2**24+1)</span><br><span class="line">&gt;&gt;&gt; 16777216.0</span><br><span class="line">&gt;&gt;&gt; np.float32(2**24+2)</span><br><span class="line">&gt;&gt;&gt; 16777218.0</span><br></pre></td></tr></table></figure>
+<p>As summary, by IEEE754 standard, the integer range which can be represented accurately is<br>| FP | Range        |<br>|—-|————–|<br>| 32 | [-2^24^,2^24^] |<br>| 64 | [-2^53^,2^53^] |</p>
+<h3 id="Why-0-1-0-2-0-3"><a href="#Why-0-1-0-2-0-3" class="headerlink" title="Why 0.1+0.2 != 0.3"></a>Why 0.1+0.2 != 0.3</h3><p>We should by far aware that not all FP numbers can be represented accurately, e.g.1.25 can but 3.1415926… can not. 0.1 and 0.2 happen to sit between two representable numbers in FP64. So the sum is not a perfect 0.3.  </p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>If you’re still thirsty on this topic, please check this <a target="_blank" rel="noopener" href="https://www.juliensobczak.com/inspect/2019/03/10/floating-point-numbers-demystified.html">blog</a>.</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Floating-point/" rel="tag"># Floating-point</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/uncategorized/2020-10-08-Leetcode-booking.html" rel="prev" title="Booking of my Leetcode">
+      <i class="fa fa-chevron-left"></i> Booking of my Leetcode
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/uncategorized/2020-10-08-How-to-deploy-hexo-blog-on-two-machines.html" rel="next" title="How to deploy hexo blog on two machines">
+      How to deploy hexo blog on two machines <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#How-Floating-point-number-are-represented-in-IEEE-754-standard"><span class="nav-number">1.</span> <span class="nav-text">How Floating-point number are represented in IEEE-754 standard</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Some-facts"><span class="nav-number">2.</span> <span class="nav-text">Some facts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Largest-continuously-representable-integer"><span class="nav-number">3.</span> <span class="nav-text">Largest continuously representable integer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Why-0-1-0-2-0-3"><span class="nav-number">4.</span> <span class="nav-text">Why 0.1+0.2 !&#x3D; 0.3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Conclusion"><span class="nav-number">5.</span> <span class="nav-text">Conclusion</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ian Wang"
+      src="/images/nuanuan.jpg">
+  <p class="site-author-name" itemprop="name">Ian Wang</p>
+  <div class="site-description" itemprop="description">Ian's place to write</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wenscarl" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wenscarl" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:shuw12@outlook.com" title="E-Mail → mailto:shuw12@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ian Wang</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

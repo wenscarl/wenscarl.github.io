@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Markdown Cheatsheet Heading 1Markup :  # Heading 1 #  -OR-  Markup :  &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; (below H1 text)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown-cheatsheet">
+<meta property="og:url" content="http://example.com/uncategorized/2020-10-08-Markdown-cheatsheet.html">
+<meta property="og:site_name" content="吾将上下而求索">
+<meta property="og:description" content="Markdown Cheatsheet Heading 1Markup :  # Heading 1 #  -OR-  Markup :  &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; (below H1 text)">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-05T05:30:42.000Z">
+<meta property="article:modified_time" content="2020-10-09T04:48:41.000Z">
+<meta property="article:author" content="Ian Wang">
+<meta property="article:tag" content="markdown">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/uncategorized/2020-10-08-Markdown-cheatsheet.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Markdown-cheatsheet | 吾将上下而求索</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">吾将上下而求索</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Keep young, keep on</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/uncategorized/2020-10-08-Markdown-cheatsheet.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Markdown-cheatsheet
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 10-04-2020 23:30:42" itemprop="dateCreated datePublished" datetime="2020-10-04T23:30:42-06:00">10-04-2020</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 10-08-2020 22:48:41" itemprop="dateModified" datetime="2020-10-08T22:48:41-06:00">10-08-2020</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Markdown-Cheatsheet"><a href="#Markdown-Cheatsheet" class="headerlink" title="Markdown Cheatsheet"></a>Markdown Cheatsheet<a name="TOP"></a></h1><hr>
+<h1 id="Heading-1"><a href="#Heading-1" class="headerlink" title="Heading 1"></a>Heading 1</h1><pre><code>Markup :  # Heading 1 #
+
+-OR-
+
+Markup :  ============= (below H1 text)
+</code></pre>
+<a id="more"></a>
+
+<h2 id="Heading-2"><a href="#Heading-2" class="headerlink" title="Heading 2"></a>Heading 2</h2><pre><code>Markup :  ## Heading 2 ##
+
+-OR-
+
+Markup: --------------- (below H2 text)
+</code></pre>
+<h3 id="Heading-3"><a href="#Heading-3" class="headerlink" title="Heading 3"></a>Heading 3</h3><pre><code>Markup :  ### Heading 3 ###
+</code></pre>
+<h4 id="Heading-4"><a href="#Heading-4" class="headerlink" title="Heading 4"></a>Heading 4</h4><pre><code>Markup :  #### Heading 4 ####
+</code></pre>
+<p>Common text</p>
+<pre><code>Markup :  Common text
+</code></pre>
+<p><em>Emphasized text</em></p>
+<pre><code>Markup :  _Emphasized text_ or *Emphasized text*
+</code></pre>
+<p><del>Strikethrough text</del></p>
+<pre><code>Markup :  ~~Strikethrough text~~
+</code></pre>
+<p><strong>Strong text</strong></p>
+<pre><code>Markup :  __Strong text__ or **Strong text**
+</code></pre>
+<p><strong><em>Strong emphasized text</em></strong></p>
+<pre><code>Markup :  ___Strong emphasized text___ or ***Strong emphasized text***
+</code></pre>
+<p><a target="_blank" rel="noopener" href="http://www.google.fr/" title="Named link title">Named Link</a> and <a target="_blank" rel="noopener" href="http://www.google.fr/">http://www.google.fr/</a> or <a href="http://example.com/">http://example.com/</a></p>
+<pre><code>Markup :  [Named Link](http://www.google.fr/ &quot;Named link title&quot;) and http://www.google.fr/ or &lt;http://example.com/&gt;
+</code></pre>
+<p><a href="#heading-1" title="Goto heading-1">heading-1</a></p>
+<pre><code>Markup: [heading-1](#heading-1 &quot;Goto heading-1&quot;)
+</code></pre>
+<p>Table, like this one :</p>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">First Header  | Second Header</span><br><span class="line">------------- | -------------</span><br><span class="line">Content Cell  | Content Cell</span><br><span class="line">Content Cell  | Content Cell</span><br></pre></td></tr></table></figure>
+<p>Adding a pipe <code>|</code> in a cell :</p>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>|</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">First Header  | Second Header</span><br><span class="line">------------- | -------------</span><br><span class="line">Content Cell  | Content Cell</span><br><span class="line">Content Cell  |  \| </span><br></pre></td></tr></table></figure>
+<p><code>code()</code></p>
+<pre><code>Markup :  `code()`
+</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> specificLanguage_code = </span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;data&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;lookedUpPlatform&quot;</span>: <span class="number">1</span>,</span><br><span class="line">        <span class="string">&quot;query&quot;</span>: <span class="string">&quot;Kasabian+Test+Transmission&quot;</span>,</span><br><span class="line">        <span class="string">&quot;lookedUpItem&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Test Transmission&quot;</span>,</span><br><span class="line">            <span class="string">&quot;artist&quot;</span>: <span class="string">&quot;Kasabian&quot;</span>,</span><br><span class="line">            <span class="string">&quot;album&quot;</span>: <span class="string">&quot;Kasabian&quot;</span>,</span><br><span class="line">            <span class="string">&quot;picture&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">            <span class="string">&quot;link&quot;</span>: <span class="string">&quot;http://open.spotify.com/track/5jhJur5n4fasblLSCOcrTp&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>Markup : ```javascript
+         <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* Bullet list</span><br><span class="line">    * Nested bullet</span><br><span class="line">        * Sub-nested bullet etc</span><br><span class="line">* Bullet list item 2</span><br><span class="line"></span><br><span class="line">~~~</span><br><span class="line"> Markup : * Bullet list</span><br><span class="line">              * Nested bullet</span><br><span class="line">                  * Sub-nested bullet etc</span><br><span class="line">          * Bullet list item 2</span><br><span class="line"></span><br><span class="line">-OR-</span><br><span class="line"></span><br><span class="line"> Markup : - Bullet list</span><br><span class="line">              - Nested bullet</span><br><span class="line">                  - Sub-nested bullet etc</span><br><span class="line">          - Bullet list item 2 </span><br><span class="line">~~~</span><br><span class="line"></span><br><span class="line">1. A numbered list</span><br><span class="line">    1. A nested numbered list</span><br><span class="line">    2. Which is numbered</span><br><span class="line">2. Which is numbered</span><br><span class="line"></span><br><span class="line">~~~</span><br><span class="line"> Markup : 1. A numbered list</span><br><span class="line">              1. A nested numbered list</span><br><span class="line">              2. Which is numbered</span><br><span class="line">          2. Which is numbered</span><br><span class="line">~~~</span><br><span class="line"></span><br><span class="line">- [ ] An uncompleted task</span><br><span class="line">- [x] A completed task</span><br><span class="line"></span><br><span class="line">~~~</span><br><span class="line"> Markup : - [ ] An uncompleted task</span><br><span class="line">          - [x] A completed task</span><br><span class="line">~~~</span><br><span class="line"></span><br><span class="line">- [ ] An uncompleted task</span><br><span class="line">    - [ ] A subtask</span><br><span class="line"></span><br><span class="line">~~~</span><br><span class="line"> Markup : - [ ] An uncompleted task</span><br><span class="line">              - [ ] A subtask</span><br><span class="line">~~~</span><br><span class="line"></span><br><span class="line">&gt; Blockquote</span><br><span class="line">&gt;</span><br><span class="line">&gt; &gt; Nested blockquote</span><br><span class="line"></span><br><span class="line">    Markup :  &gt; Blockquote</span><br><span class="line">              &gt;&gt; Nested Blockquote</span><br><span class="line"></span><br><span class="line">_Horizontal line :_</span><br><span class="line">- - - -</span><br><span class="line"></span><br><span class="line">    Markup :  - - - -</span><br><span class="line"></span><br><span class="line">_Image with alt :_</span><br><span class="line"></span><br><span class="line">![picture alt](http:&#x2F;&#x2F;via.placeholder.com&#x2F;200x150 &quot;Title is optional&quot;)</span><br><span class="line"></span><br><span class="line">    Markup : ![picture alt](http:&#x2F;&#x2F;via.placeholder.com&#x2F;200x150 &quot;Title is optional&quot;)</span><br><span class="line"></span><br><span class="line">Foldable text:</span><br><span class="line"></span><br><span class="line">&lt;details&gt;</span><br><span class="line">  &lt;summary&gt;Title 1&lt;&#x2F;summary&gt;</span><br><span class="line">  &lt;p&gt;Content 1 Content 1 Content 1 Content 1 Content 1&lt;&#x2F;p&gt;</span><br><span class="line">&lt;&#x2F;details&gt;</span><br><span class="line">&lt;details&gt;</span><br><span class="line">  &lt;summary&gt;Title 2&lt;&#x2F;summary&gt;</span><br><span class="line">  &lt;p&gt;Content 2 Content 2 Content 2 Content 2 Content 2&lt;&#x2F;p&gt;</span><br><span class="line">&lt;&#x2F;details&gt;</span><br><span class="line"></span><br><span class="line">    Markup : &lt;details&gt;</span><br><span class="line">               &lt;summary&gt;Title 1&lt;&#x2F;summary&gt;</span><br><span class="line">               &lt;p&gt;Content 1 Content 1 Content 1 Content 1 Content 1&lt;&#x2F;p&gt;</span><br><span class="line">             &lt;&#x2F;details&gt;</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;html</span><br><span class="line">&lt;h3&gt;HTML&lt;&#x2F;h3&gt;</span><br><span class="line">&lt;p&gt; Some HTML code here &lt;&#x2F;p&gt;</span><br></pre></td></tr></table></figure>
+</code></pre>
+<p>Link to a specific part of the page:</p>
+<p><a href="#TOP">Go To TOP</a></p>
+<pre><code>Markup : [text goes here](#section_name)
+          section_title&lt;a name=&quot;section_name&quot;&gt;&lt;/a&gt;    
+</code></pre>
+<p>Hotkey:</p>
+<p><kbd>⌘F</kbd></p>
+<p><kbd>⇧⌘F</kbd></p>
+<pre><code>Markup : &lt;kbd&gt;⌘F&lt;/kbd&gt;
+</code></pre>
+<p>Hotkey list:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Symbol</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Option</td>
+<td>⌥</td>
+</tr>
+<tr>
+<td>Control</td>
+<td>⌃</td>
+</tr>
+<tr>
+<td>Command</td>
+<td>⌘</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>⇧</td>
+</tr>
+<tr>
+<td>Caps Lock</td>
+<td>⇪</td>
+</tr>
+<tr>
+<td>Tab</td>
+<td>⇥</td>
+</tr>
+<tr>
+<td>Esc</td>
+<td>⎋</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>⌽</td>
+</tr>
+<tr>
+<td>Return</td>
+<td>↩</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>⌫</td>
+</tr>
+<tr>
+<td>Up</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>Down</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>Left</td>
+<td>←</td>
+</tr>
+<tr>
+<td>Right</td>
+<td>→</td>
+</tr>
+</tbody></table>
+<p>Emoji:</p>
+<p>:exclamation: Use emoji icons to enhance text. :+1:  Look up emoji codes at <a target="_blank" rel="noopener" href="http://emoji-cheat-sheet.com/">emoji-cheat-sheet.com</a></p>
+<pre><code>Markup : Code appears between colons :EMOJICODE:
+</code></pre>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/markdown/" rel="tag"># markdown</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/uncategorized/2020-10-08-How-to-deploy-hexo-blog-on-two-machines.html" rel="prev" title="How to deploy hexo blog on two machines">
+      <i class="fa fa-chevron-left"></i> How to deploy hexo blog on two machines
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/uncategorized/2020-10-08-Least-square-FEM.html" rel="next" title="Least-square-FEM">
+      Least-square-FEM <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Markdown-Cheatsheet"><span class="nav-number">1.</span> <span class="nav-text">Markdown Cheatsheet</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Heading-1"><span class="nav-number">2.</span> <span class="nav-text">Heading 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Heading-2"><span class="nav-number">2.1.</span> <span class="nav-text">Heading 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Heading-3"><span class="nav-number">2.1.1.</span> <span class="nav-text">Heading 3</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Heading-4"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">Heading 4</span></a></li></ol></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ian Wang"
+      src="/images/nuanuan.jpg">
+  <p class="site-author-name" itemprop="name">Ian Wang</p>
+  <div class="site-description" itemprop="description">Ian's place to write</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wenscarl" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wenscarl" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:shuw12@outlook.com" title="E-Mail → mailto:shuw12@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ian Wang</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
