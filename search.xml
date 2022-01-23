@@ -130,50 +130,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Introduction to Hexo</title>
-    <url>/uncategorized/2017-10-08-Introduction-to-hexo.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>博客迭代记录</title>
-    <url>/uncategorized/2020-07-10-ReleaseNode.html</url>
-    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>本博客首发时间为2015年，至今已经5个年头了。</p>
-<p>感觉之前更新迭代的有点乱，很多用户在使用的时候也没法确定是否要更新新版的博客，再次我专门用一篇文章来记录博客更新迭代的记录，如果你已经在使用我的博客模板的，你可以看看更新记录后确认下是否要更新。</p>
-<p>博客的全功能介绍请看<a href="https://leopardpan.cn/2020/07/blog_info/">博客功能介绍</a></p>
-<h2 id="1-0-0"><a href="#1-0-0" class="headerlink" title="1.0.0"></a>1.0.0</h2><p>2016-11-25 第一版发布，红色主题</p>
-<h2 id="2-0-0-开发中"><a href="#2-0-0-开发中" class="headerlink" title="2.0.0 开发中"></a>2.0.0 开发中</h2><ul>
-<li>2016-11-25 修改博客风格为淡蓝色主题</li>
-<li>2016-12-16 增长404、about等页面</li>
-<li>2017-1-12 增加代码高亮</li>
-<li>2017-3-19 增加打赏公共</li>
-<li>2017-9-8 多说评论系统停服，切换到disqus评论（多说上的评论全没了😭）</li>
-<li>2019-1-25 增加博客底部社交链接</li>
-<li>2020-7-8 博客域名从 <a href="http://baixin.io/">http://baixin.io</a> 迁移到 <a href="https://leopardpan.cn/">https://leopardpan.cn</a> （baixin.io没法备案之前的统计也全没了😭）.</li>
-<li>2020-7-13 增加文章自动生成目录功能, 增加livere评论系统</li>
-</ul>
-<h2 id="博客更新手册"><a href="#博客更新手册" class="headerlink" title="博客更新手册"></a>博客更新手册</h2><p>如果你已经在使我的博客模板了，现在又想继续更新新版的博客，你下载博客后只需要修改两个各方</p>
-<ul>
-<li>_config.yml 文件</li>
-<li>_posts 目录</li>
-</ul>
-<p><code>_config.yml</code> 文件里面的内容设置成你自己的，也可以用你原来的，最好是更新版的字段做一下对比。</p>
-<p><code>_posts</code> 目录里面的文章全部删掉，把你自己的文章放进来</p>
-<p>修改以上两个地方新版的博客便更新完成，快看看效果吧！</p>
-]]></content>
-      <tags>
-        <tag>jekyll</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>文档支持的Markdown语法</title>
     <url>/uncategorized/2016-11-20-markdownTool.html</url>
     <content><![CDATA[<h2 id="什么是-Markdown"><a href="#什么是-Markdown" class="headerlink" title="什么是 Markdown"></a>什么是 Markdown</h2><p>Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：如您正在阅读的这篇文章。它使用简单的符号标记不同的标题，分割不同的段落，<strong>粗体</strong> 或者 <em>斜体</em> 某些文字.</p>
@@ -230,6 +186,50 @@
       <tags>
         <tag>markdown</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>博客迭代记录</title>
+    <url>/uncategorized/2020-07-10-ReleaseNode.html</url>
+    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>本博客首发时间为2015年，至今已经5个年头了。</p>
+<p>感觉之前更新迭代的有点乱，很多用户在使用的时候也没法确定是否要更新新版的博客，再次我专门用一篇文章来记录博客更新迭代的记录，如果你已经在使用我的博客模板的，你可以看看更新记录后确认下是否要更新。</p>
+<p>博客的全功能介绍请看<a href="https://leopardpan.cn/2020/07/blog_info/">博客功能介绍</a></p>
+<h2 id="1-0-0"><a href="#1-0-0" class="headerlink" title="1.0.0"></a>1.0.0</h2><p>2016-11-25 第一版发布，红色主题</p>
+<h2 id="2-0-0-开发中"><a href="#2-0-0-开发中" class="headerlink" title="2.0.0 开发中"></a>2.0.0 开发中</h2><ul>
+<li>2016-11-25 修改博客风格为淡蓝色主题</li>
+<li>2016-12-16 增长404、about等页面</li>
+<li>2017-1-12 增加代码高亮</li>
+<li>2017-3-19 增加打赏公共</li>
+<li>2017-9-8 多说评论系统停服，切换到disqus评论（多说上的评论全没了😭）</li>
+<li>2019-1-25 增加博客底部社交链接</li>
+<li>2020-7-8 博客域名从 <a href="http://baixin.io/">http://baixin.io</a> 迁移到 <a href="https://leopardpan.cn/">https://leopardpan.cn</a> （baixin.io没法备案之前的统计也全没了😭）.</li>
+<li>2020-7-13 增加文章自动生成目录功能, 增加livere评论系统</li>
+</ul>
+<h2 id="博客更新手册"><a href="#博客更新手册" class="headerlink" title="博客更新手册"></a>博客更新手册</h2><p>如果你已经在使我的博客模板了，现在又想继续更新新版的博客，你下载博客后只需要修改两个各方</p>
+<ul>
+<li>_config.yml 文件</li>
+<li>_posts 目录</li>
+</ul>
+<p><code>_config.yml</code> 文件里面的内容设置成你自己的，也可以用你原来的，最好是更新版的字段做一下对比。</p>
+<p><code>_posts</code> 目录里面的文章全部删掉，把你自己的文章放进来</p>
+<p>修改以上两个地方新版的博客便更新完成，快看看效果吧！</p>
+]]></content>
+      <tags>
+        <tag>jekyll</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Introduction to Hexo</title>
+    <url>/uncategorized/2017-10-08-Introduction-to-hexo.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>博客模板功能介绍</title>
@@ -491,62 +491,6 @@ or git clone -b hexo &lt;remote_repo&gt; ....
       </tags>
   </entry>
   <entry>
-    <title>Least-square-FEM</title>
-    <url>/uncategorized/2020-10-08-Least-square-FEM.html</url>
-    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This is a course project for MATH578 at UNM. This project discusses the use of Least-square FEM to stabilize numerical solution of convection-diffusion equation. The report can be found <a href="/docs/LeastSquare/LSFEM.pdf">here</a>. </p>
-]]></content>
-      <tags>
-        <tag>least-square</tag>
-        <tag>finite element method</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Machine Learning</title>
-    <url>/Machine-Learning/2020-10-08-Maching-learning.html</url>
-    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This is a series of course projects for Machine Learning at UNM. For the topics, please refer to the following table.</p>
-<table>
-<thead>
-<tr>
-<th>Topic</th>
-<th>Keywords</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a href="https://drive.google.com/file/d/166U1g7DIQUAqwpPBPXGx2oVb_Y8vWDKy/view?usp=sharing">Kernel Tricks for Regrssion Problems</a></td>
-<td>Kernel Methods, Ridge Regression, Support Vector Machine, Classification</td>
-</tr>
-<tr>
-<td><a href="https://drive.google.com/file/d/1xSmkzo0DuT44t4cEJzvbINlo7UhylVyV/view?usp=sharing">Support Vector Machine for Classification and Regression</a></td>
-<td>SVM, Structural risk, Classification, Regression</td>
-</tr>
-<tr>
-<td><a href="https://drive.google.com/file/d/1odVvtl2Y1ChLeAxfBdeMBdyfZ8kWIuuZ/view?usp=sharing">Hidden Markov Models</a></td>
-<td>Hidden Markov Model, Markov Model, Latent Variable, Markov Process</td>
-</tr>
-<tr>
-<td><a href="https://drive.google.com/file/d/1pt5Ou9hvZ55NDtPlE2cBw4rSwuODWXtJ/view?usp=sharing">Latent Linear Models: PCA and ICA</a></td>
-<td>Latent Linear Model, PCA, PPCA, ICA, FastICA, EM, Factor Analysis</td>
-</tr>
-<tr>
-<td><a href="https://drive.google.com/file/d/1d2jZrlAiDdpEqe2BPi2p5WTUV7fYZBKU/view?usp=sharing">Clustering with Gaussian Mixture Models and K-Means</a></td>
-<td>EM, Gaussian Mixture Models, K-means</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>Machine Learning</category>
-      </categories>
-      <tags>
-        <tag>machine learning</tag>
-        <tag>HMM</tag>
-        <tag>SVM</tag>
-        <tag>PCA</tag>
-        <tag>ICA</tag>
-        <tag>GMM</tag>
-        <tag>EM</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Large Scale Inversion of Subsurface Flow</title>
     <url>/uncategorized/2020-10-08-Large-scale-inversion.html</url>
     <content><![CDATA[<h2 id="When-was-this-work-done"><a href="#When-was-this-work-done" class="headerlink" title="When was this work done?"></a>When was this work done?</h2><p>This is a intern project(<a href="https://www.lanl.gov/projects/national-security-education-center/information-science-technology/summer-schools/parallelcomputing/2018/2018-projects.php"><strong>PCRSI</strong></a>) at Los Alamos National Lab(LANL) summer 2018. My mentor was Dr. Satish Karra and co-author is Dr. Daniel O’Malley. My sincere thanks to them. </p>
@@ -556,6 +500,16 @@ or git clone -b hexo &lt;remote_repo&gt; ....
         <tag>inversion</tag>
         <tag>parallel computing</tag>
         <tag>adjoint method</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Least-square-FEM</title>
+    <url>/uncategorized/2020-10-08-Least-square-FEM.html</url>
+    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This is a course project for MATH578 at UNM. This project discusses the use of Least-square FEM to stabilize numerical solution of convection-diffusion equation. The report can be found <a href="/docs/LeastSquare/LSFEM.pdf">here</a>. </p>
+]]></content>
+      <tags>
+        <tag>least-square</tag>
+        <tag>finite element method</tag>
       </tags>
   </entry>
   <entry>
@@ -729,6 +683,52 @@ Markup: --------------- (below H2 text)
       </tags>
   </entry>
   <entry>
+    <title>Machine Learning</title>
+    <url>/Machine-Learning/2020-10-08-Maching-learning.html</url>
+    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This is a series of course projects for Machine Learning at UNM. For the topics, please refer to the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Keywords</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://drive.google.com/file/d/166U1g7DIQUAqwpPBPXGx2oVb_Y8vWDKy/view?usp=sharing">Kernel Tricks for Regrssion Problems</a></td>
+<td>Kernel Methods, Ridge Regression, Support Vector Machine, Classification</td>
+</tr>
+<tr>
+<td><a href="https://drive.google.com/file/d/1xSmkzo0DuT44t4cEJzvbINlo7UhylVyV/view?usp=sharing">Support Vector Machine for Classification and Regression</a></td>
+<td>SVM, Structural risk, Classification, Regression</td>
+</tr>
+<tr>
+<td><a href="https://drive.google.com/file/d/1odVvtl2Y1ChLeAxfBdeMBdyfZ8kWIuuZ/view?usp=sharing">Hidden Markov Models</a></td>
+<td>Hidden Markov Model, Markov Model, Latent Variable, Markov Process</td>
+</tr>
+<tr>
+<td><a href="https://drive.google.com/file/d/1pt5Ou9hvZ55NDtPlE2cBw4rSwuODWXtJ/view?usp=sharing">Latent Linear Models: PCA and ICA</a></td>
+<td>Latent Linear Model, PCA, PPCA, ICA, FastICA, EM, Factor Analysis</td>
+</tr>
+<tr>
+<td><a href="https://drive.google.com/file/d/1d2jZrlAiDdpEqe2BPi2p5WTUV7fYZBKU/view?usp=sharing">Clustering with Gaussian Mixture Models and K-Means</a></td>
+<td>EM, Gaussian Mixture Models, K-means</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Machine Learning</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+        <tag>HMM</tag>
+        <tag>SVM</tag>
+        <tag>PCA</tag>
+        <tag>ICA</tag>
+        <tag>GMM</tag>
+        <tag>EM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown syntax supported by the document</title>
     <url>/uncategorized/2020-10-08-Markdown-tool.html</url>
     <content><![CDATA[<h2 id="What-is-Markdown"><a href="#What-is-Markdown" class="headerlink" title="What is Markdown?"></a>What is Markdown?</h2><h2 id="What-Is-It"><a href="#What-Is-It" class="headerlink" title="What Is It?"></a>What Is It?</h2><p>Markdown is a plain text formatting syntax aimed at making writing  for the internet easier. The philosophy behind Markdown is that plain  text documents should be readable without tags mussing everything up,  but there should still be ways to add text modifiers like lists, bold,  italics, etc. It is an alternative to WYSIWYG (what you see is what you  get) editors, which use rich text that later gets converted to proper  HTML.</p>
@@ -841,7 +841,7 @@ Markup: --------------- (below H2 text)
 <p>Files included:</p>
 <p>Folder <strong>forDelivery</strong> contains the DGTD solver in <strong>dgtd_MPI</strong>, geometry files in <strong>geo</strong> and all necessary file to obtain the s-parameter in folder <strong>halfmatchTL</strong>. To start,go to <strong>halfmatchTL</strong> and execute <em>runMPI.sh</em>. </p>
 <p>In folder <strong>circuitfittingProject</strong>, there includes necessary MATLAB and python files. Each file should be commented well. </p>
-<p>For any question, please contact <a href="mailto:&#x73;&#x68;&#x75;&#x77;&#x61;&#x6e;&#x67;&#49;&#50;&#x40;&#x75;&#x6e;&#x6d;&#46;&#101;&#100;&#117;">&#x73;&#x68;&#x75;&#x77;&#x61;&#x6e;&#x67;&#49;&#50;&#x40;&#x75;&#x6e;&#x6d;&#46;&#101;&#100;&#117;</a>. </p>
+<p>For any question, please contact <a href="mailto:&#115;&#x68;&#x75;&#119;&#97;&#110;&#103;&#x31;&#50;&#64;&#117;&#x6e;&#109;&#x2e;&#101;&#100;&#x75;">&#115;&#x68;&#x75;&#119;&#97;&#110;&#103;&#x31;&#50;&#64;&#117;&#x6e;&#109;&#x2e;&#101;&#100;&#x75;</a>. </p>
 ]]></content>
       <categories>
         <category>cem</category>
@@ -878,6 +878,78 @@ Markup: --------------- (below H2 text)
         <tag>Tensorflow</tag>
         <tag>Deep Learning</tag>
         <tag>eager execution</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>What does std::move do at parameter binding?</title>
+    <url>/programming/2022-01-23-what%20does%20stdmove%20do.html</url>
+    <content><![CDATA[<p><code>std::move</code> is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears in factory mode and demonstrate how compiler treat it at parameter binding. Some term clarification:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void foo(int p1);</span><br><span class="line">int a &#x3D; 1;</span><br><span class="line">foo(a);</span><br></pre></td></tr></table></figure>
+<p>we refer <code>p1</code> as parameter and <code>a</code> as argument of <code>foo</code>. </p>
+<p>Say we have a resource class as</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Struct Resource &#123;&#125;;</span><br></pre></td></tr></table></figure>
+<p>and a handle class to hold the resource as,</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">handle</span> &#123;</span></span><br><span class="line"> <span class="keyword">public</span>:                                                     </span><br><span class="line">  handle () &#123; res = <span class="keyword">new</span> Resource(); &#125;                               </span><br><span class="line">  ~handle () &#123; <span class="keyword">if</span> (res) <span class="keyword">delete</span> res; &#125;</span><br><span class="line">  handle (<span class="keyword">const</span> handle &amp; other)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;copy constructor&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;At entrance: other.res=&quot;</span>&lt;&lt;other.res&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    res = <span class="keyword">new</span> Resource(*other.res);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;I am set to=&quot;</span>&lt;&lt;res&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">                                                        </span><br><span class="line">  handle (handle &amp;&amp; other) &#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;move constructor&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    res = other.res;</span><br><span class="line">    other.res = <span class="literal">nullptr</span>;</span><br><span class="line">  &#125;</span><br><span class="line">                                                        </span><br><span class="line">  handle &amp; <span class="keyword">operator</span>=(handle &amp;&amp; other)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;move assignment&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">std</span>::swap(res, other.res);</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function">Resource* <span class="title">get_res</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> res; &#125;</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  Resource* res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>Then we need a wrapper class as an aggregate of couple of handles like this</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">wrapper</span>&#123;</span></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  wrapper(handle &amp;&amp;handle) :</span><br><span class="line">   _handle_1(<span class="built_in">std</span>::move(handle)) &#123;</span><br><span class="line">       <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;private member  holds resource &quot;</span>&lt;&lt;_handle_1.get_res()&lt;&lt;<span class="string">&quot;; parameter holds &quot;</span> &lt;&lt;</span><br><span class="line">           handle.get_res()&lt;&lt;<span class="built_in">endl</span>;&#125;  </span><br><span class="line">    </span><br><span class="line">  <span class="function">handle* <span class="title">get_handle</span><span class="params">()</span>  </span>&#123;<span class="keyword">return</span> &amp;_handle_1;&#125;</span><br><span class="line">  wrapper(wrapper&amp;&amp; x) = <span class="keyword">default</span>;</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  handle _handle_1;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p> Assume there is a user case where the ownership needs to be passed around.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">handle h4;</span><br><span class="line">cout &lt;&lt;&quot;h4 res&#x3D;&quot;&lt;&lt;h4.get_res()&lt;&lt;endl;</span><br><span class="line">unique_ptr&lt;wrapper&gt; m(new wrapper(std::move(h4)));</span><br><span class="line">cout &lt;&lt;&quot;h4 res&#x3D;&quot;&lt;&lt;h4.get_res()&lt;&lt;endl;</span><br><span class="line">cout &lt;&lt;&quot;m res&#x3D;&quot;&lt;&lt;instance-&gt;get_holder()-&gt;get_res()&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
+<p>It’s nearly a common ground that we need to use <code>std::move(h4)</code> as argument to construct <code>wrapper()</code>, but the key is how to write the initialization list of the constructor for class wrapper. We have the following 4 cases.</p>
+<ol>
+<li><code>wrapper(handle &amp;&amp;handle) : _handle_1(std::move(handle))</code></li>
+<li><code>wrapper(handle &amp;&amp;handle) : _handle_1(handle)</code></li>
+<li><code>wrapper(handle handle) : _handle_1(std::move(handle))</code></li>
+<li><code>wrapper(handle handle) : _handle_1(handle)</code></li>
+</ol>
+<ul>
+<li><pre><code class="c++">// output #1
+h4 res=0x55fbc9929eb0
+move constructor
+private member holds resource 0x55fbc9929eb0; parameter holds 0
+h4 res=0
+m res=0x55fbc9929eb0
+Success! It&#39;s what we want and  only 1 move constructor is called. The compiler it smart enough to `swap(h4, _handl_1)`.
+    
+// output #2
+h4 res=0x564af9158eb0
+copy constructor
+At entrance: other.res=0x564af9158eb0
+I am set to=0x564af9159300
+private member holds resource 0x564af9159300; parameter holds 0x564af9158eb0
+h4 res=0x564af9158eb0
+m res=0x564af9159300
+Failure. No move at all because we never mean  to `move` explicitly inside wrapper. Luckily, `h4` is not tampered and `h4-&gt;temp` is saved or optimized by compiler. 
+    
+// output #3
+h4 res=0x555ca6e7ceb0
+move constructor
+move constructor
+private member holds resource 0x555ca6e7ceb0; parameter holds 0
+h4 res=0
+m res=0x555ca6e7ceb0
+Success! But 2 moves. Interestingly, no copy constructor! `h4-&gt;temp-&gt;_handle_1`
+    
+// output #4
+h4 res=0x56100474deb0
+move constructor
+copy constructor
+At entrance: other.res=0x56100474deb0
+I am set to=0x56100474e300
+private member holds resource 0x56100474e300; parameter holds 0x56100474deb0
+h4 res=0
+m res=0x56100474e300
+Failure. Really bad because `h4-&gt;temp` and gets lost!
+
+</code></pre>
+</li>
+</ul>
+<p>Based on analysis above, I would actually recommend case 3 over 1 though one more time of <code>move</code>. Reason is case 3 is more general in which case the input argument can be rvalue or lvalue. Moreover, <code>move</code> is implemented by <code>swap</code> under the hood(usually) thus not too much overheads. </p>
+]]></content>
+      <categories>
+        <category>programming</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
       </tags>
   </entry>
   <entry>
@@ -11142,78 +11214,6 @@ Markup: --------------- (below H2 text)
       <tags>
         <tag>Leetcode</tag>
         <tag>algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>What does std::move do at parameter binding?</title>
-    <url>/programming/2022-01-23-what%20does%20stdmove%20do.html</url>
-    <content><![CDATA[<p><code>std::move</code> is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears in factory mode and demonstrate how compiler treat it at parameter binding. Some term clarification:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void foo(int p1);</span><br><span class="line">int a &#x3D; 1;</span><br><span class="line">foo(a);</span><br></pre></td></tr></table></figure>
-<p>we refer <code>p1</code> as parameter and <code>a</code> as argument of <code>foo</code>. </p>
-<p>Say we have a resource class as</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Struct Resource &#123;&#125;;</span><br></pre></td></tr></table></figure>
-<p>and a handle class to hold the resource as,</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">handle</span> &#123;</span></span><br><span class="line"> <span class="keyword">public</span>:                                                     </span><br><span class="line">  handle () &#123; res = <span class="keyword">new</span> Resource(); &#125;                               </span><br><span class="line">  ~handle () &#123; <span class="keyword">if</span> (res) <span class="keyword">delete</span> res; &#125;</span><br><span class="line">  handle (<span class="keyword">const</span> handle &amp; other)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;copy constructor&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;At entrance: other.res=&quot;</span>&lt;&lt;other.res&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    res = <span class="keyword">new</span> Resource(*other.res);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;I am set to=&quot;</span>&lt;&lt;res&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">                                                        </span><br><span class="line">  handle (handle &amp;&amp; other) &#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;move constructor&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    res = other.res;</span><br><span class="line">    other.res = <span class="literal">nullptr</span>;</span><br><span class="line">  &#125;</span><br><span class="line">                                                        </span><br><span class="line">  handle &amp; <span class="keyword">operator</span>=(handle &amp;&amp; other)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;move assignment&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">std</span>::swap(res, other.res);</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function">Resource* <span class="title">get_res</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> res; &#125;</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  Resource* res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>Then we need a wrapper class as an aggregate of couple of handles like this</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">wrapper</span>&#123;</span></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  wrapper(handle &amp;&amp;handle) :</span><br><span class="line">   _handle_1(<span class="built_in">std</span>::move(handle)) &#123;</span><br><span class="line">       <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;private member  holds resource &quot;</span>&lt;&lt;_handle_1.get_res()&lt;&lt;<span class="string">&quot;; parameter holds &quot;</span> &lt;&lt;</span><br><span class="line">           handle.get_res()&lt;&lt;<span class="built_in">endl</span>;&#125;  </span><br><span class="line">    </span><br><span class="line">  <span class="function">handle* <span class="title">get_handle</span><span class="params">()</span>  </span>&#123;<span class="keyword">return</span> &amp;_handle_1;&#125;</span><br><span class="line">  wrapper(wrapper&amp;&amp; x) = <span class="keyword">default</span>;</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  handle _handle_1;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p> Assume there is a user case where the ownership needs to be passed around.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">handle h4;</span><br><span class="line">cout &lt;&lt;&quot;h4 res&#x3D;&quot;&lt;&lt;h4.get_res()&lt;&lt;endl;</span><br><span class="line">unique_ptr&lt;wrapper&gt; m(new wrapper(std::move(h4)));</span><br><span class="line">cout &lt;&lt;&quot;h4 res&#x3D;&quot;&lt;&lt;h4.get_res()&lt;&lt;endl;</span><br><span class="line">cout &lt;&lt;&quot;m res&#x3D;&quot;&lt;&lt;instance-&gt;get_holder()-&gt;get_res()&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
-<p>It’s nearly a common ground that we need to use <code>std::move(h4)</code> as argument to construct <code>wrapper()</code>, but the key is how to write the initialization list of the constructor for class wrapper. We have the following 4 cases.</p>
-<ol>
-<li><code>wrapper(handle &amp;&amp;handle) : _handle_1(std::move(handle))</code></li>
-<li><code>wrapper(handle &amp;&amp;handle) : _handle_1(handle)</code></li>
-<li><code>wrapper(handle handle) : _handle_1(std::move(handle))</code></li>
-<li><code>wrapper(handle handle) : _handle_1(handle)</code></li>
-</ol>
-<ul>
-<li><pre><code class="c++">// output #1
-h4 res=0x55fbc9929eb0
-move constructor
-private member holds resource 0x55fbc9929eb0; parameter holds 0
-h4 res=0
-m res=0x55fbc9929eb0
-Success! It&#39;s what we want and  only 1 move constructor is called. The compiler it smart enough to `swap(h4, _handl_1)`.
-    
-// output #2
-h4 res=0x564af9158eb0
-copy constructor
-At entrance: other.res=0x564af9158eb0
-I am set to=0x564af9159300
-private member holds resource 0x564af9159300; parameter holds 0x564af9158eb0
-h4 res=0x564af9158eb0
-m res=0x564af9159300
-Failure. No move at all because we never mean  to `move` explicitly inside wrapper. Luckily, `h4` is not tampered and `h4-&gt;temp` is saved or optimized by compiler. 
-    
-// output #3
-h4 res=0x555ca6e7ceb0
-move constructor
-move constructor
-private member holds resource 0x555ca6e7ceb0; parameter holds 0
-h4 res=0
-m res=0x555ca6e7ceb0
-Success! But 2 moves. Interestingly, no copy constructor! `h4-&gt;temp-&gt;_handle_1`
-    
-// output #4
-h4 res=0x56100474deb0
-move constructor
-copy constructor
-At entrance: other.res=0x56100474deb0
-I am set to=0x56100474e300
-private member holds resource 0x56100474e300; parameter holds 0x56100474deb0
-h4 res=0
-m res=0x56100474e300
-Failure. Really bad because `h4-&gt;temp` and gets lost!
-
-</code></pre>
-</li>
-</ul>
-<p>Based on analysis above, I would actually recommend case 3 over 1 though one more time of <code>move</code>. Reason is case 3 is more general in which case the input argument can be rvalue or lvalue. Moreover, <code>move</code> is implemented by <code>swap</code> under the hood(usually) thus not too much overheads. </p>
-]]></content>
-      <categories>
-        <category>programming</category>
-      </categories>
-      <tags>
-        <tag>c++</tag>
       </tags>
   </entry>
 </search>
