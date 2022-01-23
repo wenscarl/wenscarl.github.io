@@ -28,7 +28,7 @@
 <meta property="og:description" content="std::move is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears frequen">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-01-23T06:00:00.000Z">
-<meta property="article:modified_time" content="2022-01-23T19:16:33.767Z">
+<meta property="article:modified_time" content="2022-01-23T20:09:01.481Z">
 <meta property="article:author" content="Ian Wang">
 <meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
@@ -224,7 +224,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 01-23-2022 00:00:00 / Modified: 13:16:33" itemprop="dateCreated datePublished" datetime="2022-01-23T00:00:00-06:00">01-23-2022</time>
+              <time title="Created: 01-23-2022 00:00:00 / Modified: 14:09:01" itemprop="dateCreated datePublished" datetime="2022-01-23T00:00:00-06:00">01-23-2022</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -285,7 +285,7 @@ I am set to=0x564af9159300
 private member holds resource 0x564af9159300; parameter holds 0x564af9158eb0
 h4 res=0x564af9158eb0
 m res=0x564af9159300
-Failure. No move at all because we never mean  to `move` explicitly inside wrapper. Luckily, `h4` is not tampered and `h4-&gt;temp` is saved or optimized by compiler. 
+Failure. No move at all because we never mean  to `move` explicitly inside wrapper. Parameter handle is a lvalue though itself is a rvalue reference. No wonder class handle invokes its copy constructor. So std::move(handle) is indispensable. Luckily, `h4` is not tampered and `h4-&gt;temp` is skipped or optimized by compiler. With std::forward() syntex, perfect forwarding, we can preserve the qualifiers (const-ref, ref, value, rvalue, etc.). of parameter and will be discusssed in another post.
     
 // output #3
 h4 res=0x555ca6e7ceb0

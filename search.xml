@@ -188,6 +188,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Introduction to Hexo</title>
+    <url>/uncategorized/2017-10-08-Introduction-to-hexo.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>博客迭代记录</title>
     <url>/uncategorized/2020-07-10-ReleaseNode.html</url>
     <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>本博客首发时间为2015年，至今已经5个年头了。</p>
@@ -216,20 +230,6 @@
       <tags>
         <tag>jekyll</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Introduction to Hexo</title>
-    <url>/uncategorized/2017-10-08-Introduction-to-hexo.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>博客模板功能介绍</title>
@@ -729,18 +729,6 @@ Markup: --------------- (below H2 text)
       </tags>
   </entry>
   <entry>
-    <title>ParaReal-heat</title>
-    <url>/uncategorized/2020-10-08-ParaReal-heat.html</url>
-    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This <a href="/docs/parallelcomputing/CS542Presentation.pdf">project</a> implements a Parallel-in-Time(PIT) algorithm, ParaReal for heat equation with hybrid OpenMP and MPI.  </p>
-]]></content>
-      <tags>
-        <tag>parallel computing</tag>
-        <tag>ParaReal</tag>
-        <tag>PIT</tag>
-        <tag>roofline model</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown syntax supported by the document</title>
     <url>/uncategorized/2020-10-08-Markdown-tool.html</url>
     <content><![CDATA[<h2 id="What-is-Markdown"><a href="#What-is-Markdown" class="headerlink" title="What is Markdown?"></a>What is Markdown?</h2><h2 id="What-Is-It"><a href="#What-Is-It" class="headerlink" title="What Is It?"></a>What Is It?</h2><p>Markdown is a plain text formatting syntax aimed at making writing  for the internet easier. The philosophy behind Markdown is that plain  text documents should be readable without tags mussing everything up,  but there should still be ways to add text modifiers like lists, bold,  italics, etc. It is an alternative to WYSIWYG (what you see is what you  get) editors, which use rich text that later gets converted to proper  HTML.</p>
@@ -797,6 +785,18 @@ Markup: --------------- (below H2 text)
       </tags>
   </entry>
   <entry>
+    <title>ParaReal-heat</title>
+    <url>/uncategorized/2020-10-08-ParaReal-heat.html</url>
+    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This <a href="/docs/parallelcomputing/CS542Presentation.pdf">project</a> implements a Parallel-in-Time(PIT) algorithm, ParaReal for heat equation with hybrid OpenMP and MPI.  </p>
+]]></content>
+      <tags>
+        <tag>parallel computing</tag>
+        <tag>ParaReal</tag>
+        <tag>PIT</tag>
+        <tag>roofline model</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Useful docker commands</title>
     <url>/uncategorized/2020-10-08-Useful-docker-commands.html</url>
     <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> ~/.bash_aliases</span><br><span class="line"><span class="comment"># kill all running containers</span></span><br><span class="line"><span class="built_in">alias</span> dockerkill=<span class="string">&#x27;docker kill $(docker ps -a -q)&#x27;</span></span><br><span class="line"><span class="comment"># delelte all stopped containers</span></span><br><span class="line"><span class="built_in">alias</span> dockercleanc=<span class="string">&#x27;docker rm $(docker ps -a -q)&#x27;</span></span><br><span class="line"><span class="comment"># delete all untaged images</span></span><br><span class="line"><span class="built_in">alias</span> dockercleani=<span class="string">&#x27;docker rmi $(docker images -q -f dangling=true)&#x27;</span>  </span><br><span class="line"><span class="comment"># delte all stopped and untaged images</span></span><br><span class="line"><span class="built_in">alias</span> dockerclean=<span class="string">&#x27;dockercleanc || true &amp;&amp; dockercleani&#x27;</span></span><br></pre></td></tr></table></figure>]]></content>
@@ -841,43 +841,13 @@ Markup: --------------- (below H2 text)
 <p>Files included:</p>
 <p>Folder <strong>forDelivery</strong> contains the DGTD solver in <strong>dgtd_MPI</strong>, geometry files in <strong>geo</strong> and all necessary file to obtain the s-parameter in folder <strong>halfmatchTL</strong>. To start,go to <strong>halfmatchTL</strong> and execute <em>runMPI.sh</em>. </p>
 <p>In folder <strong>circuitfittingProject</strong>, there includes necessary MATLAB and python files. Each file should be commented well. </p>
-<p>For any question, please contact <a href="mailto:&#115;&#104;&#117;&#x77;&#x61;&#x6e;&#x67;&#49;&#x32;&#64;&#117;&#x6e;&#x6d;&#x2e;&#x65;&#x64;&#x75;">&#115;&#104;&#117;&#x77;&#x61;&#x6e;&#x67;&#49;&#x32;&#64;&#117;&#x6e;&#x6d;&#x2e;&#x65;&#x64;&#x75;</a>. </p>
+<p>For any question, please contact <a href="mailto:&#x73;&#104;&#x75;&#119;&#x61;&#110;&#x67;&#49;&#50;&#x40;&#117;&#x6e;&#x6d;&#x2e;&#101;&#x64;&#x75;">&#x73;&#104;&#x75;&#119;&#x61;&#110;&#x67;&#49;&#50;&#x40;&#117;&#x6e;&#x6d;&#x2e;&#101;&#x64;&#x75;</a>. </p>
 ]]></content>
       <categories>
         <category>cem</category>
       </categories>
       <tags>
         <tag>cem</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Deterministic-random-shuffle</title>
-    <url>/Deep-Learning/2020-10-14-Deterministic-random-shuffle.html</url>
-    <content><![CDATA[<h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><p>Determinism is a important issue in deep learning(DL) though a lot of randomness is burried here and there, e.g. initialization of weights </p>
-<p>It’s actually easier to understand in TF1.x language, purely graph mode. This <a href="https://www.tensorflow.org/api_docs/python/tf/compat/v1/set_random_seed">link</a> is highly recommended. TF2.x introduces eager mode but still keeps graph mode option by all sorts of means, e.g. <code>tf.function</code>. It’s explained <a href="https://www.tensorflow.org/api_docs/python/tf/random/set_seed">here</a> but to be honest way more  counterintuitive.</p>
-<p>This post aims to list couple of senarios may trip you down when playing around with such concepts. </p>
-<a id="more"></a>
-
-<h2 id="Problem-statement"><a href="#Problem-statement" class="headerlink" title="Problem statement"></a>Problem statement</h2><p>Determinism means, in most cases, the identical results among many runs. A common approach is <code>tf.random.set_seed(SEED)</code> at the entry point of your code. To be frank, there is a lot of implications going on under the hood, but essentially it will achieve repeatable results. I am actually assuming all the ops(on CPU and GPU) are deterministic, but in fact NOT! Check <a href="https://github.com/NVIDIA/framework-determinism">here</a>.</p>
-<p>This post will focus on another case: without running the program twice, can we get a repeatable results, if a op under test is executed in a loop many times. A substantial example would be 1) identical dropout between batches or epochs; 2) same order of shuffle of input data. For simplicity, the latter will be looked at. All the codes are based on TF2.x. </p>
-<h3 id="Graph-mode"><a href="#Graph-mode" class="headerlink" title="Graph mode"></a>Graph mode</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@tf.function</span><br><span class="line">def shuffled_sum(input_val, seed&#x3D;123):</span><br><span class="line">    print(&quot;Python run&quot;)</span><br><span class="line">    tf.random.set_seed(seed)</span><br><span class="line">    tensorValue1 &#x3D; tf.random.shuffle(input_val, seed)</span><br><span class="line">    tf.print(tensorValue1)</span><br><span class="line">    tensorValue2 &#x3D; tf.random.shuffle(input_val, seed)</span><br><span class="line">    tf.print(tensorValue2)</span><br><span class="line"></span><br><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])  # run-1</span><br><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])  # run-2</span><br><span class="line"></span><br><span class="line">## output:</span><br><span class="line">Python run</span><br><span class="line">[8 7 3 ... 9 1 10] ---A</span><br><span class="line">[8 7 3 ... 9 1 10] ---B</span><br><span class="line">[6 8 10 ... 4 1 7] ---C</span><br><span class="line">[6 8 10 ... 4 1 7] ---D</span><br></pre></td></tr></table></figure>
-<p>The intention of <code>shuffled_sum</code> was to set the seed as much as it can to achieve repeatable results. But why we didn’t see <code>A==C</code>? </p>
-<p>A: TF’s builds the graph first and find that input argument <code>seed</code> is not related to <code>tensorValue1</code> and <code>tensorValue2</code>. In run-2, the global seed is not seen for the shuffle op. The internal counter for shuffle op increments. For <code>A==B</code> ,  the two ops takes in the same input args, so TF regards them as identical. </p>
-<h3 id="Eager-mode"><a href="#Eager-mode" class="headerlink" title="Eager mode"></a>Eager mode</h3><p>This time, we comments out <code>tf.funciton</code>,and see the output as</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">## output:</span><br><span class="line">Python run</span><br><span class="line">[8 7 3 ... 9 1 10] ---A</span><br><span class="line">[6 8 10 ... 4 1 7] ---B</span><br><span class="line">Python run</span><br><span class="line">[8 7 3 ... 9 1 10] ---C</span><br><span class="line">[6 8 10 ... 4 1 7] ---D</span><br></pre></td></tr></table></figure>
-<p>Now <code>A==C</code> reals the global seed works. But <code>A!=B</code> means that B is the next sequence of A given the seeds combination and it’s deterministic.  In eager mode, the shuffle simply runs twice(counter increments) in the function.</p>
-<h3 id="How-to-enforce-repeatability-in-graph-mode"><a href="#How-to-enforce-repeatability-in-graph-mode" class="headerlink" title="How to enforce repeatability in graph mode?"></a>How to enforce repeatability in graph mode?</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])</span><br><span class="line">tf.random.set_seed(123)</span><br><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])</span><br><span class="line">## output:</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br></pre></td></tr></table></figure>
-<p>‘tf.random.set_seed(123)’ have to be run before gets into run-2 so it cannot fall into a graph. In TF1.x way, it should comes before session.run(xxx).</p>
-]]></content>
-      <categories>
-        <category>Deep Learning</category>
-      </categories>
-      <tags>
-        <tag>Randomness</tag>
-        <tag>Determinism</tag>
-        <tag>Tensorflow</tag>
-        <tag>Deep Learning</tag>
-        <tag>eager execution</tag>
       </tags>
   </entry>
   <entry>
@@ -921,7 +891,7 @@ I am set to=0x564af9159300
 private member holds resource 0x564af9159300; parameter holds 0x564af9158eb0
 h4 res=0x564af9158eb0
 m res=0x564af9159300
-Failure. No move at all because we never mean  to `move` explicitly inside wrapper. Luckily, `h4` is not tampered and `h4-&gt;temp` is saved or optimized by compiler. 
+Failure. No move at all because we never mean  to `move` explicitly inside wrapper. Parameter handle is a lvalue though itself is a rvalue reference. No wonder class handle invokes its copy constructor. So std::move(handle) is indispensable. Luckily, `h4` is not tampered and `h4-&gt;temp` is skipped or optimized by compiler. With std::forward() syntex, perfect forwarding, we can preserve the qualifiers (const-ref, ref, value, rvalue, etc.). of parameter and will be discusssed in another post.
     
 // output #3
 h4 res=0x555ca6e7ceb0
@@ -953,6 +923,36 @@ Failure. Really bad because `h4-&gt;temp` and gets lost!
       </categories>
       <tags>
         <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Deterministic-random-shuffle</title>
+    <url>/Deep-Learning/2020-10-14-Deterministic-random-shuffle.html</url>
+    <content><![CDATA[<h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><p>Determinism is a important issue in deep learning(DL) though a lot of randomness is burried here and there, e.g. initialization of weights </p>
+<p>It’s actually easier to understand in TF1.x language, purely graph mode. This <a href="https://www.tensorflow.org/api_docs/python/tf/compat/v1/set_random_seed">link</a> is highly recommended. TF2.x introduces eager mode but still keeps graph mode option by all sorts of means, e.g. <code>tf.function</code>. It’s explained <a href="https://www.tensorflow.org/api_docs/python/tf/random/set_seed">here</a> but to be honest way more  counterintuitive.</p>
+<p>This post aims to list couple of senarios may trip you down when playing around with such concepts. </p>
+<a id="more"></a>
+
+<h2 id="Problem-statement"><a href="#Problem-statement" class="headerlink" title="Problem statement"></a>Problem statement</h2><p>Determinism means, in most cases, the identical results among many runs. A common approach is <code>tf.random.set_seed(SEED)</code> at the entry point of your code. To be frank, there is a lot of implications going on under the hood, but essentially it will achieve repeatable results. I am actually assuming all the ops(on CPU and GPU) are deterministic, but in fact NOT! Check <a href="https://github.com/NVIDIA/framework-determinism">here</a>.</p>
+<p>This post will focus on another case: without running the program twice, can we get a repeatable results, if a op under test is executed in a loop many times. A substantial example would be 1) identical dropout between batches or epochs; 2) same order of shuffle of input data. For simplicity, the latter will be looked at. All the codes are based on TF2.x. </p>
+<h3 id="Graph-mode"><a href="#Graph-mode" class="headerlink" title="Graph mode"></a>Graph mode</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@tf.function</span><br><span class="line">def shuffled_sum(input_val, seed&#x3D;123):</span><br><span class="line">    print(&quot;Python run&quot;)</span><br><span class="line">    tf.random.set_seed(seed)</span><br><span class="line">    tensorValue1 &#x3D; tf.random.shuffle(input_val, seed)</span><br><span class="line">    tf.print(tensorValue1)</span><br><span class="line">    tensorValue2 &#x3D; tf.random.shuffle(input_val, seed)</span><br><span class="line">    tf.print(tensorValue2)</span><br><span class="line"></span><br><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])  # run-1</span><br><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])  # run-2</span><br><span class="line"></span><br><span class="line">## output:</span><br><span class="line">Python run</span><br><span class="line">[8 7 3 ... 9 1 10] ---A</span><br><span class="line">[8 7 3 ... 9 1 10] ---B</span><br><span class="line">[6 8 10 ... 4 1 7] ---C</span><br><span class="line">[6 8 10 ... 4 1 7] ---D</span><br></pre></td></tr></table></figure>
+<p>The intention of <code>shuffled_sum</code> was to set the seed as much as it can to achieve repeatable results. But why we didn’t see <code>A==C</code>? </p>
+<p>A: TF’s builds the graph first and find that input argument <code>seed</code> is not related to <code>tensorValue1</code> and <code>tensorValue2</code>. In run-2, the global seed is not seen for the shuffle op. The internal counter for shuffle op increments. For <code>A==B</code> ,  the two ops takes in the same input args, so TF regards them as identical. </p>
+<h3 id="Eager-mode"><a href="#Eager-mode" class="headerlink" title="Eager mode"></a>Eager mode</h3><p>This time, we comments out <code>tf.funciton</code>,and see the output as</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">## output:</span><br><span class="line">Python run</span><br><span class="line">[8 7 3 ... 9 1 10] ---A</span><br><span class="line">[6 8 10 ... 4 1 7] ---B</span><br><span class="line">Python run</span><br><span class="line">[8 7 3 ... 9 1 10] ---C</span><br><span class="line">[6 8 10 ... 4 1 7] ---D</span><br></pre></td></tr></table></figure>
+<p>Now <code>A==C</code> reals the global seed works. But <code>A!=B</code> means that B is the next sequence of A given the seeds combination and it’s deterministic.  In eager mode, the shuffle simply runs twice(counter increments) in the function.</p>
+<h3 id="How-to-enforce-repeatability-in-graph-mode"><a href="#How-to-enforce-repeatability-in-graph-mode" class="headerlink" title="How to enforce repeatability in graph mode?"></a>How to enforce repeatability in graph mode?</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])</span><br><span class="line">tf.random.set_seed(123)</span><br><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])</span><br><span class="line">## output:</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br></pre></td></tr></table></figure>
+<p>‘tf.random.set_seed(123)’ have to be run before gets into run-2 so it cannot fall into a graph. In TF1.x way, it should comes before session.run(xxx).</p>
+]]></content>
+      <categories>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>Randomness</tag>
+        <tag>Determinism</tag>
+        <tag>Tensorflow</tag>
+        <tag>Deep Learning</tag>
+        <tag>eager execution</tag>
       </tags>
   </entry>
   <entry>
