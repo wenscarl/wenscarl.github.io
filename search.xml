@@ -513,6 +513,52 @@ or git clone -b hexo &lt;remote_repo&gt; ....
       </tags>
   </entry>
   <entry>
+    <title>Machine Learning</title>
+    <url>/Machine-Learning/2020-10-08-Maching-learning.html</url>
+    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This is a series of course projects for Machine Learning at UNM. For the topics, please refer to the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Keywords</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://drive.google.com/file/d/166U1g7DIQUAqwpPBPXGx2oVb_Y8vWDKy/view?usp=sharing">Kernel Tricks for Regrssion Problems</a></td>
+<td>Kernel Methods, Ridge Regression, Support Vector Machine, Classification</td>
+</tr>
+<tr>
+<td><a href="https://drive.google.com/file/d/1xSmkzo0DuT44t4cEJzvbINlo7UhylVyV/view?usp=sharing">Support Vector Machine for Classification and Regression</a></td>
+<td>SVM, Structural risk, Classification, Regression</td>
+</tr>
+<tr>
+<td><a href="https://drive.google.com/file/d/1odVvtl2Y1ChLeAxfBdeMBdyfZ8kWIuuZ/view?usp=sharing">Hidden Markov Models</a></td>
+<td>Hidden Markov Model, Markov Model, Latent Variable, Markov Process</td>
+</tr>
+<tr>
+<td><a href="https://drive.google.com/file/d/1pt5Ou9hvZ55NDtPlE2cBw4rSwuODWXtJ/view?usp=sharing">Latent Linear Models: PCA and ICA</a></td>
+<td>Latent Linear Model, PCA, PPCA, ICA, FastICA, EM, Factor Analysis</td>
+</tr>
+<tr>
+<td><a href="https://drive.google.com/file/d/1d2jZrlAiDdpEqe2BPi2p5WTUV7fYZBKU/view?usp=sharing">Clustering with Gaussian Mixture Models and K-Means</a></td>
+<td>EM, Gaussian Mixture Models, K-means</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Machine Learning</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+        <tag>HMM</tag>
+        <tag>SVM</tag>
+        <tag>PCA</tag>
+        <tag>ICA</tag>
+        <tag>GMM</tag>
+        <tag>EM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown-cheatsheet</title>
     <url>/uncategorized/2020-10-08-Markdown-cheatsheet.html</url>
     <content><![CDATA[<h1 id="Markdown-Cheatsheet"><a href="#Markdown-Cheatsheet" class="headerlink" title="Markdown Cheatsheet"></a>Markdown Cheatsheet<a name="TOP"></a></h1><hr>
@@ -683,49 +729,15 @@ Markup: --------------- (below H2 text)
       </tags>
   </entry>
   <entry>
-    <title>Machine Learning</title>
-    <url>/Machine-Learning/2020-10-08-Maching-learning.html</url>
-    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This is a series of course projects for Machine Learning at UNM. For the topics, please refer to the following table.</p>
-<table>
-<thead>
-<tr>
-<th>Topic</th>
-<th>Keywords</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a href="https://drive.google.com/file/d/166U1g7DIQUAqwpPBPXGx2oVb_Y8vWDKy/view?usp=sharing">Kernel Tricks for Regrssion Problems</a></td>
-<td>Kernel Methods, Ridge Regression, Support Vector Machine, Classification</td>
-</tr>
-<tr>
-<td><a href="https://drive.google.com/file/d/1xSmkzo0DuT44t4cEJzvbINlo7UhylVyV/view?usp=sharing">Support Vector Machine for Classification and Regression</a></td>
-<td>SVM, Structural risk, Classification, Regression</td>
-</tr>
-<tr>
-<td><a href="https://drive.google.com/file/d/1odVvtl2Y1ChLeAxfBdeMBdyfZ8kWIuuZ/view?usp=sharing">Hidden Markov Models</a></td>
-<td>Hidden Markov Model, Markov Model, Latent Variable, Markov Process</td>
-</tr>
-<tr>
-<td><a href="https://drive.google.com/file/d/1pt5Ou9hvZ55NDtPlE2cBw4rSwuODWXtJ/view?usp=sharing">Latent Linear Models: PCA and ICA</a></td>
-<td>Latent Linear Model, PCA, PPCA, ICA, FastICA, EM, Factor Analysis</td>
-</tr>
-<tr>
-<td><a href="https://drive.google.com/file/d/1d2jZrlAiDdpEqe2BPi2p5WTUV7fYZBKU/view?usp=sharing">Clustering with Gaussian Mixture Models and K-Means</a></td>
-<td>EM, Gaussian Mixture Models, K-means</td>
-</tr>
-</tbody></table>
+    <title>ParaReal-heat</title>
+    <url>/uncategorized/2020-10-08-ParaReal-heat.html</url>
+    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This <a href="/docs/parallelcomputing/CS542Presentation.pdf">project</a> implements a Parallel-in-Time(PIT) algorithm, ParaReal for heat equation with hybrid OpenMP and MPI.  </p>
 ]]></content>
-      <categories>
-        <category>Machine Learning</category>
-      </categories>
       <tags>
-        <tag>machine learning</tag>
-        <tag>HMM</tag>
-        <tag>SVM</tag>
-        <tag>PCA</tag>
-        <tag>ICA</tag>
-        <tag>GMM</tag>
-        <tag>EM</tag>
+        <tag>parallel computing</tag>
+        <tag>ParaReal</tag>
+        <tag>PIT</tag>
+        <tag>roofline model</tag>
       </tags>
   </entry>
   <entry>
@@ -785,18 +797,6 @@ Markup: --------------- (below H2 text)
       </tags>
   </entry>
   <entry>
-    <title>ParaReal-heat</title>
-    <url>/uncategorized/2020-10-08-ParaReal-heat.html</url>
-    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This <a href="/docs/parallelcomputing/CS542Presentation.pdf">project</a> implements a Parallel-in-Time(PIT) algorithm, ParaReal for heat equation with hybrid OpenMP and MPI.  </p>
-]]></content>
-      <tags>
-        <tag>parallel computing</tag>
-        <tag>ParaReal</tag>
-        <tag>PIT</tag>
-        <tag>roofline model</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Useful docker commands</title>
     <url>/uncategorized/2020-10-08-Useful-docker-commands.html</url>
     <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> ~/.bash_aliases</span><br><span class="line"><span class="comment"># kill all running containers</span></span><br><span class="line"><span class="built_in">alias</span> dockerkill=<span class="string">&#x27;docker kill $(docker ps -a -q)&#x27;</span></span><br><span class="line"><span class="comment"># delelte all stopped containers</span></span><br><span class="line"><span class="built_in">alias</span> dockercleanc=<span class="string">&#x27;docker rm $(docker ps -a -q)&#x27;</span></span><br><span class="line"><span class="comment"># delete all untaged images</span></span><br><span class="line"><span class="built_in">alias</span> dockercleani=<span class="string">&#x27;docker rmi $(docker images -q -f dangling=true)&#x27;</span>  </span><br><span class="line"><span class="comment"># delte all stopped and untaged images</span></span><br><span class="line"><span class="built_in">alias</span> dockerclean=<span class="string">&#x27;dockercleanc || true &amp;&amp; dockercleani&#x27;</span></span><br></pre></td></tr></table></figure>]]></content>
@@ -841,7 +841,7 @@ Markup: --------------- (below H2 text)
 <p>Files included:</p>
 <p>Folder <strong>forDelivery</strong> contains the DGTD solver in <strong>dgtd_MPI</strong>, geometry files in <strong>geo</strong> and all necessary file to obtain the s-parameter in folder <strong>halfmatchTL</strong>. To start,go to <strong>halfmatchTL</strong> and execute <em>runMPI.sh</em>. </p>
 <p>In folder <strong>circuitfittingProject</strong>, there includes necessary MATLAB and python files. Each file should be commented well. </p>
-<p>For any question, please contact <a href="mailto:&#115;&#x68;&#x75;&#119;&#97;&#110;&#103;&#x31;&#50;&#64;&#117;&#x6e;&#109;&#x2e;&#101;&#100;&#x75;">&#115;&#x68;&#x75;&#119;&#97;&#110;&#103;&#x31;&#50;&#64;&#117;&#x6e;&#109;&#x2e;&#101;&#100;&#x75;</a>. </p>
+<p>For any question, please contact <a href="mailto:&#115;&#104;&#117;&#x77;&#x61;&#x6e;&#x67;&#49;&#x32;&#64;&#117;&#x6e;&#x6d;&#x2e;&#x65;&#x64;&#x75;">&#115;&#104;&#117;&#x77;&#x61;&#x6e;&#x67;&#49;&#x32;&#64;&#117;&#x6e;&#x6d;&#x2e;&#x65;&#x64;&#x75;</a>. </p>
 ]]></content>
       <categories>
         <category>cem</category>
@@ -883,7 +883,10 @@ Markup: --------------- (below H2 text)
   <entry>
     <title>What does std::move do at parameter binding?</title>
     <url>/programming/2022-01-23-what%20does%20stdmove%20do.html</url>
-    <content><![CDATA[<p><code>std::move</code> is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears in factory mode and demonstrate how compiler treat it at parameter binding. Some term clarification:</p>
+    <content><![CDATA[<p><code>std::move</code> is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears frequently in factory mode and demonstrate how compiler treats it at parameter binding. </p>
+<a id="more"></a>
+
+<p>Some term clarification:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void foo(int p1);</span><br><span class="line">int a &#x3D; 1;</span><br><span class="line">foo(a);</span><br></pre></td></tr></table></figure>
 <p>we refer <code>p1</code> as parameter and <code>a</code> as argument of <code>foo</code>. </p>
 <p>Say we have a resource class as</p>

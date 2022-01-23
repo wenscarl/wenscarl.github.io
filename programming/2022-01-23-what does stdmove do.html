@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="std::move is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears in fact">
+  <meta name="description" content="std::move is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears frequen">
 <meta property="og:type" content="article">
 <meta property="og:title" content="What does std::move do at parameter binding?">
 <meta property="og:url" content="http://example.com/programming/2022-01-23-what%20does%20stdmove%20do.html">
 <meta property="og:site_name" content="吾将上下而求索">
-<meta property="og:description" content="std::move is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears in fact">
+<meta property="og:description" content="std::move is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears frequen">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-01-23T06:00:00.000Z">
-<meta property="article:modified_time" content="2022-01-23T16:46:35.783Z">
+<meta property="article:modified_time" content="2022-01-23T19:16:33.767Z">
 <meta property="article:author" content="Ian Wang">
 <meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
@@ -224,7 +224,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 01-23-2022 00:00:00 / Modified: 10:46:35" itemprop="dateCreated datePublished" datetime="2022-01-23T00:00:00-06:00">01-23-2022</time>
+              <time title="Created: 01-23-2022 00:00:00 / Modified: 13:16:33" itemprop="dateCreated datePublished" datetime="2022-01-23T00:00:00-06:00">01-23-2022</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -247,7 +247,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><code>std::move</code> is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears in factory mode and demonstrate how compiler treat it at parameter binding. Some term clarification:</p>
+        <p><code>std::move</code> is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears frequently in factory mode and demonstrate how compiler treats it at parameter binding. </p>
+<a id="more"></a>
+
+<p>Some term clarification:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void foo(int p1);</span><br><span class="line">int a &#x3D; 1;</span><br><span class="line">foo(a);</span><br></pre></td></tr></table></figure>
 <p>we refer <code>p1</code> as parameter and <code>a</code> as argument of <code>foo</code>. </p>
 <p>Say we have a resource class as</p>
