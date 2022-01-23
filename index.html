@@ -197,6 +197,134 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/programming/2022-01-23-what%20does%20stdmove%20do.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/programming/2022-01-23-what%20does%20stdmove%20do.html" class="post-title-link" itemprop="url">What does std::move do at parameter binding?</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 01-23-2022 00:00:00 / Modified: 10:46:35" itemprop="dateCreated datePublished" datetime="2022-01-23T00:00:00-06:00">01-23-2022</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming/" itemprop="url" rel="index"><span itemprop="name">programming</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><code>std::move</code> is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears in factory mode and demonstrate how compiler treat it at parameter binding. Some term clarification:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void foo(int p1);</span><br><span class="line">int a &#x3D; 1;</span><br><span class="line">foo(a);</span><br></pre></td></tr></table></figure>
+<p>we refer <code>p1</code> as parameter and <code>a</code> as argument of <code>foo</code>. </p>
+<p>Say we have a resource class as</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Struct Resource &#123;&#125;;</span><br></pre></td></tr></table></figure>
+<p>and a handle class to hold the resource as,</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">handle</span> &#123;</span></span><br><span class="line"> <span class="keyword">public</span>:                                                     </span><br><span class="line">  handle () &#123; res = <span class="keyword">new</span> Resource(); &#125;                               </span><br><span class="line">  ~handle () &#123; <span class="keyword">if</span> (res) <span class="keyword">delete</span> res; &#125;</span><br><span class="line">  handle (<span class="keyword">const</span> handle &amp; other)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;copy constructor&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;At entrance: other.res=&quot;</span>&lt;&lt;other.res&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    res = <span class="keyword">new</span> Resource(*other.res);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;I am set to=&quot;</span>&lt;&lt;res&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">                                                        </span><br><span class="line">  handle (handle &amp;&amp; other) &#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;move constructor&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    res = other.res;</span><br><span class="line">    other.res = <span class="literal">nullptr</span>;</span><br><span class="line">  &#125;</span><br><span class="line">                                                        </span><br><span class="line">  handle &amp; <span class="keyword">operator</span>=(handle &amp;&amp; other)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;move assignment&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">std</span>::swap(res, other.res);</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function">Resource* <span class="title">get_res</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> res; &#125;</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  Resource* res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>Then we need a wrapper class as an aggregate of couple of handles like this</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">wrapper</span>&#123;</span></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  wrapper(handle &amp;&amp;handle) :</span><br><span class="line">   _handle_1(<span class="built_in">std</span>::move(handle)) &#123;</span><br><span class="line">       <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;private member  holds resource &quot;</span>&lt;&lt;_handle_1.get_res()&lt;&lt;<span class="string">&quot;; parameter holds &quot;</span> &lt;&lt;</span><br><span class="line">           handle.get_res()&lt;&lt;<span class="built_in">endl</span>;&#125;  </span><br><span class="line">    </span><br><span class="line">  <span class="function">handle* <span class="title">get_handle</span><span class="params">()</span>  </span>&#123;<span class="keyword">return</span> &amp;_handle_1;&#125;</span><br><span class="line">  wrapper(wrapper&amp;&amp; x) = <span class="keyword">default</span>;</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  handle _handle_1;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p> Assume there is a user case where the ownership needs to be passed around.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">handle h4;</span><br><span class="line">cout &lt;&lt;&quot;h4 res&#x3D;&quot;&lt;&lt;h4.get_res()&lt;&lt;endl;</span><br><span class="line">unique_ptr&lt;wrapper&gt; m(new wrapper(std::move(h4)));</span><br><span class="line">cout &lt;&lt;&quot;h4 res&#x3D;&quot;&lt;&lt;h4.get_res()&lt;&lt;endl;</span><br><span class="line">cout &lt;&lt;&quot;m res&#x3D;&quot;&lt;&lt;instance-&gt;get_holder()-&gt;get_res()&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
+<p>It’s nearly a common ground that we need to use <code>std::move(h4)</code> as argument to construct <code>wrapper()</code>, but the key is how to write the initialization list of the constructor for class wrapper. We have the following 4 cases.</p>
+<ol>
+<li><code>wrapper(handle &amp;&amp;handle) : _handle_1(std::move(handle))</code></li>
+<li><code>wrapper(handle &amp;&amp;handle) : _handle_1(handle)</code></li>
+<li><code>wrapper(handle handle) : _handle_1(std::move(handle))</code></li>
+<li><code>wrapper(handle handle) : _handle_1(handle)</code></li>
+</ol>
+<ul>
+<li><pre><code class="c++">// output #1
+h4 res=0x55fbc9929eb0
+move constructor
+private member holds resource 0x55fbc9929eb0; parameter holds 0
+h4 res=0
+m res=0x55fbc9929eb0
+Success! It&#39;s what we want and  only 1 move constructor is called. The compiler it smart enough to `swap(h4, _handl_1)`.
+    
+// output #2
+h4 res=0x564af9158eb0
+copy constructor
+At entrance: other.res=0x564af9158eb0
+I am set to=0x564af9159300
+private member holds resource 0x564af9159300; parameter holds 0x564af9158eb0
+h4 res=0x564af9158eb0
+m res=0x564af9159300
+Failure. No move at all because we never mean  to `move` explicitly inside wrapper. Luckily, `h4` is not tampered and `h4-&gt;temp` is saved or optimized by compiler. 
+    
+// output #3
+h4 res=0x555ca6e7ceb0
+move constructor
+move constructor
+private member holds resource 0x555ca6e7ceb0; parameter holds 0
+h4 res=0
+m res=0x555ca6e7ceb0
+Success! But 2 moves. Interestingly, no copy constructor! `h4-&gt;temp-&gt;_handle_1`
+    
+// output #4
+h4 res=0x56100474deb0
+move constructor
+copy constructor
+At entrance: other.res=0x56100474deb0
+I am set to=0x56100474e300
+private member holds resource 0x56100474e300; parameter holds 0x56100474deb0
+h4 res=0
+m res=0x56100474e300
+Failure. Really bad because `h4-&gt;temp` and gets lost!
+
+</code></pre>
+</li>
+</ul>
+<p>Based on analysis above, I would actually recommend case 3 over 1 though one more time of <code>move</code>. Reason is case 3 is more general in which case the input argument can be rvalue or lvalue. Moreover, <code>move</code> is implemented by <code>swap</code> under the hood(usually) thus not too much overheads. </p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/GPU/inter-cta-sync.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -876,84 +1004,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/uncategorized/2020-10-08-Markdown-cheatsheet.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/nuanuan.jpg">
-      <meta itemprop="name" content="Ian Wang">
-      <meta itemprop="description" content="Ian's place to write">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="吾将上下而求索">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/uncategorized/2020-10-08-Markdown-cheatsheet.html" class="post-title-link" itemprop="url">Markdown-cheatsheet</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 10-05-2020 00:30:42" itemprop="dateCreated datePublished" datetime="2020-10-05T00:30:42-05:00">10-05-2020</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 10-08-2020 23:48:41" itemprop="dateModified" datetime="2020-10-08T23:48:41-05:00">10-08-2020</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Markdown-Cheatsheet"><a href="#Markdown-Cheatsheet" class="headerlink" title="Markdown Cheatsheet"></a>Markdown Cheatsheet<a name="TOP"></a></h1><hr>
-<h1 id="Heading-1"><a href="#Heading-1" class="headerlink" title="Heading 1"></a>Heading 1</h1><pre><code>Markup :  # Heading 1 #
-
--OR-
-
-Markup :  ============= (below H1 text)
-</code></pre>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/uncategorized/2020-10-08-Markdown-cheatsheet.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1025,20 +1075,20 @@ Markup :  ============= (below H1 text)
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-count">23</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-count">35</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

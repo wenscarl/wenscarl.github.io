@@ -20,24 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="MotivationDeterminism is a important issue in deep learning(DL) though a lot of randomness is burried here and there, e.g. initialization of weights  It’s actually easier to understand in TF1.x langua">
+  <meta name="description" content="std::move is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears in fact">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Deterministic-random-shuffle">
-<meta property="og:url" content="http://example.com/Deep-Learning/2020-10-14-Deterministic-random-shuffle.html">
+<meta property="og:title" content="What does std::move do at parameter binding?">
+<meta property="og:url" content="http://example.com/programming/2022-01-23-what%20does%20stdmove%20do.html">
 <meta property="og:site_name" content="吾将上下而求索">
-<meta property="og:description" content="MotivationDeterminism is a important issue in deep learning(DL) though a lot of randomness is burried here and there, e.g. initialization of weights  It’s actually easier to understand in TF1.x langua">
+<meta property="og:description" content="std::move is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears in fact">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-10-14T06:00:00.000Z">
-<meta property="article:modified_time" content="2021-02-14T02:47:36.597Z">
+<meta property="article:published_time" content="2022-01-23T06:00:00.000Z">
+<meta property="article:modified_time" content="2022-01-23T16:46:35.783Z">
 <meta property="article:author" content="Ian Wang">
-<meta property="article:tag" content="Randomness">
-<meta property="article:tag" content="Determinism">
-<meta property="article:tag" content="Tensorflow">
-<meta property="article:tag" content="Deep Learning">
-<meta property="article:tag" content="eager execution">
+<meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/Deep-Learning/2020-10-14-Deterministic-random-shuffle.html">
+<link rel="canonical" href="http://example.com/programming/2022-01-23-what%20does%20stdmove%20do.html">
 
 
 <script id="page-configurations">
@@ -50,7 +46,7 @@
   };
 </script>
 
-  <title>Deterministic-random-shuffle | 吾将上下而求索</title>
+  <title>What does std::move do at parameter binding? | 吾将上下而求索</title>
   
 
 
@@ -204,7 +200,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/Deep-Learning/2020-10-14-Deterministic-random-shuffle.html">
+    <link itemprop="mainEntityOfPage" href="http://example.com/programming/2022-01-23-what%20does%20stdmove%20do.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/nuanuan.jpg">
@@ -217,7 +213,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Deterministic-random-shuffle
+          What does std::move do at parameter binding?
         </h1>
 
         <div class="post-meta">
@@ -226,23 +222,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 10-14-2020 01:00:00" itemprop="dateCreated datePublished" datetime="2020-10-14T01:00:00-05:00">10-14-2020</time>
+              <time title="Created: 01-23-2022 00:00:00 / Modified: 10:46:35" itemprop="dateCreated datePublished" datetime="2022-01-23T00:00:00-06:00">01-23-2022</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 02-13-2021 20:47:36" itemprop="dateModified" datetime="2021-02-13T20:47:36-06:00">02-13-2021</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Deep-Learning/" itemprop="url" rel="index"><span itemprop="name">Deep Learning</span></a>
+                  <a href="/categories/programming/" itemprop="url" rel="index"><span itemprop="name">programming</span></a>
                 </span>
             </span>
 
@@ -257,21 +247,67 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><p>Determinism is a important issue in deep learning(DL) though a lot of randomness is burried here and there, e.g. initialization of weights </p>
-<p>It’s actually easier to understand in TF1.x language, purely graph mode. This <a target="_blank" rel="noopener" href="https://www.tensorflow.org/api_docs/python/tf/compat/v1/set_random_seed">link</a> is highly recommended. TF2.x introduces eager mode but still keeps graph mode option by all sorts of means, e.g. <code>tf.function</code>. It’s explained <a target="_blank" rel="noopener" href="https://www.tensorflow.org/api_docs/python/tf/random/set_seed">here</a> but to be honest way more  counterintuitive.</p>
-<p>This post aims to list couple of senarios may trip you down when playing around with such concepts. </p>
-<a id="more"></a>
+        <p><code>std::move</code> is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears in factory mode and demonstrate how compiler treat it at parameter binding. Some term clarification:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void foo(int p1);</span><br><span class="line">int a &#x3D; 1;</span><br><span class="line">foo(a);</span><br></pre></td></tr></table></figure>
+<p>we refer <code>p1</code> as parameter and <code>a</code> as argument of <code>foo</code>. </p>
+<p>Say we have a resource class as</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Struct Resource &#123;&#125;;</span><br></pre></td></tr></table></figure>
+<p>and a handle class to hold the resource as,</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">handle</span> &#123;</span></span><br><span class="line"> <span class="keyword">public</span>:                                                     </span><br><span class="line">  handle () &#123; res = <span class="keyword">new</span> Resource(); &#125;                               </span><br><span class="line">  ~handle () &#123; <span class="keyword">if</span> (res) <span class="keyword">delete</span> res; &#125;</span><br><span class="line">  handle (<span class="keyword">const</span> handle &amp; other)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;copy constructor&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;At entrance: other.res=&quot;</span>&lt;&lt;other.res&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    res = <span class="keyword">new</span> Resource(*other.res);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;I am set to=&quot;</span>&lt;&lt;res&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">                                                        </span><br><span class="line">  handle (handle &amp;&amp; other) &#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;move constructor&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    res = other.res;</span><br><span class="line">    other.res = <span class="literal">nullptr</span>;</span><br><span class="line">  &#125;</span><br><span class="line">                                                        </span><br><span class="line">  handle &amp; <span class="keyword">operator</span>=(handle &amp;&amp; other)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;move assignment&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">std</span>::swap(res, other.res);</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function">Resource* <span class="title">get_res</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> res; &#125;</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  Resource* res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>Then we need a wrapper class as an aggregate of couple of handles like this</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">wrapper</span>&#123;</span></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  wrapper(handle &amp;&amp;handle) :</span><br><span class="line">   _handle_1(<span class="built_in">std</span>::move(handle)) &#123;</span><br><span class="line">       <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;private member  holds resource &quot;</span>&lt;&lt;_handle_1.get_res()&lt;&lt;<span class="string">&quot;; parameter holds &quot;</span> &lt;&lt;</span><br><span class="line">           handle.get_res()&lt;&lt;<span class="built_in">endl</span>;&#125;  </span><br><span class="line">    </span><br><span class="line">  <span class="function">handle* <span class="title">get_handle</span><span class="params">()</span>  </span>&#123;<span class="keyword">return</span> &amp;_handle_1;&#125;</span><br><span class="line">  wrapper(wrapper&amp;&amp; x) = <span class="keyword">default</span>;</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  handle _handle_1;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p> Assume there is a user case where the ownership needs to be passed around.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">handle h4;</span><br><span class="line">cout &lt;&lt;&quot;h4 res&#x3D;&quot;&lt;&lt;h4.get_res()&lt;&lt;endl;</span><br><span class="line">unique_ptr&lt;wrapper&gt; m(new wrapper(std::move(h4)));</span><br><span class="line">cout &lt;&lt;&quot;h4 res&#x3D;&quot;&lt;&lt;h4.get_res()&lt;&lt;endl;</span><br><span class="line">cout &lt;&lt;&quot;m res&#x3D;&quot;&lt;&lt;instance-&gt;get_holder()-&gt;get_res()&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
+<p>It’s nearly a common ground that we need to use <code>std::move(h4)</code> as argument to construct <code>wrapper()</code>, but the key is how to write the initialization list of the constructor for class wrapper. We have the following 4 cases.</p>
+<ol>
+<li><code>wrapper(handle &amp;&amp;handle) : _handle_1(std::move(handle))</code></li>
+<li><code>wrapper(handle &amp;&amp;handle) : _handle_1(handle)</code></li>
+<li><code>wrapper(handle handle) : _handle_1(std::move(handle))</code></li>
+<li><code>wrapper(handle handle) : _handle_1(handle)</code></li>
+</ol>
+<ul>
+<li><pre><code class="c++">// output #1
+h4 res=0x55fbc9929eb0
+move constructor
+private member holds resource 0x55fbc9929eb0; parameter holds 0
+h4 res=0
+m res=0x55fbc9929eb0
+Success! It&#39;s what we want and  only 1 move constructor is called. The compiler it smart enough to `swap(h4, _handl_1)`.
+    
+// output #2
+h4 res=0x564af9158eb0
+copy constructor
+At entrance: other.res=0x564af9158eb0
+I am set to=0x564af9159300
+private member holds resource 0x564af9159300; parameter holds 0x564af9158eb0
+h4 res=0x564af9158eb0
+m res=0x564af9159300
+Failure. No move at all because we never mean  to `move` explicitly inside wrapper. Luckily, `h4` is not tampered and `h4-&gt;temp` is saved or optimized by compiler. 
+    
+// output #3
+h4 res=0x555ca6e7ceb0
+move constructor
+move constructor
+private member holds resource 0x555ca6e7ceb0; parameter holds 0
+h4 res=0
+m res=0x555ca6e7ceb0
+Success! But 2 moves. Interestingly, no copy constructor! `h4-&gt;temp-&gt;_handle_1`
+    
+// output #4
+h4 res=0x56100474deb0
+move constructor
+copy constructor
+At entrance: other.res=0x56100474deb0
+I am set to=0x56100474e300
+private member holds resource 0x56100474e300; parameter holds 0x56100474deb0
+h4 res=0
+m res=0x56100474e300
+Failure. Really bad because `h4-&gt;temp` and gets lost!
 
-<h2 id="Problem-statement"><a href="#Problem-statement" class="headerlink" title="Problem statement"></a>Problem statement</h2><p>Determinism means, in most cases, the identical results among many runs. A common approach is <code>tf.random.set_seed(SEED)</code> at the entry point of your code. To be frank, there is a lot of implications going on under the hood, but essentially it will achieve repeatable results. I am actually assuming all the ops(on CPU and GPU) are deterministic, but in fact NOT! Check <a target="_blank" rel="noopener" href="https://github.com/NVIDIA/framework-determinism">here</a>.</p>
-<p>This post will focus on another case: without running the program twice, can we get a repeatable results, if a op under test is executed in a loop many times. A substantial example would be 1) identical dropout between batches or epochs; 2) same order of shuffle of input data. For simplicity, the latter will be looked at. All the codes are based on TF2.x. </p>
-<h3 id="Graph-mode"><a href="#Graph-mode" class="headerlink" title="Graph mode"></a>Graph mode</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">@tf.function</span><br><span class="line">def shuffled_sum(input_val, seed&#x3D;123):</span><br><span class="line">    print(&quot;Python run&quot;)</span><br><span class="line">    tf.random.set_seed(seed)</span><br><span class="line">    tensorValue1 &#x3D; tf.random.shuffle(input_val, seed)</span><br><span class="line">    tf.print(tensorValue1)</span><br><span class="line">    tensorValue2 &#x3D; tf.random.shuffle(input_val, seed)</span><br><span class="line">    tf.print(tensorValue2)</span><br><span class="line"></span><br><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])  # run-1</span><br><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])  # run-2</span><br><span class="line"></span><br><span class="line">## output:</span><br><span class="line">Python run</span><br><span class="line">[8 7 3 ... 9 1 10] ---A</span><br><span class="line">[8 7 3 ... 9 1 10] ---B</span><br><span class="line">[6 8 10 ... 4 1 7] ---C</span><br><span class="line">[6 8 10 ... 4 1 7] ---D</span><br></pre></td></tr></table></figure>
-<p>The intention of <code>shuffled_sum</code> was to set the seed as much as it can to achieve repeatable results. But why we didn’t see <code>A==C</code>? </p>
-<p>A: TF’s builds the graph first and find that input argument <code>seed</code> is not related to <code>tensorValue1</code> and <code>tensorValue2</code>. In run-2, the global seed is not seen for the shuffle op. The internal counter for shuffle op increments. For <code>A==B</code> ,  the two ops takes in the same input args, so TF regards them as identical. </p>
-<h3 id="Eager-mode"><a href="#Eager-mode" class="headerlink" title="Eager mode"></a>Eager mode</h3><p>This time, we comments out <code>tf.funciton</code>,and see the output as</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">## output:</span><br><span class="line">Python run</span><br><span class="line">[8 7 3 ... 9 1 10] ---A</span><br><span class="line">[6 8 10 ... 4 1 7] ---B</span><br><span class="line">Python run</span><br><span class="line">[8 7 3 ... 9 1 10] ---C</span><br><span class="line">[6 8 10 ... 4 1 7] ---D</span><br></pre></td></tr></table></figure>
-<p>Now <code>A==C</code> reals the global seed works. But <code>A!=B</code> means that B is the next sequence of A given the seeds combination and it’s deterministic.  In eager mode, the shuffle simply runs twice(counter increments) in the function.</p>
-<h3 id="How-to-enforce-repeatability-in-graph-mode"><a href="#How-to-enforce-repeatability-in-graph-mode" class="headerlink" title="How to enforce repeatability in graph mode?"></a>How to enforce repeatability in graph mode?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])</span><br><span class="line">tf.random.set_seed(123)</span><br><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])</span><br><span class="line">## output:</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br></pre></td></tr></table></figure>
-<p>‘tf.random.set_seed(123)’ have to be run before gets into run-2 so it cannot fall into a graph. In TF1.x way, it should comes before session.run(xxx).</p>
+</code></pre>
+</li>
+</ul>
+<p>Based on analysis above, I would actually recommend case 3 over 1 though one more time of <code>move</code>. Reason is case 3 is more general in which case the input argument can be rvalue or lvalue. Moreover, <code>move</code> is implemented by <code>swap</code> under the hood(usually) thus not too much overheads. </p>
 
     </div>
 
@@ -281,11 +317,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Randomness/" rel="tag"># Randomness</a>
-              <a href="/tags/Determinism/" rel="tag"># Determinism</a>
-              <a href="/tags/Tensorflow/" rel="tag"># Tensorflow</a>
-              <a href="/tags/Deep-Learning/" rel="tag"># Deep Learning</a>
-              <a href="/tags/eager-execution/" rel="tag"># eager execution</a>
+              <a href="/tags/c/" rel="tag"># c++</a>
           </div>
 
         
@@ -294,13 +326,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/uncategorized/2020-10-08-Useful-docker-commands.html" rel="prev" title="Useful docker commands">
-      <i class="fa fa-chevron-left"></i> Useful docker commands
+    <a href="/GPU/inter-cta-sync.html" rel="prev" title="How to achieve Inter-cta sync on Nvidia GPU">
+      <i class="fa fa-chevron-left"></i> How to achieve Inter-cta sync on Nvidia GPU
     </a></div>
-      <div class="post-nav-item">
-    <a href="/uncategorized/2016-06-12-HEXO_Advanced.html" rel="next" title="HEXO Advanced">
-      HEXO Advanced <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -359,7 +388,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Motivation"><span class="nav-number">1.</span> <span class="nav-text">Motivation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-statement"><span class="nav-number">2.</span> <span class="nav-text">Problem statement</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Graph-mode"><span class="nav-number">2.1.</span> <span class="nav-text">Graph mode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Eager-mode"><span class="nav-number">2.2.</span> <span class="nav-text">Eager mode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-enforce-repeatability-in-graph-mode"><span class="nav-number">2.3.</span> <span class="nav-text">How to enforce repeatability in graph mode?</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
