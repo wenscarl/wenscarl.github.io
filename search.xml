@@ -11219,4 +11219,46 @@ Failure. Really bad because `h4-&gt;temp` and gets lost!
         <tag>algorithms</tag>
       </tags>
   </entry>
+  <entry>
+    <title>What does std::forward do?</title>
+    <url>/programming/2022-01-24-what%20does%20stdforward%20do.html</url>
+    <content><![CDATA[<p><code>std::forward</code> is another signature feature of c++11 beside <code>std::move</code>. Technically, it does perfect forwarding. But of what and when? In this post, we will explore some use cases and context behind.</p>
+<a id="more"></a>
+
+<p><strong>C++11 lets us perform perfect forwarding, which means that we can forward the parameters passed to a function template to another function call inside it without losing their own qualifiers (const-ref, ref, value, rvalue, etc.).</strong></p>
+<h1 id="THE-standard"><a href="#THE-standard" class="headerlink" title="THE standard"></a>THE standard</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span>&#123;</span></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line">  foo(T&amp;&amp; p) : _p(<span class="built_in">std</span>::forward&lt;T&gt;(p)) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>The above snippet covers almost 90% occurrence but with lots of pretexts and c++ rules. Boiler first.</p>
+<p>   1.<strong>_ Reference folding  _</strong></p>
+<ol>
+<li><p>X&amp; &amp;, X&amp; &amp;&amp;, X&amp;&amp; &amp; -&gt; X&amp;</p>
+</li>
+<li><p>X&amp;&amp; &amp;&amp; -&gt; X&amp;&amp;</p>
+</li>
+<li><p>A special rule for rvalue reference. When a left value is passed to a function whose argument is a right-valued reference, and this right-valued reference points to a template type argument (T&amp;&amp;), the compiler infers that the template argument type is a left-valued reference to the real parameter, as in </p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(T&amp;&amp;)</span></span>;</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">f(i)</span><br></pre></td></tr></table></figure>
+<p>T is int&amp; but not int. Again, according to the reference folding rule <code>void f(int&amp; &amp;&amp;)</code> will be inferred as <code>f(int&amp;)</code>, so f will be instantiated as: <code>f&lt;int&amp;&gt;(int&amp;)</code>. That make sense because we never intend to pass in a rvalue.</p>
+</li>
+<li><p><strong><em><code>std::forward</code>cast its parameter(here <code>p</code>) to a rvalue only when the parameter binds to a rvalue.</em></strong></p>
+<p>Here a example is better to illustrate the idea. For <em>THE standard</em> code,</p>
+<ul>
+<li><p>pass in as </p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i=<span class="number">0</span>; foo(i);</span><br></pre></td></tr></table></figure>
+<p>rule #2 is satisfied and <code>T = int&amp;</code>. <code>foo&lt;int&amp;&gt;(int&amp; &amp;&amp; p) -&gt; foo&lt;int&amp;&gt;(int&amp; p)</code> is called. Here parameter <code>p</code> is a rvalue and rvalue reference.</p>
+</li>
+<li><p>pass in as</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">foo(<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<p><code>T = int</code>, and <code>foo&lt;int&gt;(int&amp;&amp; p)</code> where <code>p</code> is a rvalue reference but lvalue itself. Passing to inner function as rvalue reference, we have to do <code>std::move(p)</code>.<br>A concise way to combine such 2 cases is <code>std::forward(p)</code>. What <code>std::forward(p)</code> returns is a lvalue or rvalue exactly the same as whatever the argument is. Let conclude with a complete example.</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;type_traits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;typeinfo&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    A(<span class="keyword">int</span>&amp;&amp; a) : _a(a) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;move , a=&quot;</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    A(<span class="keyword">int</span>&amp; a)  : _a(a) &#123;</span><br><span class="line">       <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;copy , a=&quot;</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span>:</span><br><span class="line">   <span class="keyword">int</span> _a;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T1</span>, <span class="keyword">class</span> <span class="title">T2</span>, <span class="keyword">class</span> <span class="title">T3</span>&gt;</span></span><br><span class="line">    B(T1 &amp;&amp; t1, T2 &amp;&amp; t2, T3 &amp;&amp; t3) :</span><br><span class="line">        a1_(<span class="built_in">std</span>::forward&lt;T1&gt;(t1)),</span><br><span class="line">        a2_(<span class="built_in">std</span>::forward&lt;T2&gt;(t2)),</span><br><span class="line">        a3_(<span class="built_in">std</span>::forward&lt;T3&gt;(t3)) &#123;&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    A a1_, a2_, a3_;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;class... U&gt;</span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">unique_ptr</span>&lt;B&gt; <span class="title">make_unique</span><span class="params">(U&amp;&amp;... u)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">std</span>::<span class="built_in">unique_ptr</span>&lt;B&gt;(<span class="keyword">new</span> B(<span class="built_in">std</span>::forward&lt;U&gt;(u)...));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">5</span>;</span><br><span class="line">    <span class="keyword">auto</span> p1 = make_unique(i, <span class="number">2</span>, <span class="built_in">std</span>::move(i));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// output</span></span><br><span class="line">copy , a=<span class="number">5</span></span><br><span class="line">move , a=<span class="number">2</span></span><br><span class="line">move , a=<span class="number">5</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>programming</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+      </tags>
+  </entry>
 </search>
