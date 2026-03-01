@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+  <link rel="mask-icon" href="/images/favicon.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="std::move is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears frequen">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What does std::move do at parameter binding?">
+<meta property="og:url" content="http://example.com/programming/2022-01-23-what%20does%20stdmove%20do.html">
+<meta property="og:site_name" content="吾将上下而求索">
+<meta property="og:description" content="std::move is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears frequen">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-01-23T06:00:00.000Z">
+<meta property="article:modified_time" content="2026-02-28T16:20:26.741Z">
+<meta property="article:author" content="Ian Wang">
+<meta property="article:tag" content="c++">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/programming/2022-01-23-what%20does%20stdmove%20do.html">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/programming/2022-01-23-what%20does%20stdmove%20do.html","path":"programming/2022-01-23-what does stdmove do.html","title":"What does std::move do at parameter binding?"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>What does std::move do at parameter binding? | 吾将上下而求索</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">吾将上下而求索</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Keep young, keep on</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ian Wang"
+      src="/images/nuanuan.jpg">
+  <p class="site-author-name" itemprop="name">Ian Wang</p>
+  <div class="site-description" itemprop="description">Ian's place to write</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">39</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wenscarl" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wenscarl" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:shuw@outlook.com" title="E-Mail → mailto:shuw@outlook.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="Back to top">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/programming/2022-01-23-what%20does%20stdmove%20do.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="What does std::move do at parameter binding? | 吾将上下而求索">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          What does std::move do at parameter binding?
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 01-23-2022 00:00:00" itemprop="dateCreated datePublished" datetime="2022-01-23T00:00:00-06:00">01-23-2022</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 02-28-2026 10:20:26" itemprop="dateModified" datetime="2026-02-28T10:20:26-06:00">02-28-2026</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/programming/" itemprop="url" rel="index"><span itemprop="name">programming</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><code>std::move</code> is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears frequently in factory mode and demonstrate how compiler treats it at parameter binding. </p>
+<a id="more"></a>
+
+<p>Some term clarification:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void foo(int p1);</span><br><span class="line">int a &#x3D; 1;</span><br><span class="line">foo(a);</span><br></pre></td></tr></table></figure>
+<p>we refer <code>p1</code> as parameter and <code>a</code> as argument of <code>foo</code>. </p>
+<p>Say we have a resource class as</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Struct Resource &#123;&#125;;</span><br></pre></td></tr></table></figure>
+<p>and a handle class to hold the resource as,</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">handle</span> &#123;</span></span><br><span class="line"> <span class="keyword">public</span>:                                                     </span><br><span class="line">  handle () &#123; res = <span class="keyword">new</span> Resource(); &#125;                               </span><br><span class="line">  ~handle () &#123; <span class="keyword">if</span> (res) <span class="keyword">delete</span> res; &#125;</span><br><span class="line">  handle (<span class="keyword">const</span> handle &amp; other)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;copy constructor&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;At entrance: other.res=&quot;</span>&lt;&lt;other.res&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    res = <span class="keyword">new</span> Resource(*other.res);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;I am set to=&quot;</span>&lt;&lt;res&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">                                                        </span><br><span class="line">  handle (handle &amp;&amp; other) &#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;move constructor&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    res = other.res;</span><br><span class="line">    other.res = <span class="literal">nullptr</span>;</span><br><span class="line">  &#125;</span><br><span class="line">                                                        </span><br><span class="line">  handle &amp; <span class="keyword">operator</span>=(handle &amp;&amp; other)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;move assignment&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">std</span>::swap(res, other.res);</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function">Resource* <span class="title">get_res</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> res; &#125;</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  Resource* res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>Then we need a wrapper class as an aggregate of couple of handles like this</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">wrapper</span>&#123;</span></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  wrapper(handle &amp;&amp;handle) :</span><br><span class="line">   _handle_1(<span class="built_in">std</span>::move(handle)) &#123;</span><br><span class="line">       <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;private member  holds resource &quot;</span>&lt;&lt;_handle_1.get_res()&lt;&lt;<span class="string">&quot;; parameter holds &quot;</span> &lt;&lt;</span><br><span class="line">           handle.get_res()&lt;&lt;<span class="built_in">endl</span>;&#125;  </span><br><span class="line">    </span><br><span class="line">  <span class="function">handle* <span class="title">get_handle</span><span class="params">()</span>  </span>&#123;<span class="keyword">return</span> &amp;_handle_1;&#125;</span><br><span class="line">  wrapper(wrapper&amp;&amp; x) = <span class="keyword">default</span>;</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  handle _handle_1;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p> Assume there is a user case where the ownership needs to be passed around.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">handle h4;</span><br><span class="line">cout &lt;&lt;&quot;h4 res&#x3D;&quot;&lt;&lt;h4.get_res()&lt;&lt;endl;</span><br><span class="line">unique_ptr&lt;wrapper&gt; m(new wrapper(std::move(h4)));</span><br><span class="line">cout &lt;&lt;&quot;h4 res&#x3D;&quot;&lt;&lt;h4.get_res()&lt;&lt;endl;</span><br><span class="line">cout &lt;&lt;&quot;m res&#x3D;&quot;&lt;&lt;instance-&gt;get_holder()-&gt;get_res()&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
+<p>It’s nearly a common ground that we need to use <code>std::move(h4)</code> as argument to construct <code>wrapper()</code>, but the key is how to write the initialization list of the constructor for class wrapper. We have the following 4 cases.</p>
+<ol>
+<li><code>wrapper(handle &amp;&amp;handle) : _handle_1(std::move(handle))</code></li>
+<li><code>wrapper(handle &amp;&amp;handle) : _handle_1(handle)</code></li>
+<li><code>wrapper(handle handle) : _handle_1(std::move(handle))</code></li>
+<li><code>wrapper(handle handle) : _handle_1(handle)</code></li>
+</ol>
+<ul>
+<li><pre><code class="c++">// output #1
+h4 res=0x55fbc9929eb0
+move constructor
+private member holds resource 0x55fbc9929eb0; parameter holds 0
+h4 res=0
+m res=0x55fbc9929eb0
+Success! It&#39;s what we want and  only 1 move constructor is called. The compiler it smart enough to `swap(h4, _handl_1)`.
+    
+// output #2
+h4 res=0x564af9158eb0
+copy constructor
+At entrance: other.res=0x564af9158eb0
+I am set to=0x564af9159300
+private member holds resource 0x564af9159300; parameter holds 0x564af9158eb0
+h4 res=0x564af9158eb0
+m res=0x564af9159300
+Failure. No move at all because we never mean  to `move` explicitly inside wrapper. Parameter handle is a lvalue though itself is a rvalue reference. No wonder class handle invokes its copy constructor. So std::move(handle) is indispensable. Luckily, `h4` is not tampered and `h4-&gt;temp` is skipped or optimized by compiler. With std::forward() syntex, perfect forwarding, we can preserve the qualifiers (const-ref, ref, value, rvalue, etc.). of parameter and will be discusssed in another post.
+    
+// output #3
+h4 res=0x555ca6e7ceb0
+move constructor
+move constructor
+private member holds resource 0x555ca6e7ceb0; parameter holds 0
+h4 res=0
+m res=0x555ca6e7ceb0
+Success! But 2 moves. Interestingly, no copy constructor! `h4-&gt;temp-&gt;_handle_1`
+    
+// output #4
+h4 res=0x56100474deb0
+move constructor
+copy constructor
+At entrance: other.res=0x56100474deb0
+I am set to=0x56100474e300
+private member holds resource 0x56100474e300; parameter holds 0x56100474deb0
+h4 res=0
+m res=0x56100474e300
+Failure. Really bad because `h4-&gt;temp` and gets lost!
+
+</code></pre>
+</li>
+</ul>
+<p>Based on analysis above, I would actually recommend case 3 over 1 though one more time of <code>move</code>. Reason is case 3 is more general in which case the input argument can be rvalue or lvalue. Moreover, <code>move</code> is implemented by <code>swap</code> under the hood(usually) thus not too much overheads. </p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    Donate
+  </button>
+  <div class="post-reward">
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/c/" rel="tag"># c++</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/GPU/inter-cta-sync.html" rel="prev" title="How to achieve Inter-cta sync on Nvidia GPU">
+                  <i class="fa fa-angle-left"></i> How to achieve Inter-cta sync on Nvidia GPU
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/programming/2022-01-24-what%20does%20stdforward%20do.html" rel="next" title="What does std::forward do?">
+                  What does std::forward do? <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ian Wang</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

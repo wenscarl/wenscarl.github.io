@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+  <link rel="mask-icon" href="/images/favicon.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Ian&#39;s place to write">
+<meta property="og:type" content="website">
+<meta property="og:title" content="吾将上下而求索">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="吾将上下而求索">
+<meta property="og:description" content="Ian&#39;s place to write">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Ian Wang">
+<meta property="article:tag" content="computational science, machine learning">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>吾将上下而求索</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">吾将上下而求索</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Keep young, keep on</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ian Wang"
+      src="/images/nuanuan.jpg">
+  <p class="site-author-name" itemprop="name">Ian Wang</p>
+  <div class="site-description" itemprop="description">Ian's place to write</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">39</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wenscarl" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wenscarl" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:shuw@outlook.com" title="E-Mail → mailto:shuw@outlook.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="Back to top">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/GPU/Why-record-stream-Matters-A-Real-CUDA-Memory-Bug-in-SGLang.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 吾将上下而求索">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/GPU/Why-record-stream-Matters-A-Real-CUDA-Memory-Bug-in-SGLang.html" class="post-title-link" itemprop="url">Why record_stream Matters: A Real CUDA Memory Bug in SGLang</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 02-21-2026 00:00:00" itemprop="dateCreated datePublished" datetime="2026-02-21T00:00:00-06:00">02-21-2026</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 03-01-2026 10:49:20" itemprop="dateModified" datetime="2026-03-01T10:49:20-06:00">03-01-2026</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/GPU/" itemprop="url" rel="index"><span itemprop="name">GPU</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>PyTorch’s CUDA memory caching allocator is designed to be fast — it recycles GPU memory aggressively based on Python reference counting. This works transparently most of the time, but it has a blind spot: <strong>it only tracks the stream on which a tensor was originally allocated</strong>.</p>
+<p>When a tensor is passed to a <em>different</em> CUDA stream, the allocator has no idea. If Python references to that tensor drop to zero at the wrong moment, the allocator can reclaim the memory while the second stream’s kernel is still reading it. The result is a silent use-after-free on the GPU: corrupted data, out-of-bounds crashes, or worse — wrong answers with no error at all.</p>
+<p>This exact bug was recently caught in <a target="_blank" rel="noopener" href="https://github.com/sgl-project/sglang/issues/18744">SGLang’s speculative decoding (EAGLE v2)</a>, and fixed with a single call to <code>record_stream</code>.</p>
+<hr>
+<h2 id="The-Bug-Index-Out-of-Bounds-in-Speculative-Decoding"><a href="#The-Bug-Index-Out-of-Bounds-in-Speculative-Decoding" class="headerlink" title="The Bug: Index Out of Bounds in Speculative Decoding"></a>The Bug: Index Out of Bounds in Speculative Decoding</h2><h3 id="Symptom"><a href="#Symptom" class="headerlink" title="Symptom"></a>Symptom</h3><p>SGLang users running DeepSeek-R1 on 8× B200/GB200 GPUs with speculative decoding (EAGLE, 2 steps) at high concurrency (≥ 1024) saw intermittent crashes like:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vectorized_gather_kernel: block: [0,1,0], thread: [64,0,0]</span><br><span class="line">  Assertion &#96;ind &gt;&#x3D; 0 &amp;&amp; ind &lt; ind_dim_size&#96; failed</span><br><span class="line"></span><br><span class="line">IndexKernel.cu:111: operator():</span><br><span class="line">  Assertion &#96;-sizes[i] &lt;&#x3D; index &amp;&amp; index &lt; sizes[i]&#96; failed</span><br></pre></td></tr></table></figure>
+<p>The indices tensor used to gather from <code>topk_p_buf</code>, <code>topk_index_buf</code>, <code>hidden_states_buf</code>, etc. contained garbage — both negative values and values far exceeding the buffer size.</p>
+<h3 id="Root-Cause"><a href="#Root-Cause" class="headerlink" title="Root Cause"></a>Root Cause</h3><p>The race condition unfolds in this sequence:</p>
+<ol>
+<li>An <code>indices</code> tensor is <strong>allocated on PyTorch’s default stream</strong>.</li>
+<li>The object holding that tensor (<code>spec_info</code>) is <strong>replaced</strong> — <code>batch.spec_info</code> is assigned a new value, dropping the last Python reference to the old one.</li>
+<li>PyTorch’s caching allocator sees refcount → 0 and <strong>reclaims the GPU memory</strong>.</li>
+<li>Meanwhile, the <strong>forward/compute stream</strong> enqueues kernels that read from those same indices.</li>
+<li>The forward stream reads from memory that has already been freed and partially overwritten → <strong>corrupted indices → out-of-bounds crash</strong>.</li>
+</ol>
+<p>The key insight: steps 3 and 4 can race because they happen on <em>different streams</em> with no synchronization between them.</p>
+<h3 id="The-Fix-PR-18958"><a href="#The-Fix-PR-18958" class="headerlink" title="The Fix (PR #18958)"></a>The Fix (<a target="_blank" rel="noopener" href="https://github.com/sgl-project/sglang/pull/18958">PR #18958</a>)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Before (broken)</span></span><br><span class="line">draft_input.topk_p = self.topk_p_buf[draft_input.future_indices.indices]</span><br><span class="line"></span><br><span class="line"><span class="comment"># After (fixed)</span></span><br><span class="line">indices = draft_input.future_indices.indices</span><br><span class="line">indices.record_stream(torch.get_device_module(self.device).current_stream())</span><br><span class="line">draft_input.topk_p = self.topk_p_buf[indices]</span><br></pre></td></tr></table></figure>
+<p>One line. <code>indices.record_stream(stream)</code> tells the caching allocator: “the current stream is also using this tensor — don’t free it until this stream has passed this point.” The race is eliminated.</p>
+<hr>
+<h2 id="What-record-stream-Does"><a href="#What-record-stream-Does" class="headerlink" title="What record_stream Does"></a>What <code>record_stream</code> Does</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tensor.record_stream(stream)</span><br></pre></td></tr></table></figure>
+<p>Registers <code>stream</code> as a consumer of <code>tensor</code>‘s underlying GPU memory. The caching allocator will not reuse that memory until <strong>all enqueued operations on <code>stream</code></strong> at the time of the call have completed.</p>
+<p><strong>When you need it:</strong> any time a tensor is:</p>
+<ul>
+<li>allocated (or last used) on stream A</li>
+<li>then handed off to stream B for further GPU work</li>
+<li>and Python references may drop to zero before stream B finishes</li>
+</ul>
+<p><strong>When you don’t need it:</strong> if you hold a Python reference to the tensor until after stream B is done (e.g., you explicitly synchronize before releasing it), the reference itself keeps the memory alive.</p>
+<hr>
+<h2 id="Minimal-Reproducer"><a href="#Minimal-Reproducer" class="headerlink" title="Minimal Reproducer"></a>Minimal Reproducer</h2><!-- PASTE YOUR REPRODUCER CODE HERE -->
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gc</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line">DEVICE = <span class="string">&quot;cuda:0&quot;</span></span><br><span class="line">N = <span class="number">32</span> * <span class="number">1024</span> * <span class="number">1024</span>  <span class="comment"># 128 MB</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">buggy</span>():</span></span><br><span class="line">    side = torch.cuda.Stream(DEVICE)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># ① Source tensor born on the DEFAULT stream.</span></span><br><span class="line">    src = torch.full((N,), <span class="number">1.0</span>, dtype=torch.float32, device=DEVICE)</span><br><span class="line">    torch.cuda.synchronize()</span><br><span class="line"></span><br><span class="line">    out = torch.empty(N, dtype=torch.float32, device=DEVICE)</span><br><span class="line">    <span class="keyword">with</span> torch.cuda.stream(side):</span><br><span class="line">        <span class="comment"># ② Burn GPU cycles on the side stream to delay the copy,</span></span><br><span class="line">        <span class="comment">#    giving the default stream time to recycle src&#x27;s memory.</span></span><br><span class="line">        delay = torch.zeros(<span class="number">4096</span>, <span class="number">4096</span>, device=DEVICE)</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">20</span>):</span><br><span class="line">            delay = torch.mm(delay + <span class="number">1e-6</span>, delay + <span class="number">1e-6</span>)</span><br><span class="line">        out.copy_(src)</span><br><span class="line">        <span class="comment"># ★ KEY FIX: tell the allocator src&#x27;s memory is live on `side`.</span></span><br><span class="line">        <span class="comment">#   The block will not be recycled until all work queued on `side`</span></span><br><span class="line">        <span class="comment">#   up to this point (including the copy) has completed.</span></span><br><span class="line">        <span class="comment">#   Both streams continue running concurrently — no serialization.</span></span><br><span class="line">        <span class="comment"># src.record_stream(side)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># ③ Python ref dropped. Allocator marks the block free for the default</span></span><br><span class="line">    <span class="comment">#    stream — unaware that the side stream will read it after the matmuls.</span></span><br><span class="line">    <span class="keyword">del</span> src</span><br><span class="line">    gc.collect()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># ④ Same-size allocation on the DEFAULT stream gets the recycled block</span></span><br><span class="line">    <span class="comment">#    and overwrites it with 2.0 while side stream is still in matmuls.</span></span><br><span class="line">    poison = torch.full((N,), <span class="number">2.0</span>, dtype=torch.float32, device=DEVICE)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Sync only to observe the result — the corruption already happened above.</span></span><br><span class="line">    torch.cuda.synchronize()</span><br><span class="line">    side.synchronize()</span><br><span class="line"></span><br><span class="line">    got = out[<span class="number">0</span>].item()</span><br><span class="line">    print(<span class="string">f&quot;[buggy ] expected=1.0  got=<span class="subst">&#123;got:<span class="number">.1</span>f&#125;</span>  &quot;</span></span><br><span class="line">          <span class="string">f&quot;→ <span class="subst">&#123;<span class="string">&#x27;CORRUPTED&#x27;</span> <span class="keyword">if</span> got != <span class="number">1.0</span> <span class="keyword">else</span> <span class="string">&#x27;OK (lucky this run)&#x27;</span>&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">del</span> poison, out</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">BUF_SIZE = <span class="number">32</span> * <span class="number">1024</span> * <span class="number">1024</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">not_succesful_buggy</span>():</span></span><br><span class="line">    side = torch.cuda.Stream(DEVICE)</span><br><span class="line"></span><br><span class="line">    buf = torch.arange(BUF_SIZE, dtype=torch.float32, device=DEVICE)  <span class="comment"># buf[i] == i</span></span><br><span class="line">    gate = torch.cuda.Event()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># ① Valid indices on DEFAULT stream: values in [0, BUF_SIZE).</span></span><br><span class="line">    indices = torch.randint(<span class="number">0</span>, BUF_SIZE, (N,), dtype=torch.int64, device=DEVICE)</span><br><span class="line">    torch.cuda.synchronize()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">with</span> torch.cuda.stream(side):</span><br><span class="line">        <span class="comment"># ② Delay gather so default stream can lap it.</span></span><br><span class="line">        delay = torch.zeros(<span class="number">4096</span>, <span class="number">4096</span>, device=DEVICE)</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">20</span>):</span><br><span class="line">            delay = torch.mm(delay + <span class="number">1e-6</span>, delay + <span class="number">1e-6</span>)</span><br><span class="line">        side.wait_event(gate)</span><br><span class="line">        out = buf[indices]   <span class="comment"># gather — reads indices after matmuls</span></span><br><span class="line"></span><br><span class="line">    indices_ptr = indices.data_ptr()</span><br><span class="line">    <span class="keyword">del</span> indices</span><br><span class="line">    gc.collect()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># ③ Recycle with OOB values — same dtype, same count.</span></span><br><span class="line">    poison = torch.full((N,), BUF_SIZE + <span class="number">9999</span>, dtype=torch.int64, device=DEVICE)</span><br><span class="line">    <span class="keyword">assert</span> poison.data_ptr() == indices_ptr, <span class="string">&quot;allocator did not reuse block&quot;</span></span><br><span class="line"></span><br><span class="line">    gate.record()</span><br><span class="line">    torch.cuda.synchronize()  <span class="comment"># poison write finishes</span></span><br><span class="line">    side.synchronize()        <span class="comment"># gather runs — reads OOB indices</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># With TORCH_USE_CUDA_DSA=1 + CUDA_LAUNCH_BLOCKING=1: assertion crash above.</span></span><br><span class="line">    <span class="comment"># Without: silent corruption — output should equal valid gathered values</span></span><br><span class="line">    <span class="comment">#          but instead reflects OOB reads (garbage or wrapped values).</span></span><br><span class="line">    got = out[<span class="number">0</span>].item()</span><br><span class="line">    expected = out[<span class="number">0</span>].item()  <span class="comment"># meaningless since buf[i]==i, just show it&#x27;s garbage</span></span><br><span class="line">    print(<span class="string">f&quot;[buggy ] out[0]=<span class="subst">&#123;got:<span class="number">.1</span>f&#125;</span>  (if corrupted, will not match any valid buf value)&quot;</span>)</span><br><span class="line">    <span class="keyword">del</span> poison, out, buf</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="keyword">assert</span> torch.cuda.is_available(), <span class="string">&quot;CUDA required&quot;</span></span><br><span class="line">    buggy()</span><br><span class="line">    not_succesful_buggy()</span><br></pre></td></tr></table></figure>
+<p>CUDA_LAUNCH_BLOCKING=1 python show_bug.py<br>Hides the bug;</p>
+<p>python show_bug.py<br>will display the difference. And src.record_stream(side) fixes it. Not sure why another cannot reproduce.</p>
+<hr>
+<h2 id="Key-Takeaways"><a href="#Key-Takeaways" class="headerlink" title="Key Takeaways"></a>Key Takeaways</h2><ul>
+<li><strong>The PyTorch caching allocator tracks allocation stream, not usage stream.</strong> Cross-stream tensor handoffs without <code>record_stream</code> are a latent use-after-free.</li>
+<li><strong>The bug is silent until it isn’t.</strong> At low concurrency or on slower hardware, the race window may never open. It took 8× B200s at 1024 concurrent requests to expose it reliably.</li>
+<li><strong>The fix is cheap.</strong> <code>record_stream</code> costs essentially nothing — it just registers a stream with the allocator’s internal bookkeeping.</li>
+<li><strong>Speculative decoding amplifies the risk.</strong> SGLang’s overlap scheduler runs prefill and decode on separate streams concurrently, and <code>spec_info</code> objects have short, non-obvious lifetimes — a perfect storm for this class of bug.</li>
+</ul>
+<hr>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/sgl-project/sglang/issues/18744">SGLang issue #18744</a> — original bug report</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/sgl-project/sglang/pull/18958">SGLang PR #18958</a> — the fix</li>
+<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.Tensor.record_stream.html">PyTorch docs: <code>Tensor.record_stream</code></a></li>
+<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/notes/cuda.html#memory-management">PyTorch CUDA memory management</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/programming/2022-01-24-what%20does%20stdforward%20do.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 吾将上下而求索">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/programming/2022-01-24-what%20does%20stdforward%20do.html" class="post-title-link" itemprop="url">What does std::forward do?</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 01-24-2022 00:00:00" itemprop="dateCreated datePublished" datetime="2022-01-24T00:00:00-06:00">01-24-2022</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 02-28-2026 10:20:26" itemprop="dateModified" datetime="2026-02-28T10:20:26-06:00">02-28-2026</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/programming/" itemprop="url" rel="index"><span itemprop="name">programming</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><code>std::forward</code> is another signature feature of c++11 beside <code>std::move</code>. Technically, it does perfect forwarding. But of what and when? In this post, we will explore some use cases and context behind.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/programming/2022-01-24-what%20does%20stdforward%20do.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/programming/2022-01-23-what%20does%20stdmove%20do.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 吾将上下而求索">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/programming/2022-01-23-what%20does%20stdmove%20do.html" class="post-title-link" itemprop="url">What does std::move do at parameter binding?</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 01-23-2022 00:00:00" itemprop="dateCreated datePublished" datetime="2022-01-23T00:00:00-06:00">01-23-2022</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 02-28-2026 10:20:26" itemprop="dateModified" datetime="2026-02-28T10:20:26-06:00">02-28-2026</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/programming/" itemprop="url" rel="index"><span itemprop="name">programming</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><code>std::move</code> is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears frequently in factory mode and demonstrate how compiler treats it at parameter binding. </p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/programming/2022-01-23-what%20does%20stdmove%20do.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/GPU/inter-cta-sync.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 吾将上下而求索">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/GPU/inter-cta-sync.html" class="post-title-link" itemprop="url">How to achieve Inter-cta sync on Nvidia GPU</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 05-27-2021 00:00:00" itemprop="dateCreated datePublished" datetime="2021-05-27T00:00:00-05:00">05-27-2021</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 02-28-2026 10:33:43" itemprop="dateModified" datetime="2026-02-28T10:33:43-06:00">02-28-2026</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/GPU/" itemprop="url" rel="index"><span itemprop="name">GPU</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>　In many deep learning and scientific applications, inter-CTA-sync is a necessary pattern. But<br>even with CUDA9’s new feature coperative launch, inter-CTA-sync is never trivial. This blog will dive into this topic with a reduction as our model. </p>
+<p> Say we need to perform a reduction over a entire grid of threads and a natural idea is to reduce intra-block first and inter-block as a second step, so called two-step protocal. It is the best version in terms of performance and comprehensibility. The second step is what need to pay attention to because other blocks have to consume data my block produced in a safe way(Producer-Consumer model). Sure, two kernel launch can be a kill but not in our scope.   </p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/GPU/inter-cta-sync.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Deep-Learning/2020-10-14-Deterministic-random-shuffle.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 吾将上下而求索">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Deep-Learning/2020-10-14-Deterministic-random-shuffle.html" class="post-title-link" itemprop="url">Deterministic-random-shuffle</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 10-14-2020 00:00:00" itemprop="dateCreated datePublished" datetime="2020-10-14T00:00:00-05:00">10-14-2020</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 02-28-2026 10:20:26" itemprop="dateModified" datetime="2026-02-28T10:20:26-06:00">02-28-2026</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Deep-Learning/" itemprop="url" rel="index"><span itemprop="name">Deep Learning</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><p>Determinism is a important issue in deep learning(DL) though a lot of randomness is burried here and there, e.g. initialization of weights </p>
+<p>It’s actually easier to understand in TF1.x language, purely graph mode. This <a target="_blank" rel="noopener" href="https://www.tensorflow.org/api_docs/python/tf/compat/v1/set_random_seed">link</a> is highly recommended. TF2.x introduces eager mode but still keeps graph mode option by all sorts of means, e.g. <code>tf.function</code>. It’s explained <a target="_blank" rel="noopener" href="https://www.tensorflow.org/api_docs/python/tf/random/set_seed">here</a> but to be honest way more  counterintuitive.</p>
+<p>This post aims to list couple of senarios may trip you down when playing around with such concepts. </p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/Deep-Learning/2020-10-14-Deterministic-random-shuffle.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/uncategorized/2020-10-08-Useful-docker-commands.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 吾将上下而求索">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/uncategorized/2020-10-08-Useful-docker-commands.html" class="post-title-link" itemprop="url">Useful docker commands</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 10-07-2020 23:06:57" itemprop="dateCreated datePublished" datetime="2020-10-07T23:06:57-05:00">10-07-2020</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 02-28-2026 10:20:26" itemprop="dateModified" datetime="2026-02-28T10:20:26-06:00">02-28-2026</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> ~/.bash_aliases</span><br><span class="line"><span class="comment"># kill all running containers</span></span><br><span class="line"><span class="built_in">alias</span> dockerkill=<span class="string">&#x27;docker kill $(docker ps -a -q)&#x27;</span></span><br><span class="line"><span class="comment"># delelte all stopped containers</span></span><br><span class="line"><span class="built_in">alias</span> dockercleanc=<span class="string">&#x27;docker rm $(docker ps -a -q)&#x27;</span></span><br><span class="line"><span class="comment"># delete all untaged images</span></span><br><span class="line"><span class="built_in">alias</span> dockercleani=<span class="string">&#x27;docker rmi $(docker images -q -f dangling=true)&#x27;</span>  </span><br><span class="line"><span class="comment"># delte all stopped and untaged images</span></span><br><span class="line"><span class="built_in">alias</span> dockerclean=<span class="string">&#x27;dockercleanc || true &amp;&amp; dockercleani&#x27;</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Math/2020-10-08-DDM-elliptic.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 吾将上下而求索">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Math/2020-10-08-DDM-elliptic.html" class="post-title-link" itemprop="url">Domain Decomposition Method for Elliptic PDEs</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 10-05-2020 22:30:08" itemprop="dateCreated datePublished" datetime="2020-10-05T22:30:08-05:00">10-05-2020</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 02-28-2026 10:20:26" itemprop="dateModified" datetime="2026-02-28T10:20:26-06:00">02-28-2026</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Math/" itemprop="url" rel="index"><span itemprop="name">Math</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This is a brief introduction to domain decomposition method(<strong>DDM</strong>) for MATH576 at UNM. The report can be found <a href="/docs/Numerical/DDM.pdf">here</a>. </p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/uncategorized/2020-10-08-ParaReal-heat.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 吾将上下而求索">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/uncategorized/2020-10-08-ParaReal-heat.html" class="post-title-link" itemprop="url">ParaReal-heat</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 10-05-2020 22:29:42" itemprop="dateCreated datePublished" datetime="2020-10-05T22:29:42-05:00">10-05-2020</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 02-28-2026 10:20:26" itemprop="dateModified" datetime="2026-02-28T10:20:26-06:00">02-28-2026</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This <a href="/docs/parallelcomputing/CS542Presentation.pdf">project</a> implements a Parallel-in-Time(PIT) algorithm, ParaReal for heat equation with hybrid OpenMP and MPI.  </p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Machine-Learning/2020-10-08-Maching-learning.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 吾将上下而求索">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Machine-Learning/2020-10-08-Maching-learning.html" class="post-title-link" itemprop="url">Machine Learning</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 10-05-2020 22:29:05" itemprop="dateCreated datePublished" datetime="2020-10-05T22:29:05-05:00">10-05-2020</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 02-28-2026 10:20:26" itemprop="dateModified" datetime="2026-02-28T10:20:26-06:00">02-28-2026</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Machine-Learning/" itemprop="url" rel="index"><span itemprop="name">Machine Learning</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This is a series of course projects for Machine Learning at UNM. For the topics, please refer to the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Keywords</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://drive.google.com/file/d/166U1g7DIQUAqwpPBPXGx2oVb_Y8vWDKy/view?usp=sharing">Kernel Tricks for Regrssion Problems</a></td>
+<td>Kernel Methods, Ridge Regression, Support Vector Machine, Classification</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://drive.google.com/file/d/1xSmkzo0DuT44t4cEJzvbINlo7UhylVyV/view?usp=sharing">Support Vector Machine for Classification and Regression</a></td>
+<td>SVM, Structural risk, Classification, Regression</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://drive.google.com/file/d/1odVvtl2Y1ChLeAxfBdeMBdyfZ8kWIuuZ/view?usp=sharing">Hidden Markov Models</a></td>
+<td>Hidden Markov Model, Markov Model, Latent Variable, Markov Process</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://drive.google.com/file/d/1pt5Ou9hvZ55NDtPlE2cBw4rSwuODWXtJ/view?usp=sharing">Latent Linear Models: PCA and ICA</a></td>
+<td>Latent Linear Model, PCA, PPCA, ICA, FastICA, EM, Factor Analysis</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://drive.google.com/file/d/1d2jZrlAiDdpEqe2BPi2p5WTUV7fYZBKU/view?usp=sharing">Clustering with Gaussian Mixture Models and K-Means</a></td>
+<td>EM, Gaussian Mixture Models, K-means</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Math/2020-10-08-Convex-beamforming.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 吾将上下而求索">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Math/2020-10-08-Convex-beamforming.html" class="post-title-link" itemprop="url">Convex-beamforming</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 10-05-2020 22:28:11" itemprop="dateCreated datePublished" datetime="2020-10-05T22:28:11-05:00">10-05-2020</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 02-28-2026 10:20:26" itemprop="dateModified" datetime="2026-02-28T10:20:26-06:00">02-28-2026</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Math/" itemprop="url" rel="index"><span itemprop="name">Math</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>In this <a href="/docs/Convex/ECE649final.pdf">report</a>, a robust beaming forming problem is analyzed and formulated into second order cone programming. The numerical method will be studied and compared with traditional ones.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ian Wang</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

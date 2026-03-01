@@ -45,64 +45,6 @@
       </tags>
   </entry>
   <entry>
-    <title>文档支持的Markdown语法</title>
-    <url>/uncategorized/2016-11-20-markdownTool.html</url>
-    <content><![CDATA[<h2 id="什么是-Markdown"><a href="#什么是-Markdown" class="headerlink" title="什么是 Markdown"></a>什么是 Markdown</h2><p>Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：如您正在阅读的这篇文章。它使用简单的符号标记不同的标题，分割不同的段落，<strong>粗体</strong> 或者 <em>斜体</em> 某些文字.</p>
-<p>很多产品的文档也是用markdown编写的，并且以“README.MD”的文件名保存在软件的目录下面。
-　　</p>
-<h2 id="一些基本语法"><a href="#一些基本语法" class="headerlink" title="一些基本语法"></a>一些基本语法</h2><p>标题<br>H1 :# Header 1<br>H2 :## Header 2<br>H3 :### Header 3<br>H4 :#### Header 4<br>H5 :##### Header 5<br>H6 :###### Header 6<br>链接 :<a href="URL">Title</a><br>加粗 :<strong>Bold</strong><br>斜体字 :<em>Italics</em><br>*删除线 :<del>text</del><br>内嵌代码 : <code>alert(&#39;Hello World&#39;);</code>        </p>
-<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><ul>
-<li>列表1</li>
-<li>列表2</li>
-<li>列表3</li>
-</ul>
-<h3 id="列表引用"><a href="#列表引用" class="headerlink" title="列表引用"></a>列表引用</h3><blockquote>
-<ul>
-<li>列表1</li>
-<li>列表2</li>
-<li>列表3</li>
-</ul>
-</blockquote>
-<h3 id="插入一张图片"><a href="#插入一张图片" class="headerlink" title="插入一张图片"></a>插入一张图片</h3><p>打赏一个吧</p>
-<p><img src="/images/payimg/weipayimg.jpg"></p>
-<p>css 的大部分语法同样可以在 markdown 上使用，但不同的渲染器渲染出来的 markdown 内容样式也不一样，下面这些链接里面有 markdown 基本语法，你也可以在下面几个平台上尝试着写一些。</p>
-<h2 id="博客支持的高级语法"><a href="#博客支持的高级语法" class="headerlink" title="博客支持的高级语法"></a>博客支持的高级语法</h2><h3 id="1-制作一份待办事宜"><a href="#1-制作一份待办事宜" class="headerlink" title="1. 制作一份待办事宜"></a>1. 制作一份待办事宜</h3><ul>
-<li><input disabled="" type="checkbox"> 支持以 PDF 格式导出文稿</li>
-<li><input disabled="" type="checkbox"> 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率</li>
-<li><input checked="" disabled="" type="checkbox"> 新增 Todo 列表功能</li>
-<li><input checked="" disabled="" type="checkbox"> 修复 图标功能</li>
-</ul>
-<h3 id="2-高亮一段代码"><a href="#2-高亮一段代码" class="headerlink" title="2. 高亮一段代码"></a>2. 高亮一段代码</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># A comment</span></span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27;hello world&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="3-绘制表格"><a href="#3-绘制表格" class="headerlink" title="3. 绘制表格"></a>3. 绘制表格</h4><table>
-<thead>
-<tr>
-<th>项目</th>
-<th align="right">价格</th>
-<th align="center">数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>计算机</td>
-<td align="right">$1600</td>
-<td align="center">5</td>
-</tr>
-<tr>
-<td>手机</td>
-<td align="right">$12</td>
-<td align="center">12</td>
-</tr>
-<tr>
-<td>管线</td>
-<td align="right">$1</td>
-<td align="center">234</td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Jekyll搭建个人博客</title>
     <url>/uncategorized/2016-10-14-jekyll_tutorials1.html</url>
     <content><![CDATA[<p>　之前写了一篇<a href="http://leopardpan.cn/2015/08/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">HEXO搭建个人博客</a>的教程获得了很好评，尤其是在<a href="http://www.jianshu.com/p/465830080ea9">简书</a>上目前已经累积了10W+的阅读量了，也有好心的读者主动给我打赏，在此感谢。</p>
@@ -185,6 +127,64 @@
 ]]></content>
       <tags>
         <tag>jekyll</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文档支持的Markdown语法</title>
+    <url>/uncategorized/2016-11-20-markdownTool.html</url>
+    <content><![CDATA[<h2 id="什么是-Markdown"><a href="#什么是-Markdown" class="headerlink" title="什么是 Markdown"></a>什么是 Markdown</h2><p>Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：如您正在阅读的这篇文章。它使用简单的符号标记不同的标题，分割不同的段落，<strong>粗体</strong> 或者 <em>斜体</em> 某些文字.</p>
+<p>很多产品的文档也是用markdown编写的，并且以“README.MD”的文件名保存在软件的目录下面。
+　　</p>
+<h2 id="一些基本语法"><a href="#一些基本语法" class="headerlink" title="一些基本语法"></a>一些基本语法</h2><p>标题<br>H1 :# Header 1<br>H2 :## Header 2<br>H3 :### Header 3<br>H4 :#### Header 4<br>H5 :##### Header 5<br>H6 :###### Header 6<br>链接 :<a href="URL">Title</a><br>加粗 :<strong>Bold</strong><br>斜体字 :<em>Italics</em><br>*删除线 :<del>text</del><br>内嵌代码 : <code>alert(&#39;Hello World&#39;);</code>        </p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><ul>
+<li>列表1</li>
+<li>列表2</li>
+<li>列表3</li>
+</ul>
+<h3 id="列表引用"><a href="#列表引用" class="headerlink" title="列表引用"></a>列表引用</h3><blockquote>
+<ul>
+<li>列表1</li>
+<li>列表2</li>
+<li>列表3</li>
+</ul>
+</blockquote>
+<h3 id="插入一张图片"><a href="#插入一张图片" class="headerlink" title="插入一张图片"></a>插入一张图片</h3><p>打赏一个吧</p>
+<p><img src="/images/payimg/weipayimg.jpg"></p>
+<p>css 的大部分语法同样可以在 markdown 上使用，但不同的渲染器渲染出来的 markdown 内容样式也不一样，下面这些链接里面有 markdown 基本语法，你也可以在下面几个平台上尝试着写一些。</p>
+<h2 id="博客支持的高级语法"><a href="#博客支持的高级语法" class="headerlink" title="博客支持的高级语法"></a>博客支持的高级语法</h2><h3 id="1-制作一份待办事宜"><a href="#1-制作一份待办事宜" class="headerlink" title="1. 制作一份待办事宜"></a>1. 制作一份待办事宜</h3><ul>
+<li><input disabled="" type="checkbox"> 支持以 PDF 格式导出文稿</li>
+<li><input disabled="" type="checkbox"> 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率</li>
+<li><input checked="" disabled="" type="checkbox"> 新增 Todo 列表功能</li>
+<li><input checked="" disabled="" type="checkbox"> 修复 图标功能</li>
+</ul>
+<h3 id="2-高亮一段代码"><a href="#2-高亮一段代码" class="headerlink" title="2. 高亮一段代码"></a>2. 高亮一段代码</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># A comment</span></span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27;hello world&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="3-绘制表格"><a href="#3-绘制表格" class="headerlink" title="3. 绘制表格"></a>3. 绘制表格</h4><table>
+<thead>
+<tr>
+<th>项目</th>
+<th align="right">价格</th>
+<th align="center">数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>计算机</td>
+<td align="right">$1600</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td>手机</td>
+<td align="right">$12</td>
+<td align="center">12</td>
+</tr>
+<tr>
+<td>管线</td>
+<td align="right">$1</td>
+<td align="center">234</td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -274,6 +274,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Convex-beamforming</title>
+    <url>/Math/2020-10-08-Convex-beamforming.html</url>
+    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>In this <a href="/docs/Convex/ECE649final.pdf">report</a>, a robust beaming forming problem is analyzed and formulated into second order cone programming. The numerical method will be studied and compared with traditional ones.</p>
+]]></content>
+      <categories>
+        <category>Math</category>
+      </categories>
+      <tags>
+        <tag>convex optimization</tag>
+        <tag>beamforming</tag>
+        <tag>SOCP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>All about floating-point numbers</title>
     <url>/Math/2020-10-08-All-about-floating-point-numbers.html</url>
     <content><![CDATA[<h3 id="How-Floating-point-number-are-represented-in-IEEE-754-standard"><a href="#How-Floating-point-number-are-represented-in-IEEE-754-standard" class="headerlink" title="How Floating-point number are represented in IEEE-754 standard"></a>How Floating-point number are represented in IEEE-754 standard</h3><p><img src="/images/UnderstandingFloatingpointnumberrepresentationslide_14.jpg" alt="IEEE754FP"><br>The maximal and minimal number </p>
@@ -321,20 +335,6 @@
       </categories>
       <tags>
         <tag>Floating-point</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Convex-beamforming</title>
-    <url>/Math/2020-10-08-Convex-beamforming.html</url>
-    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>In this <a href="/docs/Convex/ECE649final.pdf">report</a>, a robust beaming forming problem is analyzed and formulated into second order cone programming. The numerical method will be studied and compared with traditional ones.</p>
-]]></content>
-      <categories>
-        <category>Math</category>
-      </categories>
-      <tags>
-        <tag>convex optimization</tag>
-        <tag>beamforming</tag>
-        <tag>SOCP</tag>
       </tags>
   </entry>
   <entry>
@@ -559,6 +559,74 @@ or git clone -b hexo &lt;remote_repo&gt; ....
       </tags>
   </entry>
   <entry>
+    <title>Markdown syntax supported by the document</title>
+    <url>/uncategorized/2020-10-08-Markdown-tool.html</url>
+    <content><![CDATA[<h2 id="What-is-Markdown"><a href="#What-is-Markdown" class="headerlink" title="What is Markdown?"></a>What is Markdown?</h2><h2 id="What-Is-It"><a href="#What-Is-It" class="headerlink" title="What Is It?"></a>What Is It?</h2><p>Markdown is a plain text formatting syntax aimed at making writing  for the internet easier. The philosophy behind Markdown is that plain  text documents should be readable without tags mussing everything up,  but there should still be ways to add text modifiers like lists, bold,  italics, etc. It is an alternative to WYSIWYG (what you see is what you  get) editors, which use rich text that later gets converted to proper  HTML.</p>
+<p>It’s possible you’ve encountered Markdown without realizing it.  Facebook chat, Skype, and Reddit all let you use different flavors of  Markdown to format your messages.</p>
+<p>Here’s a quick example: to make words bold using Markdown, you simply enclose them in * (asterisks). So, <em>bold word</em> would look like <strong>bold word</strong> when everything is said and done.</p>
+<p>All told, Markdown is a great way to write for the web using plain text.</p>
+<h2 id="Basic-grammers"><a href="#Basic-grammers" class="headerlink" title="Basic grammers"></a>Basic grammers</h2><p>Title<br>H1 :# Header 1<br>H2 :## Header 2<br>H3 :### Header 3<br>H4 :#### Header 4<br>H5 :##### Header 5<br>H6 :###### Header 6<br>Link :<a href="URL">Title</a><br>Bold :<strong>Bold</strong><br>Italics :<em>Italics</em><br>*strikebreak :<del>text</del><br>inlines : <code>alert(&#39;Hello World&#39;);</code>        </p>
+<h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><ul>
+<li>list1</li>
+<li>list2</li>
+<li>list3</li>
+</ul>
+<h3 id="list-reference"><a href="#list-reference" class="headerlink" title="list reference"></a>list reference</h3><blockquote>
+<ul>
+<li>list1</li>
+<li>list2</li>
+<li>list3</li>
+</ul>
+</blockquote>
+<h2 id="Advanced-syntax"><a href="#Advanced-syntax" class="headerlink" title="Advanced syntax"></a>Advanced syntax</h2><h3 id="1-Todo-list"><a href="#1-Todo-list" class="headerlink" title="1. Todo list"></a>1. Todo list</h3><ul>
+<li><input disabled="" type="checkbox"> support for exporting the text in PDF format</li>
+<li><input disabled="" type="checkbox"> Improving the Cmd rendering algorithm to improve rendering efficiency using local rendering techniques</li>
+<li><input checked="" disabled="" type="checkbox"> New Todo List Feature</li>
+<li><input checked="" disabled="" type="checkbox"> Fix Icon function<h3 id="2-Highliget-a-snippet-of-code"><a href="#2-Highliget-a-snippet-of-code" class="headerlink" title="2. Highliget a snippet of code"></a>2. Highliget a snippet of code</h3></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># A comment</span></span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27;hello world&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="3-Table"><a href="#3-Table" class="headerlink" title="3. Table"></a>3. Table</h4><table>
+<thead>
+<tr>
+<th>item</th>
+<th align="right">price</th>
+<th align="center">quantity</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>computer</td>
+<td align="right">$1600</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td>cellphone</td>
+<td align="right">$12</td>
+<td align="center">12</td>
+</tr>
+<tr>
+<td>cable</td>
+<td align="right">$1</td>
+<td align="center">234</td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ParaReal-heat</title>
+    <url>/uncategorized/2020-10-08-ParaReal-heat.html</url>
+    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This <a href="/docs/parallelcomputing/CS542Presentation.pdf">project</a> implements a Parallel-in-Time(PIT) algorithm, ParaReal for heat equation with hybrid OpenMP and MPI.  </p>
+]]></content>
+      <tags>
+        <tag>parallel computing</tag>
+        <tag>ParaReal</tag>
+        <tag>PIT</tag>
+        <tag>roofline model</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown-cheatsheet</title>
     <url>/uncategorized/2020-10-08-Markdown-cheatsheet.html</url>
     <content><![CDATA[<h1 id="Markdown-Cheatsheet"><a href="#Markdown-Cheatsheet" class="headerlink" title="Markdown Cheatsheet"></a>Markdown Cheatsheet<a name="TOP"></a></h1><hr>
@@ -729,74 +797,6 @@ Markup: --------------- (below H2 text)
       </tags>
   </entry>
   <entry>
-    <title>Markdown syntax supported by the document</title>
-    <url>/uncategorized/2020-10-08-Markdown-tool.html</url>
-    <content><![CDATA[<h2 id="What-is-Markdown"><a href="#What-is-Markdown" class="headerlink" title="What is Markdown?"></a>What is Markdown?</h2><h2 id="What-Is-It"><a href="#What-Is-It" class="headerlink" title="What Is It?"></a>What Is It?</h2><p>Markdown is a plain text formatting syntax aimed at making writing  for the internet easier. The philosophy behind Markdown is that plain  text documents should be readable without tags mussing everything up,  but there should still be ways to add text modifiers like lists, bold,  italics, etc. It is an alternative to WYSIWYG (what you see is what you  get) editors, which use rich text that later gets converted to proper  HTML.</p>
-<p>It’s possible you’ve encountered Markdown without realizing it.  Facebook chat, Skype, and Reddit all let you use different flavors of  Markdown to format your messages.</p>
-<p>Here’s a quick example: to make words bold using Markdown, you simply enclose them in * (asterisks). So, <em>bold word</em> would look like <strong>bold word</strong> when everything is said and done.</p>
-<p>All told, Markdown is a great way to write for the web using plain text.</p>
-<h2 id="Basic-grammers"><a href="#Basic-grammers" class="headerlink" title="Basic grammers"></a>Basic grammers</h2><p>Title<br>H1 :# Header 1<br>H2 :## Header 2<br>H3 :### Header 3<br>H4 :#### Header 4<br>H5 :##### Header 5<br>H6 :###### Header 6<br>Link :<a href="URL">Title</a><br>Bold :<strong>Bold</strong><br>Italics :<em>Italics</em><br>*strikebreak :<del>text</del><br>inlines : <code>alert(&#39;Hello World&#39;);</code>        </p>
-<h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><ul>
-<li>list1</li>
-<li>list2</li>
-<li>list3</li>
-</ul>
-<h3 id="list-reference"><a href="#list-reference" class="headerlink" title="list reference"></a>list reference</h3><blockquote>
-<ul>
-<li>list1</li>
-<li>list2</li>
-<li>list3</li>
-</ul>
-</blockquote>
-<h2 id="Advanced-syntax"><a href="#Advanced-syntax" class="headerlink" title="Advanced syntax"></a>Advanced syntax</h2><h3 id="1-Todo-list"><a href="#1-Todo-list" class="headerlink" title="1. Todo list"></a>1. Todo list</h3><ul>
-<li><input disabled="" type="checkbox"> support for exporting the text in PDF format</li>
-<li><input disabled="" type="checkbox"> Improving the Cmd rendering algorithm to improve rendering efficiency using local rendering techniques</li>
-<li><input checked="" disabled="" type="checkbox"> New Todo List Feature</li>
-<li><input checked="" disabled="" type="checkbox"> Fix Icon function<h3 id="2-Highliget-a-snippet-of-code"><a href="#2-Highliget-a-snippet-of-code" class="headerlink" title="2. Highliget a snippet of code"></a>2. Highliget a snippet of code</h3></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># A comment</span></span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27;hello world&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="3-Table"><a href="#3-Table" class="headerlink" title="3. Table"></a>3. Table</h4><table>
-<thead>
-<tr>
-<th>item</th>
-<th align="right">price</th>
-<th align="center">quantity</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>computer</td>
-<td align="right">$1600</td>
-<td align="center">5</td>
-</tr>
-<tr>
-<td>cellphone</td>
-<td align="right">$12</td>
-<td align="center">12</td>
-</tr>
-<tr>
-<td>cable</td>
-<td align="right">$1</td>
-<td align="center">234</td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ParaReal-heat</title>
-    <url>/uncategorized/2020-10-08-ParaReal-heat.html</url>
-    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This <a href="/docs/parallelcomputing/CS542Presentation.pdf">project</a> implements a Parallel-in-Time(PIT) algorithm, ParaReal for heat equation with hybrid OpenMP and MPI.  </p>
-]]></content>
-      <tags>
-        <tag>parallel computing</tag>
-        <tag>ParaReal</tag>
-        <tag>PIT</tag>
-        <tag>roofline model</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Useful docker commands</title>
     <url>/uncategorized/2020-10-08-Useful-docker-commands.html</url>
     <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> ~/.bash_aliases</span><br><span class="line"><span class="comment"># kill all running containers</span></span><br><span class="line"><span class="built_in">alias</span> dockerkill=<span class="string">&#x27;docker kill $(docker ps -a -q)&#x27;</span></span><br><span class="line"><span class="comment"># delelte all stopped containers</span></span><br><span class="line"><span class="built_in">alias</span> dockercleanc=<span class="string">&#x27;docker rm $(docker ps -a -q)&#x27;</span></span><br><span class="line"><span class="comment"># delete all untaged images</span></span><br><span class="line"><span class="built_in">alias</span> dockercleani=<span class="string">&#x27;docker rmi $(docker images -q -f dangling=true)&#x27;</span>  </span><br><span class="line"><span class="comment"># delte all stopped and untaged images</span></span><br><span class="line"><span class="built_in">alias</span> dockerclean=<span class="string">&#x27;dockercleanc || true &amp;&amp; dockercleani&#x27;</span></span><br></pre></td></tr></table></figure>]]></content>
@@ -841,7 +841,7 @@ Markup: --------------- (below H2 text)
 <p>Files included:</p>
 <p>Folder <strong>forDelivery</strong> contains the DGTD solver in <strong>dgtd_MPI</strong>, geometry files in <strong>geo</strong> and all necessary file to obtain the s-parameter in folder <strong>halfmatchTL</strong>. To start,go to <strong>halfmatchTL</strong> and execute <em>runMPI.sh</em>. </p>
 <p>In folder <strong>circuitfittingProject</strong>, there includes necessary MATLAB and python files. Each file should be commented well. </p>
-<p>For any question, please contact <a href="mailto:&#x73;&#x68;&#x75;&#119;&#97;&#110;&#x67;&#49;&#x32;&#x40;&#117;&#110;&#109;&#x2e;&#101;&#100;&#117;">&#x73;&#x68;&#x75;&#119;&#97;&#110;&#x67;&#49;&#x32;&#x40;&#117;&#110;&#109;&#x2e;&#101;&#100;&#117;</a>. </p>
+<p>For any question, please contact <a href="mailto:&#115;&#104;&#117;&#x77;&#x61;&#x6e;&#x67;&#x31;&#50;&#x40;&#117;&#x6e;&#109;&#46;&#101;&#x64;&#117;">&#115;&#104;&#117;&#x77;&#x61;&#x6e;&#x67;&#x31;&#50;&#x40;&#117;&#x6e;&#109;&#46;&#101;&#x64;&#117;</a>. </p>
 ]]></content>
       <categories>
         <category>cem</category>
@@ -999,7 +999,7 @@ Failure. Really bad because `h4-&gt;temp` and gets lost!
   </entry>
   <entry>
     <title>Why record_stream Matters: A Real CUDA Memory Bug in SGLang</title>
-    <url>/programming/Why-record-stream-Matters-A-Real-CUDA-Memory-Bug-in-SGLang.html</url>
+    <url>/GPU/Why-record-stream-Matters-A-Real-CUDA-Memory-Bug-in-SGLang.html</url>
     <content><![CDATA[<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>PyTorch’s CUDA memory caching allocator is designed to be fast — it recycles GPU memory aggressively based on Python reference counting. This works transparently most of the time, but it has a blind spot: <strong>it only tracks the stream on which a tensor was originally allocated</strong>.</p>
 <p>When a tensor is passed to a <em>different</em> CUDA stream, the allocator has no idea. If Python references to that tensor drop to zero at the wrong moment, the allocator can reclaim the memory while the second stream’s kernel is still reading it. The result is a silent use-after-free on the GPU: corrupted data, out-of-bounds crashes, or worse — wrong answers with no error at all.</p>
 <p>This exact bug was recently caught in <a href="https://github.com/sgl-project/sglang/issues/18744">SGLang’s speculative decoding (EAGLE v2)</a>, and fixed with a single call to <code>record_stream</code>.</p>
@@ -1050,13 +1050,36 @@ Failure. Really bad because `h4-&gt;temp` and gets lost!
 </ul>
 ]]></content>
       <categories>
-        <category>programming</category>
+        <category>GPU</category>
       </categories>
       <tags>
         <tag>CUDA</tag>
         <tag>PyTorch</tag>
         <tag>GPU</tag>
         <tag>debugging</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>How to achieve Inter-cta sync on Nvidia GPU</title>
+    <url>/GPU/inter-cta-sync.html</url>
+    <content><![CDATA[<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>　In many deep learning and scientific applications, inter-CTA-sync is a necessary pattern. But<br>even with CUDA9’s new feature coperative launch, inter-CTA-sync is never trivial. This blog will dive into this topic with a reduction as our model. </p>
+<p> Say we need to perform a reduction over a entire grid of threads and a natural idea is to reduce intra-block first and inter-block as a second step, so called two-step protocal. It is the best version in terms of performance and comprehensibility. The second step is what need to pay attention to because other blocks have to consume data my block produced in a safe way(Producer-Consumer model). Sure, two kernel launch can be a kill but not in our scope.   </p>
+<a id="more"></a>
+
+<h3 id="Sample-code"><a href="#Sample-code" class="headerlink" title="Sample code"></a>Sample code</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">__device__ int count&#x3D;0;</span><br><span class="line"> </span><br><span class="line">__global__ static void sum(int* data_gpu,int* block_gpu,int *sum_gpu,int length)</span><br><span class="line">&#123;</span><br><span class="line">    extern __shared__ int blocksum[];</span><br><span class="line">    __shared__ int islast;</span><br><span class="line">    int offset;</span><br><span class="line"> </span><br><span class="line">    const int tid&#x3D;threadIdx.x;</span><br><span class="line">    const int bid&#x3D;blockIdx.x;</span><br><span class="line">    blocksum[tid]&#x3D;0;</span><br><span class="line">    for(int i&#x3D;bid*THREAD_NUM+tid;i&lt;length;i+&#x3D;BLOCK_NUM*THREAD_NUM)</span><br><span class="line">        blocksum[tid]+&#x3D;data_gpu[i];</span><br><span class="line"> </span><br><span class="line">    __syncthreads();</span><br><span class="line">    offset&#x3D;THREAD_NUM&#x2F;2;</span><br><span class="line">    while(offset&gt;0)</span><br><span class="line">    &#123;</span><br><span class="line">        if(tid&lt;offset)  blocksum[tid]+&#x3D;blocksum[tid+offset];</span><br><span class="line">        offset&gt;&gt;&#x3D;1;</span><br><span class="line">        __syncthreads();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    if(tid&#x3D;&#x3D;0)</span><br><span class="line">    &#123;</span><br><span class="line">        block_gpu[bid]&#x3D;blocksum[0];</span><br><span class="line">        __threadfence();</span><br><span class="line"> </span><br><span class="line">        int value&#x3D;atomicAdd(&amp;count,1);</span><br><span class="line">        islast&#x3D;(value&#x3D;&#x3D;gridDim.x-1);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    __syncthreads();</span><br><span class="line"> </span><br><span class="line">    if(islast)</span><br><span class="line">    &#123;</span><br><span class="line">        if(tid&#x3D;&#x3D;0)</span><br><span class="line">        &#123;</span><br><span class="line">            int s&#x3D;0;</span><br><span class="line">            for(int i&#x3D;0;i&lt;BLOCK_NUM;i++)  s+&#x3D;block_gpu[i];</span><br><span class="line">            *sum_gpu&#x3D;s;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>The one-step reduction procedure presented in this section is mainly an example to show you how you can use the data generated by one or more other threads during the execution of one kernel, one or more threads. Let’s start with threadfence. First, threadfence has two main roles, and three levels of control: one role is to control the validity of accesses (writes only). The other is to control that the compiler does not over-optimize (for reads and writes) the top and bottom of the fence (from a line-of-code perspective) when generating instructions. This is actually a combination of hardware and software, the former being mainly hardware, the latter being mainly software (compiler behavior control). Let’s start with threadfence’s control of memory writes. It has a detail that is not specified here: it can suspend the thread (warp) that calls it for a certain period of time until the access writes made by that thread (warp) have reached a certain level. Then the execution of the thread (warp) can be resumed. That is, at what level of completion for the partner thread in the block, for other threads on the GPU, or globally (e.g., the CPU or other cards participating in P2P Access), as described in this section. This leads to the 3 levels of threadfence functions with different suffixes in this section:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">__threadfence_block();</span><br><span class="line">__threadfence();</span><br><span class="line">__threadfence_system();</span><br></pre></td></tr></table></figure>
+<p>Each of these three levels is higher than the other. When used, it causes threads (warp) to be suspended for longer and longer periods of time (suspension does not necessarily have a negative performance impact. This is because the hardware can choose to switch to another thread or warp during this time, which means it can be masked). If we look at it from the hardware point of view only, after the thread executes the instructions written by the access (generated by the compiler), it will continue to execute without the 3 functions (the corresponding instructions generated), and not wait for the access to complete.</p>
+<p>From a hardware perspective, if a thread executes the access-written instructions (generated by the compiler) without these three functions (generated instructions), it will continue to execute without waiting for the access to complete. With these three instructions, the thread will pause and wait for the writing process to complete to a point where it can be “seen” by other threads at different levels before continuing. This is why I emphasized that this is a write in the “control access (write)” brackets. This is because for reads, you can automatically wait when an operand is used. However, the write does not have this function. After the data (from the register) and the access instruction are submitted to the LSU in the SM, that is, after the access instruction is successfully issued, the thread continues to execute. These three functions, on the other hand, effectively introduce three different levels of delay, allowing multiple hardware pipelines to continue execution only after a certain level of write operation has been completed. This is useful in many scenarios (e.g. the example at the end of this chapter where a thread in a block reads data generated by a thread in another block). There is no information on how long this causes threads/warp to pause. One interesting thing is that, when a certain computational power card has a time error at a certain level of the instruction, then the compiler does a patch operation when generating a specific level of the pause instruction for that particular computational power card. (Two instructions are generated in a row to fix the worst-case timing problem and ensure that the write operation is executed properly somewhere).<br>And that’s not all, we all know that hardware can’t leave software, otherwise it’s a soulless corpse. Not only does the hardware have certain operations on the threadfence family of functions (the corresponding instructions), but the compiler, when encountering the three functions, besides generating the three corresponding instructions normally, also causes some behavioral changes: this is what the previous text said, causing some changes in the optimization behavior, which is also described in this section. In layman’s terms, this means separating the accesses before and after the threadfence family of functions,<br>The compiler will not cross the threadfence boundary and reorder the access statements,<br>to optimize performance while maintaining safety and logical correctness. This is why there are a lot of repetitive long sentences in this section.<br>The other part of the long sentence, which says, “A thread’s …. The write operation …. When and where it can be observed by whom (3 levels)…” is a change in the compiler’s behavior, plus a pause in control due to the 3 different instructions generated by the hardware. These are the two main points of threadfence. The user should see for himself the three levels. As mentioned before, the main difference is the pause time (not from official sources, from actual observation).<br>But these two points are not all, this chapter also talks about a volatile keyword.<br>It also happens to have two roles. It is also used in software and hardware. In the example at the end of this chapter, this keyword is indispensable. The software role is similar to that of the threadfence function, where compiler control and changes in behavior occur: this is actually familiar to everyone.<br>The compiler will not use an old value that already exists, such as a fixed p[offset] that has already been read. Instead, it generates a new access instruction to read it. The other point is hardware, as we all know that current cards (e.g. Pascal, GTX1080 with 6.1 computing power), have a uniform (logical) L2 cache, and a separate L1 cache for each SM. (also called unified cache in this computing power, may be different in other computing power, here unified cache), that is, the card has 1 L2 cache (in GPU), and 20 independent L1 cache (in each SM), once SM 10 Once SM 10 writes a value, changing the content of its L1 cache and/or global L2 cache (to the value just written), SM 9, if it still reads the normal access memory, may get the old content in SM 9’s L1 cache directly because it was there before, immediately. At this point, with the volatile keyword, the compiler will not only not use the case mentioned in point (1), but will issue a new access after the encounter, and will also control the cache control policy of the access instruction so that it can pass over the old value in the L1 of the current SM, to get the correct result. In other words, some cards with multiple L1s and unified L2s do not maintain consistency under certain circumstances. This is about volatile.<br>Then let’s talk about this example. This example is a simplified version, and some details have been removed. But it is still sufficient as an example here. If users want to see the full version, there are many online. From NV, from different authors. You can refer to it when the time comes. Let me start with the important point: the mix of normal access and atomic operations. First of all, as we said before, this is a single-step statute summing kernel. It only takes one kernel start, to find the final sum in parallel for a large amount of data on a buffer (a statute operation is a process that takes a large range of inputs and gives a small range of outputs, you can also think of it as a shadowing process from a large set to a small set). You can also think of it as a projection from a large set to a small set). Of course, this example is just a simple summation. Since the kernel only wants to do all the operations in one boot, the code is split into two parts, the first part is just the normal summation of the respective blocks, and then saved to the explicit memory. The second part is the last block elected, which does the second step, reading the internal sums of the previous blocks, and then finding the final sum. This completes the global summation of the single kernel. Because here involves, read the results of other threads, so use the previously mentioned volatile + threadfence, but here the threadfence also has an important role, is the common common access (result[…]) = … write) and atomic access (atomInc). There is no completion order between the normal access instruction and the atomic instruction. By inserting a threadfence function between the two instructions, this code causes all previously terminated kernels to run through the atomic operation only when they have paused long enough for the written part to be globally visible and successfully validated. This allows the final block to be read as soon as the result of the atomic operation is available (a successful election). This prevents a subsequent atomic operation from completing while the previous normal access (which holds the sum of the parts) is still on its way. That’s the main caveat here.<br>It is also important to note that there are two other versions of this common statute summation. Version 2 requires two kernel boots, but the code is much simpler. Version 2 of the kernel only internally calculates its own partial sum for each block, and saves its own partial sum (not written here, there are plenty of forums for that), which means that version 2 of the kernel only needs the first half of version 1 of the kernel. The second half is not needed. Then, by a simple trick (booting it twice in a row), the second boot only needs to set 1 block. This version of the code is simple (only half of it), and circumvents the threadfence operation, the atomInc operation, and the process of controlling the scope of the atomic operation inside the block here with an if (which is performed once collectively) and then broadcasting the result back in shared memory. This simplifies things considerably, but often results in better performance. So code 2 is highly recommended (the only thing you have to pay for is to boot the kernel twice. But the kernel itself has been greatly simplified)</p>
+]]></content>
+      <categories>
+        <category>GPU</category>
+      </categories>
+      <tags>
+        <tag>parallel computing</tag>
       </tags>
   </entry>
   <entry>
@@ -11298,29 +11321,6 @@ Failure. Really bad because `h4-&gt;temp` and gets lost!
       <tags>
         <tag>Leetcode</tag>
         <tag>algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>How to achieve Inter-cta sync on Nvidia GPU</title>
-    <url>/GPU/inter-cta-sync.html</url>
-    <content><![CDATA[<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>　In many deep learning and scientific applications, inter-CTA-sync is a necessary pattern. But<br>even with CUDA9’s new feature coperative launch, inter-CTA-sync is never trivial. This blog will dive into this topic with a reduction as our model. </p>
-<p> Say we need to perform a reduction over a entire grid of threads and a natural idea is to reduce intra-block first and inter-block as a second step, so called two-step protocal. It is the best version in terms of performance and comprehensibility. The second step is what need to pay attention to because other blocks have to consume data my block produced in a safe way(Producer-Consumer model). Sure, two kernel launch can be a kill but not in our scope.   </p>
-<a id="more"></a>
-
-<h3 id="Sample-code"><a href="#Sample-code" class="headerlink" title="Sample code"></a>Sample code</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">__device__ int count&#x3D;0;</span><br><span class="line"> </span><br><span class="line">__global__ static void sum(int* data_gpu,int* block_gpu,int *sum_gpu,int length)</span><br><span class="line">&#123;</span><br><span class="line">    extern __shared__ int blocksum[];</span><br><span class="line">    __shared__ int islast;</span><br><span class="line">    int offset;</span><br><span class="line"> </span><br><span class="line">    const int tid&#x3D;threadIdx.x;</span><br><span class="line">    const int bid&#x3D;blockIdx.x;</span><br><span class="line">    blocksum[tid]&#x3D;0;</span><br><span class="line">    for(int i&#x3D;bid*THREAD_NUM+tid;i&lt;length;i+&#x3D;BLOCK_NUM*THREAD_NUM)</span><br><span class="line">        blocksum[tid]+&#x3D;data_gpu[i];</span><br><span class="line"> </span><br><span class="line">    __syncthreads();</span><br><span class="line">    offset&#x3D;THREAD_NUM&#x2F;2;</span><br><span class="line">    while(offset&gt;0)</span><br><span class="line">    &#123;</span><br><span class="line">        if(tid&lt;offset)  blocksum[tid]+&#x3D;blocksum[tid+offset];</span><br><span class="line">        offset&gt;&gt;&#x3D;1;</span><br><span class="line">        __syncthreads();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    if(tid&#x3D;&#x3D;0)</span><br><span class="line">    &#123;</span><br><span class="line">        block_gpu[bid]&#x3D;blocksum[0];</span><br><span class="line">        __threadfence();</span><br><span class="line"> </span><br><span class="line">        int value&#x3D;atomicAdd(&amp;count,1);</span><br><span class="line">        islast&#x3D;(value&#x3D;&#x3D;gridDim.x-1);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    __syncthreads();</span><br><span class="line"> </span><br><span class="line">    if(islast)</span><br><span class="line">    &#123;</span><br><span class="line">        if(tid&#x3D;&#x3D;0)</span><br><span class="line">        &#123;</span><br><span class="line">            int s&#x3D;0;</span><br><span class="line">            for(int i&#x3D;0;i&lt;BLOCK_NUM;i++)  s+&#x3D;block_gpu[i];</span><br><span class="line">            *sum_gpu&#x3D;s;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p>The one-step reduction procedure presented in this section is mainly an example to show you how you can use the data generated by one or more other threads during the execution of one kernel, one or more threads. Let’s start with threadfence. First, threadfence has two main roles, and three levels of control: one role is to control the validity of accesses (writes only). The other is to control that the compiler does not over-optimize (for reads and writes) the top and bottom of the fence (from a line-of-code perspective) when generating instructions. This is actually a combination of hardware and software, the former being mainly hardware, the latter being mainly software (compiler behavior control). Let’s start with threadfence’s control of memory writes. It has a detail that is not specified here: it can suspend the thread (warp) that calls it for a certain period of time until the access writes made by that thread (warp) have reached a certain level. Then the execution of the thread (warp) can be resumed. That is, at what level of completion for the partner thread in the block, for other threads on the GPU, or globally (e.g., the CPU or other cards participating in P2P Access), as described in this section. This leads to the 3 levels of threadfence functions with different suffixes in this section:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">__threadfence_block();</span><br><span class="line">__threadfence();</span><br><span class="line">__threadfence_system();</span><br></pre></td></tr></table></figure>
-<p>Each of these three levels is higher than the other. When used, it causes threads (warp) to be suspended for longer and longer periods of time (suspension does not necessarily have a negative performance impact. This is because the hardware can choose to switch to another thread or warp during this time, which means it can be masked). If we look at it from the hardware point of view only, after the thread executes the instructions written by the access (generated by the compiler), it will continue to execute without the 3 functions (the corresponding instructions generated), and not wait for the access to complete.</p>
-<p>From a hardware perspective, if a thread executes the access-written instructions (generated by the compiler) without these three functions (generated instructions), it will continue to execute without waiting for the access to complete. With these three instructions, the thread will pause and wait for the writing process to complete to a point where it can be “seen” by other threads at different levels before continuing. This is why I emphasized that this is a write in the “control access (write)” brackets. This is because for reads, you can automatically wait when an operand is used. However, the write does not have this function. After the data (from the register) and the access instruction are submitted to the LSU in the SM, that is, after the access instruction is successfully issued, the thread continues to execute. These three functions, on the other hand, effectively introduce three different levels of delay, allowing multiple hardware pipelines to continue execution only after a certain level of write operation has been completed. This is useful in many scenarios (e.g. the example at the end of this chapter where a thread in a block reads data generated by a thread in another block). There is no information on how long this causes threads/warp to pause. One interesting thing is that, when a certain computational power card has a time error at a certain level of the instruction, then the compiler does a patch operation when generating a specific level of the pause instruction for that particular computational power card. (Two instructions are generated in a row to fix the worst-case timing problem and ensure that the write operation is executed properly somewhere).<br>And that’s not all, we all know that hardware can’t leave software, otherwise it’s a soulless corpse. Not only does the hardware have certain operations on the threadfence family of functions (the corresponding instructions), but the compiler, when encountering the three functions, besides generating the three corresponding instructions normally, also causes some behavioral changes: this is what the previous text said, causing some changes in the optimization behavior, which is also described in this section. In layman’s terms, this means separating the accesses before and after the threadfence family of functions,<br>The compiler will not cross the threadfence boundary and reorder the access statements,<br>to optimize performance while maintaining safety and logical correctness. This is why there are a lot of repetitive long sentences in this section.<br>The other part of the long sentence, which says, “A thread’s …. The write operation …. When and where it can be observed by whom (3 levels)…” is a change in the compiler’s behavior, plus a pause in control due to the 3 different instructions generated by the hardware. These are the two main points of threadfence. The user should see for himself the three levels. As mentioned before, the main difference is the pause time (not from official sources, from actual observation).<br>But these two points are not all, this chapter also talks about a volatile keyword.<br>It also happens to have two roles. It is also used in software and hardware. In the example at the end of this chapter, this keyword is indispensable. The software role is similar to that of the threadfence function, where compiler control and changes in behavior occur: this is actually familiar to everyone.<br>The compiler will not use an old value that already exists, such as a fixed p[offset] that has already been read. Instead, it generates a new access instruction to read it. The other point is hardware, as we all know that current cards (e.g. Pascal, GTX1080 with 6.1 computing power), have a uniform (logical) L2 cache, and a separate L1 cache for each SM. (also called unified cache in this computing power, may be different in other computing power, here unified cache), that is, the card has 1 L2 cache (in GPU), and 20 independent L1 cache (in each SM), once SM 10 Once SM 10 writes a value, changing the content of its L1 cache and/or global L2 cache (to the value just written), SM 9, if it still reads the normal access memory, may get the old content in SM 9’s L1 cache directly because it was there before, immediately. At this point, with the volatile keyword, the compiler will not only not use the case mentioned in point (1), but will issue a new access after the encounter, and will also control the cache control policy of the access instruction so that it can pass over the old value in the L1 of the current SM, to get the correct result. In other words, some cards with multiple L1s and unified L2s do not maintain consistency under certain circumstances. This is about volatile.<br>Then let’s talk about this example. This example is a simplified version, and some details have been removed. But it is still sufficient as an example here. If users want to see the full version, there are many online. From NV, from different authors. You can refer to it when the time comes. Let me start with the important point: the mix of normal access and atomic operations. First of all, as we said before, this is a single-step statute summing kernel. It only takes one kernel start, to find the final sum in parallel for a large amount of data on a buffer (a statute operation is a process that takes a large range of inputs and gives a small range of outputs, you can also think of it as a shadowing process from a large set to a small set). You can also think of it as a projection from a large set to a small set). Of course, this example is just a simple summation. Since the kernel only wants to do all the operations in one boot, the code is split into two parts, the first part is just the normal summation of the respective blocks, and then saved to the explicit memory. The second part is the last block elected, which does the second step, reading the internal sums of the previous blocks, and then finding the final sum. This completes the global summation of the single kernel. Because here involves, read the results of other threads, so use the previously mentioned volatile + threadfence, but here the threadfence also has an important role, is the common common access (result[…]) = … write) and atomic access (atomInc). There is no completion order between the normal access instruction and the atomic instruction. By inserting a threadfence function between the two instructions, this code causes all previously terminated kernels to run through the atomic operation only when they have paused long enough for the written part to be globally visible and successfully validated. This allows the final block to be read as soon as the result of the atomic operation is available (a successful election). This prevents a subsequent atomic operation from completing while the previous normal access (which holds the sum of the parts) is still on its way. That’s the main caveat here.<br>It is also important to note that there are two other versions of this common statute summation. Version 2 requires two kernel boots, but the code is much simpler. Version 2 of the kernel only internally calculates its own partial sum for each block, and saves its own partial sum (not written here, there are plenty of forums for that), which means that version 2 of the kernel only needs the first half of version 1 of the kernel. The second half is not needed. Then, by a simple trick (booting it twice in a row), the second boot only needs to set 1 block. This version of the code is simple (only half of it), and circumvents the threadfence operation, the atomInc operation, and the process of controlling the scope of the atomic operation inside the block here with an if (which is performed once collectively) and then broadcasting the result back in shared memory. This simplifies things considerably, but often results in better performance. So code 2 is highly recommended (the only thing you have to pay for is to boot the kernel twice. But the kernel itself has been greatly simplified)</p>
-]]></content>
-      <categories>
-        <category>GPU</category>
-      </categories>
-      <tags>
-        <tag>parallel computing</tag>
       </tags>
   </entry>
 </search>

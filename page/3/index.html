@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+  <link rel="mask-icon" href="/images/favicon.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Ian&#39;s place to write">
+<meta property="og:type" content="website">
+<meta property="og:title" content="吾将上下而求索">
+<meta property="og:url" content="http://example.com/page/3/index.html">
+<meta property="og:site_name" content="吾将上下而求索">
+<meta property="og:description" content="Ian&#39;s place to write">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Ian Wang">
+<meta property="article:tag" content="computational science, machine learning">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/page/3/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"page/3/index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>吾将上下而求索</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">吾将上下而求索</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Keep young, keep on</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ian Wang"
+      src="/images/nuanuan.jpg">
+  <p class="site-author-name" itemprop="name">Ian Wang</p>
+  <div class="site-description" itemprop="description">Ian's place to write</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">39</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wenscarl" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wenscarl" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:shuw@outlook.com" title="E-Mail → mailto:shuw@outlook.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="Back to top">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/uncategorized/2020-10-08-Markdown-tool.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 吾将上下而求索">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/uncategorized/2020-10-08-Markdown-tool.html" class="post-title-link" itemprop="url">Markdown syntax supported by the document</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 11-20-2017 00:00:00" itemprop="dateCreated datePublished" datetime="2017-11-20T00:00:00-06:00">11-20-2017</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 02-28-2026 10:20:26" itemprop="dateModified" datetime="2026-02-28T10:20:26-06:00">02-28-2026</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="What-is-Markdown"><a href="#What-is-Markdown" class="headerlink" title="What is Markdown?"></a>What is Markdown?</h2><h2 id="What-Is-It"><a href="#What-Is-It" class="headerlink" title="What Is It?"></a>What Is It?</h2><p>Markdown is a plain text formatting syntax aimed at making writing  for the internet easier. The philosophy behind Markdown is that plain  text documents should be readable without tags mussing everything up,  but there should still be ways to add text modifiers like lists, bold,  italics, etc. It is an alternative to WYSIWYG (what you see is what you  get) editors, which use rich text that later gets converted to proper  HTML.</p>
+<p>It’s possible you’ve encountered Markdown without realizing it.  Facebook chat, Skype, and Reddit all let you use different flavors of  Markdown to format your messages.</p>
+<p>Here’s a quick example: to make words bold using Markdown, you simply enclose them in * (asterisks). So, <em>bold word</em> would look like <strong>bold word</strong> when everything is said and done.</p>
+<p>All told, Markdown is a great way to write for the web using plain text.</p>
+<h2 id="Basic-grammers"><a href="#Basic-grammers" class="headerlink" title="Basic grammers"></a>Basic grammers</h2><p>Title<br>H1 :# Header 1<br>H2 :## Header 2<br>H3 :### Header 3<br>H4 :#### Header 4<br>H5 :##### Header 5<br>H6 :###### Header 6<br>Link :<a href="URL">Title</a><br>Bold :<strong>Bold</strong><br>Italics :<em>Italics</em><br>*strikebreak :<del>text</del><br>inlines : <code>alert(&#39;Hello World&#39;);</code>        </p>
+<h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><ul>
+<li>list1</li>
+<li>list2</li>
+<li>list3</li>
+</ul>
+<h3 id="list-reference"><a href="#list-reference" class="headerlink" title="list reference"></a>list reference</h3><blockquote>
+<ul>
+<li>list1</li>
+<li>list2</li>
+<li>list3</li>
+</ul>
+</blockquote>
+<h2 id="Advanced-syntax"><a href="#Advanced-syntax" class="headerlink" title="Advanced syntax"></a>Advanced syntax</h2><h3 id="1-Todo-list"><a href="#1-Todo-list" class="headerlink" title="1. Todo list"></a>1. Todo list</h3><ul>
+<li><input disabled="" type="checkbox"> support for exporting the text in PDF format</li>
+<li><input disabled="" type="checkbox"> Improving the Cmd rendering algorithm to improve rendering efficiency using local rendering techniques</li>
+<li><input checked="" disabled="" type="checkbox"> New Todo List Feature</li>
+<li><input checked="" disabled="" type="checkbox"> Fix Icon function<h3 id="2-Highliget-a-snippet-of-code"><a href="#2-Highliget-a-snippet-of-code" class="headerlink" title="2. Highliget a snippet of code"></a>2. Highliget a snippet of code</h3></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># A comment</span></span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27;hello world&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="3-Table"><a href="#3-Table" class="headerlink" title="3. Table"></a>3. Table</h4><table>
+<thead>
+<tr>
+<th>item</th>
+<th align="right">price</th>
+<th align="center">quantity</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>computer</td>
+<td align="right">$1600</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td>cellphone</td>
+<td align="right">$12</td>
+<td align="center">12</td>
+</tr>
+<tr>
+<td>cable</td>
+<td align="right">$1</td>
+<td align="center">234</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/uncategorized/2017-10-08-Introduction-to-hexo.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 吾将上下而求索">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/uncategorized/2017-10-08-Introduction-to-hexo.html" class="post-title-link" itemprop="url">Introduction to Hexo</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 10-02-2017 00:00:00" itemprop="dateCreated datePublished" datetime="2017-10-02T00:00:00-05:00">10-02-2017</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 02-28-2026 10:20:26" itemprop="dateModified" datetime="2026-02-28T10:20:26-06:00">02-28-2026</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/uncategorized/2016-11-20-markdownTool.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 吾将上下而求索">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/uncategorized/2016-11-20-markdownTool.html" class="post-title-link" itemprop="url">文档支持的Markdown语法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 11-20-2016 00:00:00" itemprop="dateCreated datePublished" datetime="2016-11-20T00:00:00-06:00">11-20-2016</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 02-28-2026 10:20:26" itemprop="dateModified" datetime="2026-02-28T10:20:26-06:00">02-28-2026</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="什么是-Markdown"><a href="#什么是-Markdown" class="headerlink" title="什么是 Markdown"></a>什么是 Markdown</h2><p>Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：如您正在阅读的这篇文章。它使用简单的符号标记不同的标题，分割不同的段落，<strong>粗体</strong> 或者 <em>斜体</em> 某些文字.</p>
+<p>很多产品的文档也是用markdown编写的，并且以“README.MD”的文件名保存在软件的目录下面。
+　　</p>
+<h2 id="一些基本语法"><a href="#一些基本语法" class="headerlink" title="一些基本语法"></a>一些基本语法</h2><p>标题<br>H1 :# Header 1<br>H2 :## Header 2<br>H3 :### Header 3<br>H4 :#### Header 4<br>H5 :##### Header 5<br>H6 :###### Header 6<br>链接 :<a href="URL">Title</a><br>加粗 :<strong>Bold</strong><br>斜体字 :<em>Italics</em><br>*删除线 :<del>text</del><br>内嵌代码 : <code>alert(&#39;Hello World&#39;);</code>        </p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><ul>
+<li>列表1</li>
+<li>列表2</li>
+<li>列表3</li>
+</ul>
+<h3 id="列表引用"><a href="#列表引用" class="headerlink" title="列表引用"></a>列表引用</h3><blockquote>
+<ul>
+<li>列表1</li>
+<li>列表2</li>
+<li>列表3</li>
+</ul>
+</blockquote>
+<h3 id="插入一张图片"><a href="#插入一张图片" class="headerlink" title="插入一张图片"></a>插入一张图片</h3><p>打赏一个吧</p>
+<p><img src="/images/payimg/weipayimg.jpg"></p>
+<p>css 的大部分语法同样可以在 markdown 上使用，但不同的渲染器渲染出来的 markdown 内容样式也不一样，下面这些链接里面有 markdown 基本语法，你也可以在下面几个平台上尝试着写一些。</p>
+<h2 id="博客支持的高级语法"><a href="#博客支持的高级语法" class="headerlink" title="博客支持的高级语法"></a>博客支持的高级语法</h2><h3 id="1-制作一份待办事宜"><a href="#1-制作一份待办事宜" class="headerlink" title="1. 制作一份待办事宜"></a>1. 制作一份待办事宜</h3><ul>
+<li><input disabled="" type="checkbox"> 支持以 PDF 格式导出文稿</li>
+<li><input disabled="" type="checkbox"> 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率</li>
+<li><input checked="" disabled="" type="checkbox"> 新增 Todo 列表功能</li>
+<li><input checked="" disabled="" type="checkbox"> 修复 图标功能</li>
+</ul>
+<h3 id="2-高亮一段代码"><a href="#2-高亮一段代码" class="headerlink" title="2. 高亮一段代码"></a>2. 高亮一段代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># A comment</span></span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27;hello world&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="3-绘制表格"><a href="#3-绘制表格" class="headerlink" title="3. 绘制表格"></a>3. 绘制表格</h4><table>
+<thead>
+<tr>
+<th>项目</th>
+<th align="right">价格</th>
+<th align="center">数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>计算机</td>
+<td align="right">$1600</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td>手机</td>
+<td align="right">$12</td>
+<td align="center">12</td>
+</tr>
+<tr>
+<td>管线</td>
+<td align="right">$1</td>
+<td align="center">234</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/uncategorized/2016-10-14-jekyll_tutorials1.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 吾将上下而求索">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/uncategorized/2016-10-14-jekyll_tutorials1.html" class="post-title-link" itemprop="url">Jekyll搭建个人博客</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 10-14-2016 00:00:00" itemprop="dateCreated datePublished" datetime="2016-10-14T00:00:00-05:00">10-14-2016</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 02-28-2026 10:20:26" itemprop="dateModified" datetime="2026-02-28T10:20:26-06:00">02-28-2026</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>　之前写了一篇<a target="_blank" rel="noopener" href="http://leopardpan.cn/2015/08/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">HEXO搭建个人博客</a>的教程获得了很好评，尤其是在<a target="_blank" rel="noopener" href="http://www.jianshu.com/p/465830080ea9">简书</a>上目前已经累积了10W+的阅读量了，也有好心的读者主动给我打赏，在此感谢。</p>
+<p>　如果你看过我的文章会发现我现在的博客样式跟之前是有很大的区别的，之前我也是使用 HEXO 搭建的博客，后来发现使用 HEXO 在多台电脑上发布博客，操作起来并不是那么方便，果断就转到了 Jekyll 上，接下来我会讲如何使用 Jekyll 搭建博客，<a target="_blank" rel="noopener" href="http://leopardpan.cn/#blog">博客模板效果</a>。</p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p> 　Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过 Markdown （或者 Textile） 以及 Liquid 转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll 也可以运行在 GitHub Page 上，也就是说，你可以使用 GitHub 的服务来搭建你的项目页面、博客或者网站，而且是完全免费的</p>
+<p>　使用 Jekyll 搭建博客之前要确认下本机环境，Git 环境（用于部署到远端）、<a target="_blank" rel="noopener" href="http://www.ruby-lang.org/en/downloads/">Ruby</a> 环境（Jekyll 是基于 Ruby 开发的）、包管理器 <a target="_blank" rel="noopener" href="http://rubygems.org/pages/download">RubyGems</a><br>　　如果你是 Mac 用户，你就需要安装 Xcode 和 Command-Line Tools了。下载方式 Preferences → Downloads → Components。</p>
+<p>　　Jekyll 是一个免费的简单静态网页生成工具，可以配合第三方服务例如： Disqus（评论）、多说(评论) 以及分享 等等扩展功能，Jekyll 可以直接部署在 Github（国外） 或 Coding（国内） 上，可以绑定自己的域名。<a target="_blank" rel="noopener" href="http://jekyll.bootcss.com/">Jekyll中文文档</a>、<a target="_blank" rel="noopener" href="https://jekyllrb.com/">Jekyll英文文档</a>、<a target="_blank" rel="noopener" href="http://jekyllthemes.org/">Jekyll主题列表</a>。</p>
+<h3 id="Jekyll-环境配置"><a href="#Jekyll-环境配置" class="headerlink" title="Jekyll 环境配置"></a>Jekyll 环境配置</h3><p>安装 jekyll</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ gem install jekyll     </span><br><span class="line">&#96;&#96;&#96;    </span><br><span class="line"></span><br><span class="line">创建博客</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;    </span><br><span class="line">$ jekyll new myBlog    </span><br><span class="line">&#96;&#96;&#96;   </span><br><span class="line"></span><br><span class="line">进入博客目录</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>$ cd myBlog  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">启动本地服务</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>$ jekyll serve</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">在浏览器里输入： [http:&#x2F;&#x2F;localhost:4000](http:&#x2F;&#x2F;localhost:4000)，就可以看到你的博客效果了。</span><br><span class="line"></span><br><span class="line">![](&#x2F;images&#x2F;posts&#x2F;jekyll&#x2F;image1.png)</span><br><span class="line"></span><br><span class="line">so easy !</span><br><span class="line"></span><br><span class="line">### 目录结构</span><br><span class="line">　</span><br><span class="line">　Jekyll 的核心其实是一个文本转换引擎。它的概念其实就是： 你用你最喜欢的标记语言来写文章，可以是 Markdown，也可以是 Textile,或者就是简单的 HTML, 然后 Jekyll 就会帮你套入一个或一系列的布局中。在整个过程中你可以设置URL路径, 你的文本在布局中的显示样式等等。这些都可以通过纯文本编辑来实现，最终生成的静态页面就是你的成品了。</span><br><span class="line"></span><br><span class="line"> 一个基本的 Jekyll 网站的目录结构一般是像这样的：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>.<br>├── _config.yml<br>├── _includes<br>|   ├── footer.html<br>|   └── header.html<br>├── _layouts<br>|   ├── default.html<br>|   ├── post.html<br>|   └── page.html<br>├── _posts<br>|   └── 2016-10-08-welcome-to-jekyll.markdown<br>├── _sass<br>|   ├── _base.scss<br>|   ├── _layout.scss<br>|   └── _syntax-highlighting.scss<br>├── about.md<br>├── css<br>|   └── main.scss<br>├── feed.xml<br>└── index.html</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">这些目录结构以及具体的作用可以参考 [官网文档](http:&#x2F;&#x2F;jekyll.com.cn&#x2F;docs&#x2F;structure&#x2F;) </span><br><span class="line"></span><br><span class="line">进入 _config.yml 里面，修改成你想看到的信息，重新 jekyll server ，刷新浏览器就可以看到你刚刚修改的信息了。</span><br><span class="line"></span><br><span class="line">到此，博客初步搭建算是完成了，</span><br><span class="line"></span><br><span class="line">### 博客部署到远端 </span><br><span class="line"></span><br><span class="line">　我这里讲的是部署到 Github Page 创建一个 github 账号，然后创建一个跟你账户名一样的仓库，如我的 github 账户名叫 [leopardpan](https:&#x2F;&#x2F;github.com&#x2F;leopardpan)，我的 github 仓库名就叫 [leopardpan.github.io](https:&#x2F;&#x2F;github.com&#x2F;leopardpan&#x2F;leopardpan.github.io)，创建好了之后，把刚才建立的 myBlog 项目 push 到 username.github.io仓库里去（username指的是你的github用户名），检查你远端仓库已经跟你本地 myBlog 同步了，然后你在浏览器里输入 username.github.io ，就可以访问你的博客了。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 编写文章</span><br><span class="line"></span><br><span class="line">　　所有的文章都是 _posts 目录下面，文章格式为 mardown 格式，文章文件名可以是 .mardown 或者 .md。</span><br><span class="line"></span><br><span class="line">　　编写一篇新文章很简单，你可以直接从 _posts&#x2F; 目录下复制一份出来 &#96;2016-10-16-welcome-to-jekyll副本.markdown&#96; ，修改名字为 2016-10-16-article1.markdown ，注意：文章名的格式前面必须为 2016-10-16- ，日期可以修改，但必须为 年-月-日- 格式，后面的 article1 是整个文章的连接 URL，如果文章名为中文，那么文章的连接URL就会变成这样的：http:&#x2F;&#x2F;leopardpan.cn&#x2F;2015&#x2F;08&#x2F;%E6%90%AD%E5&#x2F; ， 所以建议文章名最好是英文的或者阿拉伯数字。 双击 2016-10-16-article1.markdown 打开</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<p>layout: post<br>title:  “Welcome to Jekyll!”<br>date:   2016-10-16 11:29:08 +0800<br>categories: jekyll update</p>
+<hr>
+<p>正文…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">title: 显示的文章名， 如：title: 我的第一篇文章                    </span><br><span class="line">date:  显示的文章发布日期，如：date: 2016-10-16                          </span><br><span class="line">categories: tag标签的分类，如：categories: 随笔            </span><br><span class="line"></span><br><span class="line">注意：文章头部格式必须为上面的，.... 就是文章的正文内容。</span><br><span class="line"></span><br><span class="line">我写文章使用的是 Sublime Text2 编辑器，如果你对 markdown 语法不熟悉的话，可以看看[作业部落的教程](https:&#x2F;&#x2F;www.zybuluo.com&#x2F;) </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 使用我的博客模板</span><br><span class="line"></span><br><span class="line">虽然博客部署完成了，你会发现博客太简单不是你想要的，如果你喜欢我的模板的话，可以使用我的模板。</span><br><span class="line"></span><br><span class="line">首先你要获取的我博客，[Github项目地址](https:&#x2F;&#x2F;github.com&#x2F;leopardpan&#x2F;leopardpan.github.io.git)，你可以直接[点击下载博客](https:&#x2F;&#x2F;github.com&#x2F;leopardpan&#x2F;leopardpan.github.io&#x2F;archive&#x2F;master.zip)，进去leopardpan.github.io&#x2F; 目录下， 使用命令部署本地服务 </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>$ jekyll server   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 如果你本机没配置过任何jekyll的环境，可能会报错</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>/Users/xxxxxxxx/.rvm/rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in <code>require&#39;: cannot load such file -- bundler (LoadError)     from /Users/xxxxxxxx/.rvm/rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in </code>require’<br>    from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/gems/jekyll-3.3.0/lib/jekyll/plugin_manager.rb:34:in <code>require_from_bundler&#39;     from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/gems/jekyll-3.3.0/exe/jekyll:9:in </code>&lt;top (required)&gt;’<br>    from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/bin/jekyll:23:in <code>load&#39;     from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/bin/jekyll:23:in </code><main>‘<br>    from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/bin/ruby_executable_hooks:15:in <code>eval&#39;     from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/bin/ruby_executable_hooks:15:in </code><main>‘</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">原因： 没有安装 bundler ，执行安装 bundler 命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>$ gem install bundler</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">提示： </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Fetching: bundler-1.13.5.gem (100%)<br>Successfully installed bundler-1.13.5<br>Parsing documentation for bundler-1.13.5<br>Installing ri documentation for bundler-1.13.5<br>Done installing documentation for bundler after 5 seconds<br>1 gem installed</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">再次执行 $ jekyll server  ，提示</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Could not find proper version of jekyll (3.1.1) in any of the sources<br>Run <code>bundle install</code> to install missing gems.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">跟着提示运行命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>$ bundle install</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">这个时候你可能会发现 bundle install 运行卡主不动了。</span><br><span class="line"></span><br><span class="line">如果很长时间都没任何提示的话，你可以尝试修改 gem 的 source</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>$ gem sources –remove <a target="_blank" rel="noopener" href="https://rubygems.org/">https://rubygems.org/</a><br>$ gem sources -a <a target="_blank" rel="noopener" href="http://ruby.taobao.org/">http://ruby.taobao.org/</a><br>$ gem sources -l<br><strong>* CURRENT SOURCES *</strong></p>
+<p><a target="_blank" rel="noopener" href="http://ruby.taobao.org/">http://ruby.taobao.org</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">再次执行命令 $ bundle install，发现开始有动静了</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Fetching gem metadata from <a target="_blank" rel="noopener" href="https://rubygems.org/">https://rubygems.org/</a>………..<br>Fetching version metadata from <a target="_blank" rel="noopener" href="https://rubygems.org/">https://rubygems.org/</a>..<br>Fetching dependency metadata from <a target="_blank" rel="noopener" href="https://rubygems.org/">https://rubygems.org/</a>.<br>。。。<br>Installing jekyll-watch 1.3.1<br>Installing jekyll 3.1.1<br>Bundle complete! 3 Gemfile dependencies, 17 gems now installed.<br>Use <code>bundle show [gemname]</code> to see where a bundled gem is installed.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">bundler安装完成，后再次启动本地服务 </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>$ jekyll server</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">继续报错</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Configuration file: /Users/tendcloud-Caroline/Desktop/leopardpan.github.io/_config.yml<br>  Dependency Error: Yikes! It looks like you don’t have jekyll-sitemap or one of its dependencies installed. In order to use Jekyll as currently configured, you’ll need to install this gem. The full error message from Ruby is: ‘cannot load such file – jekyll-sitemap’ If you run into trouble, you can find helpful resources at <a target="_blank" rel="noopener" href="http://jekyllrb.com/help/">http://jekyllrb.com/help/</a>!<br>jekyll 3.1.1 | Error:  jekyll-sitemap</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">表示 当前的 jekyll 版本是 3.1.1 ，无法使用 jekyll-sitemap </span><br><span class="line"></span><br><span class="line">解决方法有两个</span><br><span class="line"></span><br><span class="line">&gt; 1、打开当前目录下的 _config.yml 文件，把 gems: [jekyll-paginate,jekyll-sitemap] 换成 gems: [jekyll-paginate] ，也就是去掉jekyll-sitemap。</span><br><span class="line"></span><br><span class="line">&gt; 2、升级 jekyll 版本，我当前的是 jekyll 3.1.2 。</span><br><span class="line"></span><br><span class="line">修改完成后保存配置，再次执行</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>$ jekyll server</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">提示</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Configuration file: /Users/baixinpan/Desktop/OpenSource/Mine/Page-Blog/leopardpan.github.io-github/_config.yml<br>            Source: /Users/baixinpan/Desktop/OpenSource/Mine/Page-Blog/leopardpan.github.io-github<br>       Destination: /Users/baixinpan/Desktop/OpenSource/Mine/Page-Blog/leopardpan.github.io-github/_site<br> Incremental build: disabled. Enable with –incremental<br>      Generating…<br>                    done in 0.901 seconds.<br> Auto-regeneration: enabled for ‘/Users/baixinpan/Desktop/OpenSource/Mine/Page-Blog/leopardpan.github.io-github’<br>Configuration file: /Users/baixinpan/Desktop/OpenSource/Mine/Page-Blog/leopardpan.github.io-github/_config.yml<br>    Server address: <a target="_blank" rel="noopener" href="http://127.0.0.1:4000/">http://127.0.0.1:4000/</a><br>  Server running… press ctrl-c to stop.</p>
+<pre><code>
+表示本地服务部署成功。
+
+在浏览器输入 [127.0.0.1:4000](127.0.0.1:4000) ， 就可以看到[leopardpan.cn](http://leopardpan.cn)博客效果了。
+
+### 修改成你自己的博客
+
+&gt;* 如果你想使用我的模板请把 _posts/ 目录下的文章都去掉。
+&gt;* 修改 _config.yml 文件里面的内容为你自己的。
+
+然后使用 git push 到你自己的仓库里面去，检查你远端仓库，在浏览器输入 username.github.io 就会发现，你有一个漂亮的主题模板了。      
+
+
+### 为什么要是用 Jekyll
+
+使用了 Jekyll 你会发现如果你想使用多台电脑发博客都很方便，只要把远端 github 仓库里的博客 clone 下来，写文章后再提交就可以了，Hexo 由于远端提交的是静态网页，所有无法直接写 Markdown 的文章。如果你想看 Hexo 搭建博客，可以看看我的另一篇[HEXO搭建个人博客](http://leopardpan.cn/2015/08/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)的教程。
+
+如果你在搭建博客遇到问题，可以在[原文博客](http://leopardpan.cn/2016/10/jekyll_tutorials1/)的评论里给我提问。
+
+后面会继续介绍，在我的博客基础上，如何修改成你自己喜欢的 Style，欢迎继续关注我博客的更新。
+
+
+### Q&amp;A 
+
+&gt; 问题：最近很多朋友使用我的模板报警告：The CNAME `leopardpan.cn` is already taken 
+&gt; 解决：把CNAME里面的baixin.io修改成你自己的域名，如果你暂时没有域名，CNAME里面就什么都不用谢。（之前没人反馈过这个问题，应该是github page最近才最的限制。）
+
+
+
+
+
+
+
+
+</code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/uncategorized/2020-10-08-HEXO-for-beginers.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nuanuan.jpg">
+      <meta itemprop="name" content="Ian Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吾将上下而求索">
+      <meta itemprop="description" content="Ian's place to write">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 吾将上下而求索">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/uncategorized/2020-10-08-HEXO-for-beginers.html" class="post-title-link" itemprop="url">HEXO搭建个人博客</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 08-25-2015 00:00:00" itemprop="dateCreated datePublished" datetime="2015-08-25T00:00:00-05:00">08-25-2015</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 02-28-2026 10:20:26" itemprop="dateModified" datetime="2026-02-28T10:20:26-06:00">02-28-2026</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>HEXO配置，HEXO+Github，搭建自己的博客</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/uncategorized/2020-10-08-HEXO-for-beginers.html">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="Previous page" aria-label="Previous page" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ian Wang</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
