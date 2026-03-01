@@ -444,6 +444,16 @@ hexo version  #查看Hexo的版本
       </tags>
   </entry>
   <entry>
+    <title>Least-square-FEM</title>
+    <url>/uncategorized/2020-10-08-Least-square-FEM.html</url>
+    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This is a course project for MATH578 at UNM. This project discusses the use of Least-square FEM to stabilize numerical solution of convection-diffusion equation. The report can be found <a href="/docs/LeastSquare/LSFEM.pdf">here</a>. </p>
+]]></content>
+      <tags>
+        <tag>least-square</tag>
+        <tag>finite element method</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>How to deploy hexo blog on two machines</title>
     <url>/uncategorized/2020-10-08-How-to-deploy-hexo-blog-on-two-machines.html</url>
     <content><![CDATA[<h3 id="Why-we-need-this"><a href="#Why-we-need-this" class="headerlink" title="Why we need this?"></a>Why we need this?</h3><p>Yes, Hexo is able to deploy with <code>npm install hexo-deployer-git --save</code> for us by simply setting up <code>_config.yml</code> file. It looks like normally: </p>
@@ -503,16 +513,6 @@ or git clone -b hexo &lt;remote_repo&gt; ....
       </tags>
   </entry>
   <entry>
-    <title>Least-square-FEM</title>
-    <url>/uncategorized/2020-10-08-Least-square-FEM.html</url>
-    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This is a course project for MATH578 at UNM. This project discusses the use of Least-square FEM to stabilize numerical solution of convection-diffusion equation. The report can be found <a href="/docs/LeastSquare/LSFEM.pdf">here</a>. </p>
-]]></content>
-      <tags>
-        <tag>least-square</tag>
-        <tag>finite element method</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Machine Learning</title>
     <url>/Machine-Learning/2020-10-08-Maching-learning.html</url>
     <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This is a series of course projects for Machine Learning at UNM. For the topics, please refer to the following table.</p>
@@ -556,74 +556,6 @@ or git clone -b hexo &lt;remote_repo&gt; ....
         <tag>ICA</tag>
         <tag>GMM</tag>
         <tag>EM</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown syntax supported by the document</title>
-    <url>/uncategorized/2020-10-08-Markdown-tool.html</url>
-    <content><![CDATA[<h2 id="What-is-Markdown"><a href="#What-is-Markdown" class="headerlink" title="What is Markdown?"></a>What is Markdown?</h2><h2 id="What-Is-It"><a href="#What-Is-It" class="headerlink" title="What Is It?"></a>What Is It?</h2><p>Markdown is a plain text formatting syntax aimed at making writing  for the internet easier. The philosophy behind Markdown is that plain  text documents should be readable without tags mussing everything up,  but there should still be ways to add text modifiers like lists, bold,  italics, etc. It is an alternative to WYSIWYG (what you see is what you  get) editors, which use rich text that later gets converted to proper  HTML.</p>
-<p>It’s possible you’ve encountered Markdown without realizing it.  Facebook chat, Skype, and Reddit all let you use different flavors of  Markdown to format your messages.</p>
-<p>Here’s a quick example: to make words bold using Markdown, you simply enclose them in * (asterisks). So, <em>bold word</em> would look like <strong>bold word</strong> when everything is said and done.</p>
-<p>All told, Markdown is a great way to write for the web using plain text.</p>
-<h2 id="Basic-grammers"><a href="#Basic-grammers" class="headerlink" title="Basic grammers"></a>Basic grammers</h2><p>Title<br>H1 :# Header 1<br>H2 :## Header 2<br>H3 :### Header 3<br>H4 :#### Header 4<br>H5 :##### Header 5<br>H6 :###### Header 6<br>Link :<a href="URL">Title</a><br>Bold :<strong>Bold</strong><br>Italics :<em>Italics</em><br>*strikebreak :<del>text</del><br>inlines : <code>alert(&#39;Hello World&#39;);</code>        </p>
-<h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><ul>
-<li>list1</li>
-<li>list2</li>
-<li>list3</li>
-</ul>
-<h3 id="list-reference"><a href="#list-reference" class="headerlink" title="list reference"></a>list reference</h3><blockquote>
-<ul>
-<li>list1</li>
-<li>list2</li>
-<li>list3</li>
-</ul>
-</blockquote>
-<h2 id="Advanced-syntax"><a href="#Advanced-syntax" class="headerlink" title="Advanced syntax"></a>Advanced syntax</h2><h3 id="1-Todo-list"><a href="#1-Todo-list" class="headerlink" title="1. Todo list"></a>1. Todo list</h3><ul>
-<li><input disabled="" type="checkbox"> support for exporting the text in PDF format</li>
-<li><input disabled="" type="checkbox"> Improving the Cmd rendering algorithm to improve rendering efficiency using local rendering techniques</li>
-<li><input checked="" disabled="" type="checkbox"> New Todo List Feature</li>
-<li><input checked="" disabled="" type="checkbox"> Fix Icon function<h3 id="2-Highliget-a-snippet-of-code"><a href="#2-Highliget-a-snippet-of-code" class="headerlink" title="2. Highliget a snippet of code"></a>2. Highliget a snippet of code</h3></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># A comment</span></span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27;hello world&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="3-Table"><a href="#3-Table" class="headerlink" title="3. Table"></a>3. Table</h4><table>
-<thead>
-<tr>
-<th>item</th>
-<th align="right">price</th>
-<th align="center">quantity</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>computer</td>
-<td align="right">$1600</td>
-<td align="center">5</td>
-</tr>
-<tr>
-<td>cellphone</td>
-<td align="right">$12</td>
-<td align="center">12</td>
-</tr>
-<tr>
-<td>cable</td>
-<td align="right">$1</td>
-<td align="center">234</td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ParaReal-heat</title>
-    <url>/uncategorized/2020-10-08-ParaReal-heat.html</url>
-    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This <a href="/docs/parallelcomputing/CS542Presentation.pdf">project</a> implements a Parallel-in-Time(PIT) algorithm, ParaReal for heat equation with hybrid OpenMP and MPI.  </p>
-]]></content>
-      <tags>
-        <tag>parallel computing</tag>
-        <tag>ParaReal</tag>
-        <tag>PIT</tag>
-        <tag>roofline model</tag>
       </tags>
   </entry>
   <entry>
@@ -797,11 +729,71 @@ Markup: --------------- (below H2 text)
       </tags>
   </entry>
   <entry>
-    <title>Useful docker commands</title>
-    <url>/uncategorized/2020-10-08-Useful-docker-commands.html</url>
-    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> ~/.bash_aliases</span><br><span class="line"><span class="comment"># kill all running containers</span></span><br><span class="line"><span class="built_in">alias</span> dockerkill=<span class="string">&#x27;docker kill $(docker ps -a -q)&#x27;</span></span><br><span class="line"><span class="comment"># delelte all stopped containers</span></span><br><span class="line"><span class="built_in">alias</span> dockercleanc=<span class="string">&#x27;docker rm $(docker ps -a -q)&#x27;</span></span><br><span class="line"><span class="comment"># delete all untaged images</span></span><br><span class="line"><span class="built_in">alias</span> dockercleani=<span class="string">&#x27;docker rmi $(docker images -q -f dangling=true)&#x27;</span>  </span><br><span class="line"><span class="comment"># delte all stopped and untaged images</span></span><br><span class="line"><span class="built_in">alias</span> dockerclean=<span class="string">&#x27;dockercleanc || true &amp;&amp; dockercleani&#x27;</span></span><br></pre></td></tr></table></figure>]]></content>
+    <title>Markdown syntax supported by the document</title>
+    <url>/uncategorized/2020-10-08-Markdown-tool.html</url>
+    <content><![CDATA[<h2 id="What-is-Markdown"><a href="#What-is-Markdown" class="headerlink" title="What is Markdown?"></a>What is Markdown?</h2><h2 id="What-Is-It"><a href="#What-Is-It" class="headerlink" title="What Is It?"></a>What Is It?</h2><p>Markdown is a plain text formatting syntax aimed at making writing  for the internet easier. The philosophy behind Markdown is that plain  text documents should be readable without tags mussing everything up,  but there should still be ways to add text modifiers like lists, bold,  italics, etc. It is an alternative to WYSIWYG (what you see is what you  get) editors, which use rich text that later gets converted to proper  HTML.</p>
+<p>It’s possible you’ve encountered Markdown without realizing it.  Facebook chat, Skype, and Reddit all let you use different flavors of  Markdown to format your messages.</p>
+<p>Here’s a quick example: to make words bold using Markdown, you simply enclose them in * (asterisks). So, <em>bold word</em> would look like <strong>bold word</strong> when everything is said and done.</p>
+<p>All told, Markdown is a great way to write for the web using plain text.</p>
+<h2 id="Basic-grammers"><a href="#Basic-grammers" class="headerlink" title="Basic grammers"></a>Basic grammers</h2><p>Title<br>H1 :# Header 1<br>H2 :## Header 2<br>H3 :### Header 3<br>H4 :#### Header 4<br>H5 :##### Header 5<br>H6 :###### Header 6<br>Link :<a href="URL">Title</a><br>Bold :<strong>Bold</strong><br>Italics :<em>Italics</em><br>*strikebreak :<del>text</del><br>inlines : <code>alert(&#39;Hello World&#39;);</code>        </p>
+<h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><ul>
+<li>list1</li>
+<li>list2</li>
+<li>list3</li>
+</ul>
+<h3 id="list-reference"><a href="#list-reference" class="headerlink" title="list reference"></a>list reference</h3><blockquote>
+<ul>
+<li>list1</li>
+<li>list2</li>
+<li>list3</li>
+</ul>
+</blockquote>
+<h2 id="Advanced-syntax"><a href="#Advanced-syntax" class="headerlink" title="Advanced syntax"></a>Advanced syntax</h2><h3 id="1-Todo-list"><a href="#1-Todo-list" class="headerlink" title="1. Todo list"></a>1. Todo list</h3><ul>
+<li><input disabled="" type="checkbox"> support for exporting the text in PDF format</li>
+<li><input disabled="" type="checkbox"> Improving the Cmd rendering algorithm to improve rendering efficiency using local rendering techniques</li>
+<li><input checked="" disabled="" type="checkbox"> New Todo List Feature</li>
+<li><input checked="" disabled="" type="checkbox"> Fix Icon function<h3 id="2-Highliget-a-snippet-of-code"><a href="#2-Highliget-a-snippet-of-code" class="headerlink" title="2. Highliget a snippet of code"></a>2. Highliget a snippet of code</h3></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># A comment</span></span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27;hello world&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="3-Table"><a href="#3-Table" class="headerlink" title="3. Table"></a>3. Table</h4><table>
+<thead>
+<tr>
+<th>item</th>
+<th align="right">price</th>
+<th align="center">quantity</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>computer</td>
+<td align="right">$1600</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td>cellphone</td>
+<td align="right">$12</td>
+<td align="center">12</td>
+</tr>
+<tr>
+<td>cable</td>
+<td align="right">$1</td>
+<td align="center">234</td>
+</tr>
+</tbody></table>
+]]></content>
       <tags>
-        <tag>docker</tag>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ParaReal-heat</title>
+    <url>/uncategorized/2020-10-08-ParaReal-heat.html</url>
+    <content><![CDATA[<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This <a href="/docs/parallelcomputing/CS542Presentation.pdf">project</a> implements a Parallel-in-Time(PIT) algorithm, ParaReal for heat equation with hybrid OpenMP and MPI.  </p>
+]]></content>
+      <tags>
+        <tag>parallel computing</tag>
+        <tag>ParaReal</tag>
+        <tag>PIT</tag>
+        <tag>roofline model</tag>
       </tags>
   </entry>
   <entry>
@@ -841,7 +833,7 @@ Markup: --------------- (below H2 text)
 <p>Files included:</p>
 <p>Folder <strong>forDelivery</strong> contains the DGTD solver in <strong>dgtd_MPI</strong>, geometry files in <strong>geo</strong> and all necessary file to obtain the s-parameter in folder <strong>halfmatchTL</strong>. To start,go to <strong>halfmatchTL</strong> and execute <em>runMPI.sh</em>. </p>
 <p>In folder <strong>circuitfittingProject</strong>, there includes necessary MATLAB and python files. Each file should be commented well. </p>
-<p>For any question, please contact <a href="mailto:&#115;&#104;&#117;&#x77;&#x61;&#x6e;&#x67;&#x31;&#50;&#x40;&#117;&#x6e;&#109;&#46;&#101;&#x64;&#117;">&#115;&#104;&#117;&#x77;&#x61;&#x6e;&#x67;&#x31;&#50;&#x40;&#117;&#x6e;&#109;&#46;&#101;&#x64;&#117;</a>. </p>
+<p>For any question, please contact <a href="mailto:&#x73;&#104;&#x75;&#x77;&#x61;&#110;&#103;&#x31;&#50;&#64;&#x75;&#x6e;&#x6d;&#x2e;&#x65;&#x64;&#117;">&#x73;&#104;&#x75;&#x77;&#x61;&#110;&#103;&#x31;&#50;&#64;&#x75;&#x6e;&#x6d;&#x2e;&#x65;&#x64;&#117;</a>. </p>
 ]]></content>
       <categories>
         <category>cem</category>
@@ -851,235 +843,11 @@ Markup: --------------- (below H2 text)
       </tags>
   </entry>
   <entry>
-    <title>Deterministic-random-shuffle</title>
-    <url>/Deep-Learning/2020-10-14-Deterministic-random-shuffle.html</url>
-    <content><![CDATA[<h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><p>Determinism is a important issue in deep learning(DL) though a lot of randomness is burried here and there, e.g. initialization of weights </p>
-<p>It’s actually easier to understand in TF1.x language, purely graph mode. This <a href="https://www.tensorflow.org/api_docs/python/tf/compat/v1/set_random_seed">link</a> is highly recommended. TF2.x introduces eager mode but still keeps graph mode option by all sorts of means, e.g. <code>tf.function</code>. It’s explained <a href="https://www.tensorflow.org/api_docs/python/tf/random/set_seed">here</a> but to be honest way more  counterintuitive.</p>
-<p>This post aims to list couple of senarios may trip you down when playing around with such concepts. </p>
-<a id="more"></a>
-
-<h2 id="Problem-statement"><a href="#Problem-statement" class="headerlink" title="Problem statement"></a>Problem statement</h2><p>Determinism means, in most cases, the identical results among many runs. A common approach is <code>tf.random.set_seed(SEED)</code> at the entry point of your code. To be frank, there is a lot of implications going on under the hood, but essentially it will achieve repeatable results. I am actually assuming all the ops(on CPU and GPU) are deterministic, but in fact NOT! Check <a href="https://github.com/NVIDIA/framework-determinism">here</a>.</p>
-<p>This post will focus on another case: without running the program twice, can we get a repeatable results, if a op under test is executed in a loop many times. A substantial example would be 1) identical dropout between batches or epochs; 2) same order of shuffle of input data. For simplicity, the latter will be looked at. All the codes are based on TF2.x. </p>
-<h3 id="Graph-mode"><a href="#Graph-mode" class="headerlink" title="Graph mode"></a>Graph mode</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@tf.function</span><br><span class="line">def shuffled_sum(input_val, seed&#x3D;123):</span><br><span class="line">    print(&quot;Python run&quot;)</span><br><span class="line">    tf.random.set_seed(seed)</span><br><span class="line">    tensorValue1 &#x3D; tf.random.shuffle(input_val, seed)</span><br><span class="line">    tf.print(tensorValue1)</span><br><span class="line">    tensorValue2 &#x3D; tf.random.shuffle(input_val, seed)</span><br><span class="line">    tf.print(tensorValue2)</span><br><span class="line"></span><br><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])  # run-1</span><br><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])  # run-2</span><br><span class="line"></span><br><span class="line">## output:</span><br><span class="line">Python run</span><br><span class="line">[8 7 3 ... 9 1 10] ---A</span><br><span class="line">[8 7 3 ... 9 1 10] ---B</span><br><span class="line">[6 8 10 ... 4 1 7] ---C</span><br><span class="line">[6 8 10 ... 4 1 7] ---D</span><br></pre></td></tr></table></figure>
-<p>The intention of <code>shuffled_sum</code> was to set the seed as much as it can to achieve repeatable results. But why we didn’t see <code>A==C</code>? </p>
-<p>A: TF’s builds the graph first and find that input argument <code>seed</code> is not related to <code>tensorValue1</code> and <code>tensorValue2</code>. In run-2, the global seed is not seen for the shuffle op. The internal counter for shuffle op increments. For <code>A==B</code> ,  the two ops takes in the same input args, so TF regards them as identical. </p>
-<h3 id="Eager-mode"><a href="#Eager-mode" class="headerlink" title="Eager mode"></a>Eager mode</h3><p>This time, we comments out <code>tf.funciton</code>,and see the output as</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">## output:</span><br><span class="line">Python run</span><br><span class="line">[8 7 3 ... 9 1 10] ---A</span><br><span class="line">[6 8 10 ... 4 1 7] ---B</span><br><span class="line">Python run</span><br><span class="line">[8 7 3 ... 9 1 10] ---C</span><br><span class="line">[6 8 10 ... 4 1 7] ---D</span><br></pre></td></tr></table></figure>
-<p>Now <code>A==C</code> reals the global seed works. But <code>A!=B</code> means that B is the next sequence of A given the seeds combination and it’s deterministic.  In eager mode, the shuffle simply runs twice(counter increments) in the function.</p>
-<h3 id="How-to-enforce-repeatability-in-graph-mode"><a href="#How-to-enforce-repeatability-in-graph-mode" class="headerlink" title="How to enforce repeatability in graph mode?"></a>How to enforce repeatability in graph mode?</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])</span><br><span class="line">tf.random.set_seed(123)</span><br><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])</span><br><span class="line">## output:</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br></pre></td></tr></table></figure>
-<p>‘tf.random.set_seed(123)’ have to be run before gets into run-2 so it cannot fall into a graph. In TF1.x way, it should comes before session.run(xxx).</p>
-]]></content>
-      <categories>
-        <category>Deep Learning</category>
-      </categories>
+    <title>Useful docker commands</title>
+    <url>/uncategorized/2020-10-08-Useful-docker-commands.html</url>
+    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> ~/.bash_aliases</span><br><span class="line"><span class="comment"># kill all running containers</span></span><br><span class="line"><span class="built_in">alias</span> dockerkill=<span class="string">&#x27;docker kill $(docker ps -a -q)&#x27;</span></span><br><span class="line"><span class="comment"># delelte all stopped containers</span></span><br><span class="line"><span class="built_in">alias</span> dockercleanc=<span class="string">&#x27;docker rm $(docker ps -a -q)&#x27;</span></span><br><span class="line"><span class="comment"># delete all untaged images</span></span><br><span class="line"><span class="built_in">alias</span> dockercleani=<span class="string">&#x27;docker rmi $(docker images -q -f dangling=true)&#x27;</span>  </span><br><span class="line"><span class="comment"># delte all stopped and untaged images</span></span><br><span class="line"><span class="built_in">alias</span> dockerclean=<span class="string">&#x27;dockercleanc || true &amp;&amp; dockercleani&#x27;</span></span><br></pre></td></tr></table></figure>]]></content>
       <tags>
-        <tag>Randomness</tag>
-        <tag>Determinism</tag>
-        <tag>Tensorflow</tag>
-        <tag>Deep Learning</tag>
-        <tag>eager execution</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>What does std::move do at parameter binding?</title>
-    <url>/programming/2022-01-23-what%20does%20stdmove%20do.html</url>
-    <content><![CDATA[<p><code>std::move</code> is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears frequently in factory mode and demonstrate how compiler treats it at parameter binding. </p>
-<a id="more"></a>
-
-<p>Some term clarification:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void foo(int p1);</span><br><span class="line">int a &#x3D; 1;</span><br><span class="line">foo(a);</span><br></pre></td></tr></table></figure>
-<p>we refer <code>p1</code> as parameter and <code>a</code> as argument of <code>foo</code>. </p>
-<p>Say we have a resource class as</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Struct Resource &#123;&#125;;</span><br></pre></td></tr></table></figure>
-<p>and a handle class to hold the resource as,</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">handle</span> &#123;</span></span><br><span class="line"> <span class="keyword">public</span>:                                                     </span><br><span class="line">  handle () &#123; res = <span class="keyword">new</span> Resource(); &#125;                               </span><br><span class="line">  ~handle () &#123; <span class="keyword">if</span> (res) <span class="keyword">delete</span> res; &#125;</span><br><span class="line">  handle (<span class="keyword">const</span> handle &amp; other)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;copy constructor&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;At entrance: other.res=&quot;</span>&lt;&lt;other.res&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    res = <span class="keyword">new</span> Resource(*other.res);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;I am set to=&quot;</span>&lt;&lt;res&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">                                                        </span><br><span class="line">  handle (handle &amp;&amp; other) &#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;move constructor&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    res = other.res;</span><br><span class="line">    other.res = <span class="literal">nullptr</span>;</span><br><span class="line">  &#125;</span><br><span class="line">                                                        </span><br><span class="line">  handle &amp; <span class="keyword">operator</span>=(handle &amp;&amp; other)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;move assignment&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">std</span>::swap(res, other.res);</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function">Resource* <span class="title">get_res</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> res; &#125;</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  Resource* res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>Then we need a wrapper class as an aggregate of couple of handles like this</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">wrapper</span>&#123;</span></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  wrapper(handle &amp;&amp;handle) :</span><br><span class="line">   _handle_1(<span class="built_in">std</span>::move(handle)) &#123;</span><br><span class="line">       <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;private member  holds resource &quot;</span>&lt;&lt;_handle_1.get_res()&lt;&lt;<span class="string">&quot;; parameter holds &quot;</span> &lt;&lt;</span><br><span class="line">           handle.get_res()&lt;&lt;<span class="built_in">endl</span>;&#125;  </span><br><span class="line">    </span><br><span class="line">  <span class="function">handle* <span class="title">get_handle</span><span class="params">()</span>  </span>&#123;<span class="keyword">return</span> &amp;_handle_1;&#125;</span><br><span class="line">  wrapper(wrapper&amp;&amp; x) = <span class="keyword">default</span>;</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  handle _handle_1;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p> Assume there is a user case where the ownership needs to be passed around.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">handle h4;</span><br><span class="line">cout &lt;&lt;&quot;h4 res&#x3D;&quot;&lt;&lt;h4.get_res()&lt;&lt;endl;</span><br><span class="line">unique_ptr&lt;wrapper&gt; m(new wrapper(std::move(h4)));</span><br><span class="line">cout &lt;&lt;&quot;h4 res&#x3D;&quot;&lt;&lt;h4.get_res()&lt;&lt;endl;</span><br><span class="line">cout &lt;&lt;&quot;m res&#x3D;&quot;&lt;&lt;instance-&gt;get_holder()-&gt;get_res()&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
-<p>It’s nearly a common ground that we need to use <code>std::move(h4)</code> as argument to construct <code>wrapper()</code>, but the key is how to write the initialization list of the constructor for class wrapper. We have the following 4 cases.</p>
-<ol>
-<li><code>wrapper(handle &amp;&amp;handle) : _handle_1(std::move(handle))</code></li>
-<li><code>wrapper(handle &amp;&amp;handle) : _handle_1(handle)</code></li>
-<li><code>wrapper(handle handle) : _handle_1(std::move(handle))</code></li>
-<li><code>wrapper(handle handle) : _handle_1(handle)</code></li>
-</ol>
-<ul>
-<li><pre><code class="c++">// output #1
-h4 res=0x55fbc9929eb0
-move constructor
-private member holds resource 0x55fbc9929eb0; parameter holds 0
-h4 res=0
-m res=0x55fbc9929eb0
-Success! It&#39;s what we want and  only 1 move constructor is called. The compiler it smart enough to `swap(h4, _handl_1)`.
-    
-// output #2
-h4 res=0x564af9158eb0
-copy constructor
-At entrance: other.res=0x564af9158eb0
-I am set to=0x564af9159300
-private member holds resource 0x564af9159300; parameter holds 0x564af9158eb0
-h4 res=0x564af9158eb0
-m res=0x564af9159300
-Failure. No move at all because we never mean  to `move` explicitly inside wrapper. Parameter handle is a lvalue though itself is a rvalue reference. No wonder class handle invokes its copy constructor. So std::move(handle) is indispensable. Luckily, `h4` is not tampered and `h4-&gt;temp` is skipped or optimized by compiler. With std::forward() syntex, perfect forwarding, we can preserve the qualifiers (const-ref, ref, value, rvalue, etc.). of parameter and will be discusssed in another post.
-    
-// output #3
-h4 res=0x555ca6e7ceb0
-move constructor
-move constructor
-private member holds resource 0x555ca6e7ceb0; parameter holds 0
-h4 res=0
-m res=0x555ca6e7ceb0
-Success! But 2 moves. Interestingly, no copy constructor! `h4-&gt;temp-&gt;_handle_1`
-    
-// output #4
-h4 res=0x56100474deb0
-move constructor
-copy constructor
-At entrance: other.res=0x56100474deb0
-I am set to=0x56100474e300
-private member holds resource 0x56100474e300; parameter holds 0x56100474deb0
-h4 res=0
-m res=0x56100474e300
-Failure. Really bad because `h4-&gt;temp` and gets lost!
-
-</code></pre>
-</li>
-</ul>
-<p>Based on analysis above, I would actually recommend case 3 over 1 though one more time of <code>move</code>. Reason is case 3 is more general in which case the input argument can be rvalue or lvalue. Moreover, <code>move</code> is implemented by <code>swap</code> under the hood(usually) thus not too much overheads. </p>
-]]></content>
-      <categories>
-        <category>programming</category>
-      </categories>
-      <tags>
-        <tag>c++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>What does std::forward do?</title>
-    <url>/programming/2022-01-24-what%20does%20stdforward%20do.html</url>
-    <content><![CDATA[<p><code>std::forward</code> is another signature feature of c++11 beside <code>std::move</code>. Technically, it does perfect forwarding. But of what and when? In this post, we will explore some use cases and context behind.</p>
-<a id="more"></a>
-
-<p><strong>C++11 lets us perform perfect forwarding, which means that we can forward the parameters passed to a function template to another function call inside it without losing their own qualifiers (const-ref, ref, value, rvalue, etc.).</strong></p>
-<h1 id="THE-standard"><a href="#THE-standard" class="headerlink" title="THE standard"></a>THE standard</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span>&#123;</span></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line">  foo(T&amp;&amp; p) : _p(<span class="built_in">std</span>::forward&lt;T&gt;(p)) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>The above snippet covers almost 90% occurrence but with lots of pretexts and c++ rules. Boiler first.</p>
-<p>   1.<strong>_ Reference folding  _</strong></p>
-<ol>
-<li><p>X&amp; &amp;, X&amp; &amp;&amp;, X&amp;&amp; &amp; -&gt; X&amp;</p>
-</li>
-<li><p>X&amp;&amp; &amp;&amp; -&gt; X&amp;&amp;</p>
-</li>
-<li><p>A special rule for rvalue reference. When a left value is passed to a function whose argument is a right-valued reference, and this right-valued reference points to a template type argument (T&amp;&amp;), the compiler infers that the template argument type is a left-valued reference to the real parameter, as in </p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(T&amp;&amp;)</span></span>;</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">f(i)</span><br></pre></td></tr></table></figure>
-<p>T is int&amp; but not int. Again, according to the reference folding rule <code>void f(int&amp; &amp;&amp;)</code> will be inferred as <code>f(int&amp;)</code>, so f will be instantiated as: <code>f&lt;int&amp;&gt;(int&amp;)</code>. That make sense because we never intend to pass in a rvalue.</p>
-</li>
-<li><p><strong><em><code>std::forward</code>cast its parameter(here <code>p</code>) to a rvalue only when the parameter binds to a rvalue.</em></strong></p>
-<p>Here a example is better to illustrate the idea. For <em>THE standard</em> code,</p>
-<ul>
-<li><p>pass in as </p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i=<span class="number">0</span>; foo(i);</span><br></pre></td></tr></table></figure>
-<p>rule #2 is satisfied and <code>T = int&amp;</code>. <code>foo&lt;int&amp;&gt;(int&amp; &amp;&amp; p) -&gt; foo&lt;int&amp;&gt;(int&amp; p)</code> is called. Here parameter <code>p</code> is a rvalue and rvalue reference.</p>
-</li>
-<li><p>pass in as</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">foo(<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
-<p><code>T = int</code>, and <code>foo&lt;int&gt;(int&amp;&amp; p)</code> where <code>p</code> is a rvalue reference but lvalue itself. Passing to inner function as rvalue reference, we have to do <code>std::move(p)</code>.<br>A concise way to combine such 2 cases is <code>std::forward(p)</code>. What <code>std::forward(p)</code> returns is a lvalue or rvalue exactly the same as whatever the argument is. Let conclude with a complete example.</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;type_traits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;typeinfo&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    A(<span class="keyword">int</span>&amp;&amp; a) : _a(a) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;move , a=&quot;</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    A(<span class="keyword">int</span>&amp; a)  : _a(a) &#123;</span><br><span class="line">       <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;copy , a=&quot;</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span>:</span><br><span class="line">   <span class="keyword">int</span> _a;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T1</span>, <span class="keyword">class</span> <span class="title">T2</span>, <span class="keyword">class</span> <span class="title">T3</span>&gt;</span></span><br><span class="line">    B(T1 &amp;&amp; t1, T2 &amp;&amp; t2, T3 &amp;&amp; t3) :</span><br><span class="line">        a1_(<span class="built_in">std</span>::forward&lt;T1&gt;(t1)),</span><br><span class="line">        a2_(<span class="built_in">std</span>::forward&lt;T2&gt;(t2)),</span><br><span class="line">        a3_(<span class="built_in">std</span>::forward&lt;T3&gt;(t3)) &#123;&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    A a1_, a2_, a3_;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;class... U&gt;</span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">unique_ptr</span>&lt;B&gt; <span class="title">make_unique</span><span class="params">(U&amp;&amp;... u)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">std</span>::<span class="built_in">unique_ptr</span>&lt;B&gt;(<span class="keyword">new</span> B(<span class="built_in">std</span>::forward&lt;U&gt;(u)...));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">5</span>;</span><br><span class="line">    <span class="keyword">auto</span> p1 = make_unique(i, <span class="number">2</span>, <span class="built_in">std</span>::move(i));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// output</span></span><br><span class="line">copy , a=<span class="number">5</span></span><br><span class="line">move , a=<span class="number">2</span></span><br><span class="line">move , a=<span class="number">5</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>programming</category>
-      </categories>
-      <tags>
-        <tag>c++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Why record_stream Matters: A Real CUDA Memory Bug in SGLang</title>
-    <url>/GPU/Why-record-stream-Matters-A-Real-CUDA-Memory-Bug-in-SGLang.html</url>
-    <content><![CDATA[<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>PyTorch’s CUDA memory caching allocator is designed to be fast — it recycles GPU memory aggressively based on Python reference counting. This works transparently most of the time, but it has a blind spot: <strong>it only tracks the stream on which a tensor was originally allocated</strong>.</p>
-<p>When a tensor is passed to a <em>different</em> CUDA stream, the allocator has no idea. If Python references to that tensor drop to zero at the wrong moment, the allocator can reclaim the memory while the second stream’s kernel is still reading it. The result is a silent use-after-free on the GPU: corrupted data, out-of-bounds crashes, or worse — wrong answers with no error at all.</p>
-<p>This exact bug was recently caught in <a href="https://github.com/sgl-project/sglang/issues/18744">SGLang’s speculative decoding (EAGLE v2)</a>, and fixed with a single call to <code>record_stream</code>.</p>
-<hr>
-<h2 id="The-Bug-Index-Out-of-Bounds-in-Speculative-Decoding"><a href="#The-Bug-Index-Out-of-Bounds-in-Speculative-Decoding" class="headerlink" title="The Bug: Index Out of Bounds in Speculative Decoding"></a>The Bug: Index Out of Bounds in Speculative Decoding</h2><h3 id="Symptom"><a href="#Symptom" class="headerlink" title="Symptom"></a>Symptom</h3><p>SGLang users running DeepSeek-R1 on 8× B200/GB200 GPUs with speculative decoding (EAGLE, 2 steps) at high concurrency (≥ 1024) saw intermittent crashes like:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vectorized_gather_kernel: block: [0,1,0], thread: [64,0,0]</span><br><span class="line">  Assertion &#96;ind &gt;&#x3D; 0 &amp;&amp; ind &lt; ind_dim_size&#96; failed</span><br><span class="line"></span><br><span class="line">IndexKernel.cu:111: operator():</span><br><span class="line">  Assertion &#96;-sizes[i] &lt;&#x3D; index &amp;&amp; index &lt; sizes[i]&#96; failed</span><br></pre></td></tr></table></figure>
-<p>The indices tensor used to gather from <code>topk_p_buf</code>, <code>topk_index_buf</code>, <code>hidden_states_buf</code>, etc. contained garbage — both negative values and values far exceeding the buffer size.</p>
-<h3 id="Root-Cause"><a href="#Root-Cause" class="headerlink" title="Root Cause"></a>Root Cause</h3><p>The race condition unfolds in this sequence:</p>
-<ol>
-<li>An <code>indices</code> tensor is <strong>allocated on PyTorch’s default stream</strong>.</li>
-<li>The object holding that tensor (<code>spec_info</code>) is <strong>replaced</strong> — <code>batch.spec_info</code> is assigned a new value, dropping the last Python reference to the old one.</li>
-<li>PyTorch’s caching allocator sees refcount → 0 and <strong>reclaims the GPU memory</strong>.</li>
-<li>Meanwhile, the <strong>forward/compute stream</strong> enqueues kernels that read from those same indices.</li>
-<li>The forward stream reads from memory that has already been freed and partially overwritten → <strong>corrupted indices → out-of-bounds crash</strong>.</li>
-</ol>
-<p>The key insight: steps 3 and 4 can race because they happen on <em>different streams</em> with no synchronization between them.</p>
-<h3 id="The-Fix-PR-18958"><a href="#The-Fix-PR-18958" class="headerlink" title="The Fix (PR #18958)"></a>The Fix (<a href="https://github.com/sgl-project/sglang/pull/18958">PR #18958</a>)</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Before (broken)</span></span><br><span class="line">draft_input.topk_p = self.topk_p_buf[draft_input.future_indices.indices]</span><br><span class="line"></span><br><span class="line"><span class="comment"># After (fixed)</span></span><br><span class="line">indices = draft_input.future_indices.indices</span><br><span class="line">indices.record_stream(torch.get_device_module(self.device).current_stream())</span><br><span class="line">draft_input.topk_p = self.topk_p_buf[indices]</span><br></pre></td></tr></table></figure>
-<p>One line. <code>indices.record_stream(stream)</code> tells the caching allocator: “the current stream is also using this tensor — don’t free it until this stream has passed this point.” The race is eliminated.</p>
-<hr>
-<h2 id="What-record-stream-Does"><a href="#What-record-stream-Does" class="headerlink" title="What record_stream Does"></a>What <code>record_stream</code> Does</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tensor.record_stream(stream)</span><br></pre></td></tr></table></figure>
-<p>Registers <code>stream</code> as a consumer of <code>tensor</code>‘s underlying GPU memory. The caching allocator will not reuse that memory until <strong>all enqueued operations on <code>stream</code></strong> at the time of the call have completed.</p>
-<p><strong>When you need it:</strong> any time a tensor is:</p>
-<ul>
-<li>allocated (or last used) on stream A</li>
-<li>then handed off to stream B for further GPU work</li>
-<li>and Python references may drop to zero before stream B finishes</li>
-</ul>
-<p><strong>When you don’t need it:</strong> if you hold a Python reference to the tensor until after stream B is done (e.g., you explicitly synchronize before releasing it), the reference itself keeps the memory alive.</p>
-<hr>
-<h2 id="Minimal-Reproducer"><a href="#Minimal-Reproducer" class="headerlink" title="Minimal Reproducer"></a>Minimal Reproducer</h2><!-- PASTE YOUR REPRODUCER CODE HERE -->
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> gc</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line">DEVICE = <span class="string">&quot;cuda:0&quot;</span></span><br><span class="line">N = <span class="number">32</span> * <span class="number">1024</span> * <span class="number">1024</span>  <span class="comment"># 128 MB</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">buggy</span>():</span></span><br><span class="line">    side = torch.cuda.Stream(DEVICE)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># ① Source tensor born on the DEFAULT stream.</span></span><br><span class="line">    src = torch.full((N,), <span class="number">1.0</span>, dtype=torch.float32, device=DEVICE)</span><br><span class="line">    torch.cuda.synchronize()</span><br><span class="line"></span><br><span class="line">    out = torch.empty(N, dtype=torch.float32, device=DEVICE)</span><br><span class="line">    <span class="keyword">with</span> torch.cuda.stream(side):</span><br><span class="line">        <span class="comment"># ② Burn GPU cycles on the side stream to delay the copy,</span></span><br><span class="line">        <span class="comment">#    giving the default stream time to recycle src&#x27;s memory.</span></span><br><span class="line">        delay = torch.zeros(<span class="number">4096</span>, <span class="number">4096</span>, device=DEVICE)</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">20</span>):</span><br><span class="line">            delay = torch.mm(delay + <span class="number">1e-6</span>, delay + <span class="number">1e-6</span>)</span><br><span class="line">        out.copy_(src)</span><br><span class="line">        <span class="comment"># ★ KEY FIX: tell the allocator src&#x27;s memory is live on `side`.</span></span><br><span class="line">        <span class="comment">#   The block will not be recycled until all work queued on `side`</span></span><br><span class="line">        <span class="comment">#   up to this point (including the copy) has completed.</span></span><br><span class="line">        <span class="comment">#   Both streams continue running concurrently — no serialization.</span></span><br><span class="line">        <span class="comment"># src.record_stream(side)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># ③ Python ref dropped. Allocator marks the block free for the default</span></span><br><span class="line">    <span class="comment">#    stream — unaware that the side stream will read it after the matmuls.</span></span><br><span class="line">    <span class="keyword">del</span> src</span><br><span class="line">    gc.collect()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># ④ Same-size allocation on the DEFAULT stream gets the recycled block</span></span><br><span class="line">    <span class="comment">#    and overwrites it with 2.0 while side stream is still in matmuls.</span></span><br><span class="line">    poison = torch.full((N,), <span class="number">2.0</span>, dtype=torch.float32, device=DEVICE)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Sync only to observe the result — the corruption already happened above.</span></span><br><span class="line">    torch.cuda.synchronize()</span><br><span class="line">    side.synchronize()</span><br><span class="line"></span><br><span class="line">    got = out[<span class="number">0</span>].item()</span><br><span class="line">    print(<span class="string">f&quot;[buggy ] expected=1.0  got=<span class="subst">&#123;got:<span class="number">.1</span>f&#125;</span>  &quot;</span></span><br><span class="line">          <span class="string">f&quot;→ <span class="subst">&#123;<span class="string">&#x27;CORRUPTED&#x27;</span> <span class="keyword">if</span> got != <span class="number">1.0</span> <span class="keyword">else</span> <span class="string">&#x27;OK (lucky this run)&#x27;</span>&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">del</span> poison, out</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">BUF_SIZE = <span class="number">32</span> * <span class="number">1024</span> * <span class="number">1024</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">not_succesful_buggy</span>():</span></span><br><span class="line">    side = torch.cuda.Stream(DEVICE)</span><br><span class="line"></span><br><span class="line">    buf = torch.arange(BUF_SIZE, dtype=torch.float32, device=DEVICE)  <span class="comment"># buf[i] == i</span></span><br><span class="line">    gate = torch.cuda.Event()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># ① Valid indices on DEFAULT stream: values in [0, BUF_SIZE).</span></span><br><span class="line">    indices = torch.randint(<span class="number">0</span>, BUF_SIZE, (N,), dtype=torch.int64, device=DEVICE)</span><br><span class="line">    torch.cuda.synchronize()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">with</span> torch.cuda.stream(side):</span><br><span class="line">        <span class="comment"># ② Delay gather so default stream can lap it.</span></span><br><span class="line">        delay = torch.zeros(<span class="number">4096</span>, <span class="number">4096</span>, device=DEVICE)</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">20</span>):</span><br><span class="line">            delay = torch.mm(delay + <span class="number">1e-6</span>, delay + <span class="number">1e-6</span>)</span><br><span class="line">        side.wait_event(gate)</span><br><span class="line">        out = buf[indices]   <span class="comment"># gather — reads indices after matmuls</span></span><br><span class="line"></span><br><span class="line">    indices_ptr = indices.data_ptr()</span><br><span class="line">    <span class="keyword">del</span> indices</span><br><span class="line">    gc.collect()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># ③ Recycle with OOB values — same dtype, same count.</span></span><br><span class="line">    poison = torch.full((N,), BUF_SIZE + <span class="number">9999</span>, dtype=torch.int64, device=DEVICE)</span><br><span class="line">    <span class="keyword">assert</span> poison.data_ptr() == indices_ptr, <span class="string">&quot;allocator did not reuse block&quot;</span></span><br><span class="line"></span><br><span class="line">    gate.record()</span><br><span class="line">    torch.cuda.synchronize()  <span class="comment"># poison write finishes</span></span><br><span class="line">    side.synchronize()        <span class="comment"># gather runs — reads OOB indices</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># With TORCH_USE_CUDA_DSA=1 + CUDA_LAUNCH_BLOCKING=1: assertion crash above.</span></span><br><span class="line">    <span class="comment"># Without: silent corruption — output should equal valid gathered values</span></span><br><span class="line">    <span class="comment">#          but instead reflects OOB reads (garbage or wrapped values).</span></span><br><span class="line">    got = out[<span class="number">0</span>].item()</span><br><span class="line">    expected = out[<span class="number">0</span>].item()  <span class="comment"># meaningless since buf[i]==i, just show it&#x27;s garbage</span></span><br><span class="line">    print(<span class="string">f&quot;[buggy ] out[0]=<span class="subst">&#123;got:<span class="number">.1</span>f&#125;</span>  (if corrupted, will not match any valid buf value)&quot;</span>)</span><br><span class="line">    <span class="keyword">del</span> poison, out, buf</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="keyword">assert</span> torch.cuda.is_available(), <span class="string">&quot;CUDA required&quot;</span></span><br><span class="line">    buggy()</span><br><span class="line">    not_succesful_buggy()</span><br></pre></td></tr></table></figure>
-<p>CUDA_LAUNCH_BLOCKING=1 python show_bug.py<br>Hides the bug;</p>
-<p>python show_bug.py<br>will display the difference. And src.record_stream(side) fixes it. Not sure why another cannot reproduce.</p>
-<hr>
-<h2 id="Key-Takeaways"><a href="#Key-Takeaways" class="headerlink" title="Key Takeaways"></a>Key Takeaways</h2><ul>
-<li><strong>The PyTorch caching allocator tracks allocation stream, not usage stream.</strong> Cross-stream tensor handoffs without <code>record_stream</code> are a latent use-after-free.</li>
-<li><strong>The bug is silent until it isn’t.</strong> At low concurrency or on slower hardware, the race window may never open. It took 8× B200s at 1024 concurrent requests to expose it reliably.</li>
-<li><strong>The fix is cheap.</strong> <code>record_stream</code> costs essentially nothing — it just registers a stream with the allocator’s internal bookkeeping.</li>
-<li><strong>Speculative decoding amplifies the risk.</strong> SGLang’s overlap scheduler runs prefill and decode on separate streams concurrently, and <code>spec_info</code> objects have short, non-obvious lifetimes — a perfect storm for this class of bug.</li>
-</ul>
-<hr>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
-<li><a href="https://github.com/sgl-project/sglang/issues/18744">SGLang issue #18744</a> — original bug report</li>
-<li><a href="https://github.com/sgl-project/sglang/pull/18958">SGLang PR #18958</a> — the fix</li>
-<li><a href="https://pytorch.org/docs/stable/generated/torch.Tensor.record_stream.html">PyTorch docs: <code>Tensor.record_stream</code></a></li>
-<li><a href="https://pytorch.org/docs/stable/notes/cuda.html#memory-management">PyTorch CUDA memory management</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>GPU</category>
-      </categories>
-      <tags>
-        <tag>CUDA</tag>
-        <tag>PyTorch</tag>
-        <tag>GPU</tag>
-        <tag>debugging</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>How to achieve Inter-cta sync on Nvidia GPU</title>
-    <url>/GPU/inter-cta-sync.html</url>
-    <content><![CDATA[<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>　In many deep learning and scientific applications, inter-CTA-sync is a necessary pattern. But<br>even with CUDA9’s new feature coperative launch, inter-CTA-sync is never trivial. This blog will dive into this topic with a reduction as our model. </p>
-<p> Say we need to perform a reduction over a entire grid of threads and a natural idea is to reduce intra-block first and inter-block as a second step, so called two-step protocal. It is the best version in terms of performance and comprehensibility. The second step is what need to pay attention to because other blocks have to consume data my block produced in a safe way(Producer-Consumer model). Sure, two kernel launch can be a kill but not in our scope.   </p>
-<a id="more"></a>
-
-<h3 id="Sample-code"><a href="#Sample-code" class="headerlink" title="Sample code"></a>Sample code</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">__device__ int count&#x3D;0;</span><br><span class="line"> </span><br><span class="line">__global__ static void sum(int* data_gpu,int* block_gpu,int *sum_gpu,int length)</span><br><span class="line">&#123;</span><br><span class="line">    extern __shared__ int blocksum[];</span><br><span class="line">    __shared__ int islast;</span><br><span class="line">    int offset;</span><br><span class="line"> </span><br><span class="line">    const int tid&#x3D;threadIdx.x;</span><br><span class="line">    const int bid&#x3D;blockIdx.x;</span><br><span class="line">    blocksum[tid]&#x3D;0;</span><br><span class="line">    for(int i&#x3D;bid*THREAD_NUM+tid;i&lt;length;i+&#x3D;BLOCK_NUM*THREAD_NUM)</span><br><span class="line">        blocksum[tid]+&#x3D;data_gpu[i];</span><br><span class="line"> </span><br><span class="line">    __syncthreads();</span><br><span class="line">    offset&#x3D;THREAD_NUM&#x2F;2;</span><br><span class="line">    while(offset&gt;0)</span><br><span class="line">    &#123;</span><br><span class="line">        if(tid&lt;offset)  blocksum[tid]+&#x3D;blocksum[tid+offset];</span><br><span class="line">        offset&gt;&gt;&#x3D;1;</span><br><span class="line">        __syncthreads();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    if(tid&#x3D;&#x3D;0)</span><br><span class="line">    &#123;</span><br><span class="line">        block_gpu[bid]&#x3D;blocksum[0];</span><br><span class="line">        __threadfence();</span><br><span class="line"> </span><br><span class="line">        int value&#x3D;atomicAdd(&amp;count,1);</span><br><span class="line">        islast&#x3D;(value&#x3D;&#x3D;gridDim.x-1);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    __syncthreads();</span><br><span class="line"> </span><br><span class="line">    if(islast)</span><br><span class="line">    &#123;</span><br><span class="line">        if(tid&#x3D;&#x3D;0)</span><br><span class="line">        &#123;</span><br><span class="line">            int s&#x3D;0;</span><br><span class="line">            for(int i&#x3D;0;i&lt;BLOCK_NUM;i++)  s+&#x3D;block_gpu[i];</span><br><span class="line">            *sum_gpu&#x3D;s;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p>The one-step reduction procedure presented in this section is mainly an example to show you how you can use the data generated by one or more other threads during the execution of one kernel, one or more threads. Let’s start with threadfence. First, threadfence has two main roles, and three levels of control: one role is to control the validity of accesses (writes only). The other is to control that the compiler does not over-optimize (for reads and writes) the top and bottom of the fence (from a line-of-code perspective) when generating instructions. This is actually a combination of hardware and software, the former being mainly hardware, the latter being mainly software (compiler behavior control). Let’s start with threadfence’s control of memory writes. It has a detail that is not specified here: it can suspend the thread (warp) that calls it for a certain period of time until the access writes made by that thread (warp) have reached a certain level. Then the execution of the thread (warp) can be resumed. That is, at what level of completion for the partner thread in the block, for other threads on the GPU, or globally (e.g., the CPU or other cards participating in P2P Access), as described in this section. This leads to the 3 levels of threadfence functions with different suffixes in this section:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">__threadfence_block();</span><br><span class="line">__threadfence();</span><br><span class="line">__threadfence_system();</span><br></pre></td></tr></table></figure>
-<p>Each of these three levels is higher than the other. When used, it causes threads (warp) to be suspended for longer and longer periods of time (suspension does not necessarily have a negative performance impact. This is because the hardware can choose to switch to another thread or warp during this time, which means it can be masked). If we look at it from the hardware point of view only, after the thread executes the instructions written by the access (generated by the compiler), it will continue to execute without the 3 functions (the corresponding instructions generated), and not wait for the access to complete.</p>
-<p>From a hardware perspective, if a thread executes the access-written instructions (generated by the compiler) without these three functions (generated instructions), it will continue to execute without waiting for the access to complete. With these three instructions, the thread will pause and wait for the writing process to complete to a point where it can be “seen” by other threads at different levels before continuing. This is why I emphasized that this is a write in the “control access (write)” brackets. This is because for reads, you can automatically wait when an operand is used. However, the write does not have this function. After the data (from the register) and the access instruction are submitted to the LSU in the SM, that is, after the access instruction is successfully issued, the thread continues to execute. These three functions, on the other hand, effectively introduce three different levels of delay, allowing multiple hardware pipelines to continue execution only after a certain level of write operation has been completed. This is useful in many scenarios (e.g. the example at the end of this chapter where a thread in a block reads data generated by a thread in another block). There is no information on how long this causes threads/warp to pause. One interesting thing is that, when a certain computational power card has a time error at a certain level of the instruction, then the compiler does a patch operation when generating a specific level of the pause instruction for that particular computational power card. (Two instructions are generated in a row to fix the worst-case timing problem and ensure that the write operation is executed properly somewhere).<br>And that’s not all, we all know that hardware can’t leave software, otherwise it’s a soulless corpse. Not only does the hardware have certain operations on the threadfence family of functions (the corresponding instructions), but the compiler, when encountering the three functions, besides generating the three corresponding instructions normally, also causes some behavioral changes: this is what the previous text said, causing some changes in the optimization behavior, which is also described in this section. In layman’s terms, this means separating the accesses before and after the threadfence family of functions,<br>The compiler will not cross the threadfence boundary and reorder the access statements,<br>to optimize performance while maintaining safety and logical correctness. This is why there are a lot of repetitive long sentences in this section.<br>The other part of the long sentence, which says, “A thread’s …. The write operation …. When and where it can be observed by whom (3 levels)…” is a change in the compiler’s behavior, plus a pause in control due to the 3 different instructions generated by the hardware. These are the two main points of threadfence. The user should see for himself the three levels. As mentioned before, the main difference is the pause time (not from official sources, from actual observation).<br>But these two points are not all, this chapter also talks about a volatile keyword.<br>It also happens to have two roles. It is also used in software and hardware. In the example at the end of this chapter, this keyword is indispensable. The software role is similar to that of the threadfence function, where compiler control and changes in behavior occur: this is actually familiar to everyone.<br>The compiler will not use an old value that already exists, such as a fixed p[offset] that has already been read. Instead, it generates a new access instruction to read it. The other point is hardware, as we all know that current cards (e.g. Pascal, GTX1080 with 6.1 computing power), have a uniform (logical) L2 cache, and a separate L1 cache for each SM. (also called unified cache in this computing power, may be different in other computing power, here unified cache), that is, the card has 1 L2 cache (in GPU), and 20 independent L1 cache (in each SM), once SM 10 Once SM 10 writes a value, changing the content of its L1 cache and/or global L2 cache (to the value just written), SM 9, if it still reads the normal access memory, may get the old content in SM 9’s L1 cache directly because it was there before, immediately. At this point, with the volatile keyword, the compiler will not only not use the case mentioned in point (1), but will issue a new access after the encounter, and will also control the cache control policy of the access instruction so that it can pass over the old value in the L1 of the current SM, to get the correct result. In other words, some cards with multiple L1s and unified L2s do not maintain consistency under certain circumstances. This is about volatile.<br>Then let’s talk about this example. This example is a simplified version, and some details have been removed. But it is still sufficient as an example here. If users want to see the full version, there are many online. From NV, from different authors. You can refer to it when the time comes. Let me start with the important point: the mix of normal access and atomic operations. First of all, as we said before, this is a single-step statute summing kernel. It only takes one kernel start, to find the final sum in parallel for a large amount of data on a buffer (a statute operation is a process that takes a large range of inputs and gives a small range of outputs, you can also think of it as a shadowing process from a large set to a small set). You can also think of it as a projection from a large set to a small set). Of course, this example is just a simple summation. Since the kernel only wants to do all the operations in one boot, the code is split into two parts, the first part is just the normal summation of the respective blocks, and then saved to the explicit memory. The second part is the last block elected, which does the second step, reading the internal sums of the previous blocks, and then finding the final sum. This completes the global summation of the single kernel. Because here involves, read the results of other threads, so use the previously mentioned volatile + threadfence, but here the threadfence also has an important role, is the common common access (result[…]) = … write) and atomic access (atomInc). There is no completion order between the normal access instruction and the atomic instruction. By inserting a threadfence function between the two instructions, this code causes all previously terminated kernels to run through the atomic operation only when they have paused long enough for the written part to be globally visible and successfully validated. This allows the final block to be read as soon as the result of the atomic operation is available (a successful election). This prevents a subsequent atomic operation from completing while the previous normal access (which holds the sum of the parts) is still on its way. That’s the main caveat here.<br>It is also important to note that there are two other versions of this common statute summation. Version 2 requires two kernel boots, but the code is much simpler. Version 2 of the kernel only internally calculates its own partial sum for each block, and saves its own partial sum (not written here, there are plenty of forums for that), which means that version 2 of the kernel only needs the first half of version 1 of the kernel. The second half is not needed. Then, by a simple trick (booting it twice in a row), the second boot only needs to set 1 block. This version of the code is simple (only half of it), and circumvents the threadfence operation, the atomInc operation, and the process of controlling the scope of the atomic operation inside the block here with an if (which is performed once collectively) and then broadcasting the result back in shared memory. This simplifies things considerably, but often results in better performance. So code 2 is highly recommended (the only thing you have to pay for is to boot the kernel twice. But the kernel itself has been greatly simplified)</p>
-]]></content>
-      <categories>
-        <category>GPU</category>
-      </categories>
-      <tags>
-        <tag>parallel computing</tag>
+        <tag>docker</tag>
       </tags>
   </entry>
   <entry>
@@ -11321,6 +11089,238 @@ Failure. Really bad because `h4-&gt;temp` and gets lost!
       <tags>
         <tag>Leetcode</tag>
         <tag>algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Deterministic-random-shuffle</title>
+    <url>/Deep-Learning/2020-10-14-Deterministic-random-shuffle.html</url>
+    <content><![CDATA[<h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><p>Determinism is a important issue in deep learning(DL) though a lot of randomness is burried here and there, e.g. initialization of weights </p>
+<p>It’s actually easier to understand in TF1.x language, purely graph mode. This <a href="https://www.tensorflow.org/api_docs/python/tf/compat/v1/set_random_seed">link</a> is highly recommended. TF2.x introduces eager mode but still keeps graph mode option by all sorts of means, e.g. <code>tf.function</code>. It’s explained <a href="https://www.tensorflow.org/api_docs/python/tf/random/set_seed">here</a> but to be honest way more  counterintuitive.</p>
+<p>This post aims to list couple of senarios may trip you down when playing around with such concepts. </p>
+<a id="more"></a>
+
+<h2 id="Problem-statement"><a href="#Problem-statement" class="headerlink" title="Problem statement"></a>Problem statement</h2><p>Determinism means, in most cases, the identical results among many runs. A common approach is <code>tf.random.set_seed(SEED)</code> at the entry point of your code. To be frank, there is a lot of implications going on under the hood, but essentially it will achieve repeatable results. I am actually assuming all the ops(on CPU and GPU) are deterministic, but in fact NOT! Check <a href="https://github.com/NVIDIA/framework-determinism">here</a>.</p>
+<p>This post will focus on another case: without running the program twice, can we get a repeatable results, if a op under test is executed in a loop many times. A substantial example would be 1) identical dropout between batches or epochs; 2) same order of shuffle of input data. For simplicity, the latter will be looked at. All the codes are based on TF2.x. </p>
+<h3 id="Graph-mode"><a href="#Graph-mode" class="headerlink" title="Graph mode"></a>Graph mode</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@tf.function</span><br><span class="line">def shuffled_sum(input_val, seed&#x3D;123):</span><br><span class="line">    print(&quot;Python run&quot;)</span><br><span class="line">    tf.random.set_seed(seed)</span><br><span class="line">    tensorValue1 &#x3D; tf.random.shuffle(input_val, seed)</span><br><span class="line">    tf.print(tensorValue1)</span><br><span class="line">    tensorValue2 &#x3D; tf.random.shuffle(input_val, seed)</span><br><span class="line">    tf.print(tensorValue2)</span><br><span class="line"></span><br><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])  # run-1</span><br><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])  # run-2</span><br><span class="line"></span><br><span class="line">## output:</span><br><span class="line">Python run</span><br><span class="line">[8 7 3 ... 9 1 10] ---A</span><br><span class="line">[8 7 3 ... 9 1 10] ---B</span><br><span class="line">[6 8 10 ... 4 1 7] ---C</span><br><span class="line">[6 8 10 ... 4 1 7] ---D</span><br></pre></td></tr></table></figure>
+<p>The intention of <code>shuffled_sum</code> was to set the seed as much as it can to achieve repeatable results. But why we didn’t see <code>A==C</code>? </p>
+<p>A: TF’s builds the graph first and find that input argument <code>seed</code> is not related to <code>tensorValue1</code> and <code>tensorValue2</code>. In run-2, the global seed is not seen for the shuffle op. The internal counter for shuffle op increments. For <code>A==B</code> ,  the two ops takes in the same input args, so TF regards them as identical. </p>
+<h3 id="Eager-mode"><a href="#Eager-mode" class="headerlink" title="Eager mode"></a>Eager mode</h3><p>This time, we comments out <code>tf.funciton</code>,and see the output as</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">## output:</span><br><span class="line">Python run</span><br><span class="line">[8 7 3 ... 9 1 10] ---A</span><br><span class="line">[6 8 10 ... 4 1 7] ---B</span><br><span class="line">Python run</span><br><span class="line">[8 7 3 ... 9 1 10] ---C</span><br><span class="line">[6 8 10 ... 4 1 7] ---D</span><br></pre></td></tr></table></figure>
+<p>Now <code>A==C</code> reals the global seed works. But <code>A!=B</code> means that B is the next sequence of A given the seeds combination and it’s deterministic.  In eager mode, the shuffle simply runs twice(counter increments) in the function.</p>
+<h3 id="How-to-enforce-repeatability-in-graph-mode"><a href="#How-to-enforce-repeatability-in-graph-mode" class="headerlink" title="How to enforce repeatability in graph mode?"></a>How to enforce repeatability in graph mode?</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])</span><br><span class="line">tf.random.set_seed(123)</span><br><span class="line">shuffled_sum([1,2,3,4,5,6,7,8,9,10])</span><br><span class="line">## output:</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br><span class="line">[8 7 3 ... 9 1 10]</span><br></pre></td></tr></table></figure>
+<p>‘tf.random.set_seed(123)’ have to be run before gets into run-2 so it cannot fall into a graph. In TF1.x way, it should comes before session.run(xxx).</p>
+]]></content>
+      <categories>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>Randomness</tag>
+        <tag>Determinism</tag>
+        <tag>Tensorflow</tag>
+        <tag>Deep Learning</tag>
+        <tag>eager execution</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>What does std::move do at parameter binding?</title>
+    <url>/programming/2022-01-23-what%20does%20stdmove%20do.html</url>
+    <content><![CDATA[<p><code>std::move</code> is the signature feature of c++11 and often used in resource management so called RAII(resource acquisition is initialization). In this post, we just focus on 1 scenario that appears frequently in factory mode and demonstrate how compiler treats it at parameter binding. </p>
+<a id="more"></a>
+
+<p>Some term clarification:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void foo(int p1);</span><br><span class="line">int a &#x3D; 1;</span><br><span class="line">foo(a);</span><br></pre></td></tr></table></figure>
+<p>we refer <code>p1</code> as parameter and <code>a</code> as argument of <code>foo</code>. </p>
+<p>Say we have a resource class as</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Struct Resource &#123;&#125;;</span><br></pre></td></tr></table></figure>
+<p>and a handle class to hold the resource as,</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">handle</span> &#123;</span></span><br><span class="line"> <span class="keyword">public</span>:                                                     </span><br><span class="line">  handle () &#123; res = <span class="keyword">new</span> Resource(); &#125;                               </span><br><span class="line">  ~handle () &#123; <span class="keyword">if</span> (res) <span class="keyword">delete</span> res; &#125;</span><br><span class="line">  handle (<span class="keyword">const</span> handle &amp; other)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;copy constructor&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;At entrance: other.res=&quot;</span>&lt;&lt;other.res&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    res = <span class="keyword">new</span> Resource(*other.res);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;I am set to=&quot;</span>&lt;&lt;res&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">                                                        </span><br><span class="line">  handle (handle &amp;&amp; other) &#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;move constructor&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    res = other.res;</span><br><span class="line">    other.res = <span class="literal">nullptr</span>;</span><br><span class="line">  &#125;</span><br><span class="line">                                                        </span><br><span class="line">  handle &amp; <span class="keyword">operator</span>=(handle &amp;&amp; other)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;move assignment&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">std</span>::swap(res, other.res);</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function">Resource* <span class="title">get_res</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> res; &#125;</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  Resource* res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>Then we need a wrapper class as an aggregate of couple of handles like this</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">wrapper</span>&#123;</span></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  wrapper(handle &amp;&amp;handle) :</span><br><span class="line">   _handle_1(<span class="built_in">std</span>::move(handle)) &#123;</span><br><span class="line">       <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;private member  holds resource &quot;</span>&lt;&lt;_handle_1.get_res()&lt;&lt;<span class="string">&quot;; parameter holds &quot;</span> &lt;&lt;</span><br><span class="line">           handle.get_res()&lt;&lt;<span class="built_in">endl</span>;&#125;  </span><br><span class="line">    </span><br><span class="line">  <span class="function">handle* <span class="title">get_handle</span><span class="params">()</span>  </span>&#123;<span class="keyword">return</span> &amp;_handle_1;&#125;</span><br><span class="line">  wrapper(wrapper&amp;&amp; x) = <span class="keyword">default</span>;</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  handle _handle_1;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p> Assume there is a user case where the ownership needs to be passed around.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">handle h4;</span><br><span class="line">cout &lt;&lt;&quot;h4 res&#x3D;&quot;&lt;&lt;h4.get_res()&lt;&lt;endl;</span><br><span class="line">unique_ptr&lt;wrapper&gt; m(new wrapper(std::move(h4)));</span><br><span class="line">cout &lt;&lt;&quot;h4 res&#x3D;&quot;&lt;&lt;h4.get_res()&lt;&lt;endl;</span><br><span class="line">cout &lt;&lt;&quot;m res&#x3D;&quot;&lt;&lt;instance-&gt;get_holder()-&gt;get_res()&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
+<p>It’s nearly a common ground that we need to use <code>std::move(h4)</code> as argument to construct <code>wrapper()</code>, but the key is how to write the initialization list of the constructor for class wrapper. We have the following 4 cases.</p>
+<ol>
+<li><code>wrapper(handle &amp;&amp;handle) : _handle_1(std::move(handle))</code></li>
+<li><code>wrapper(handle &amp;&amp;handle) : _handle_1(handle)</code></li>
+<li><code>wrapper(handle handle) : _handle_1(std::move(handle))</code></li>
+<li><code>wrapper(handle handle) : _handle_1(handle)</code></li>
+</ol>
+<ul>
+<li><pre><code class="c++">// output #1
+h4 res=0x55fbc9929eb0
+move constructor
+private member holds resource 0x55fbc9929eb0; parameter holds 0
+h4 res=0
+m res=0x55fbc9929eb0
+Success! It&#39;s what we want and  only 1 move constructor is called. The compiler it smart enough to `swap(h4, _handl_1)`.
+    
+// output #2
+h4 res=0x564af9158eb0
+copy constructor
+At entrance: other.res=0x564af9158eb0
+I am set to=0x564af9159300
+private member holds resource 0x564af9159300; parameter holds 0x564af9158eb0
+h4 res=0x564af9158eb0
+m res=0x564af9159300
+Failure. No move at all because we never mean  to `move` explicitly inside wrapper. Parameter handle is a lvalue though itself is a rvalue reference. No wonder class handle invokes its copy constructor. So std::move(handle) is indispensable. Luckily, `h4` is not tampered and `h4-&gt;temp` is skipped or optimized by compiler. With std::forward() syntex, perfect forwarding, we can preserve the qualifiers (const-ref, ref, value, rvalue, etc.). of parameter and will be discusssed in another post.
+    
+// output #3
+h4 res=0x555ca6e7ceb0
+move constructor
+move constructor
+private member holds resource 0x555ca6e7ceb0; parameter holds 0
+h4 res=0
+m res=0x555ca6e7ceb0
+Success! But 2 moves. Interestingly, no copy constructor! `h4-&gt;temp-&gt;_handle_1`
+    
+// output #4
+h4 res=0x56100474deb0
+move constructor
+copy constructor
+At entrance: other.res=0x56100474deb0
+I am set to=0x56100474e300
+private member holds resource 0x56100474e300; parameter holds 0x56100474deb0
+h4 res=0
+m res=0x56100474e300
+Failure. Really bad because `h4-&gt;temp` and gets lost!
+
+</code></pre>
+</li>
+</ul>
+<p>Based on analysis above, I would actually recommend case 3 over 1 though one more time of <code>move</code>. Reason is case 3 is more general in which case the input argument can be rvalue or lvalue. Moreover, <code>move</code> is implemented by <code>swap</code> under the hood(usually) thus not too much overheads. </p>
+]]></content>
+      <categories>
+        <category>programming</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>What does std::forward do?</title>
+    <url>/programming/2022-01-24-what%20does%20stdforward%20do.html</url>
+    <content><![CDATA[<p><code>std::forward</code> is another signature feature of c++11 beside <code>std::move</code>. Technically, it does perfect forwarding. But of what and when? In this post, we will explore some use cases and context behind.</p>
+<a id="more"></a>
+
+<p><strong>C++11 lets us perform perfect forwarding, which means that we can forward the parameters passed to a function template to another function call inside it without losing their own qualifiers (const-ref, ref, value, rvalue, etc.).</strong></p>
+<h1 id="THE-standard"><a href="#THE-standard" class="headerlink" title="THE standard"></a>THE standard</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span>&#123;</span></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line">  foo(T&amp;&amp; p) : _p(<span class="built_in">std</span>::forward&lt;T&gt;(p)) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>The above snippet covers almost 90% occurrence but with lots of pretexts and c++ rules. Boiler first.</p>
+<p>   1.<strong>_ Reference folding  _</strong></p>
+<ol>
+<li><p>X&amp; &amp;, X&amp; &amp;&amp;, X&amp;&amp; &amp; -&gt; X&amp;</p>
+</li>
+<li><p>X&amp;&amp; &amp;&amp; -&gt; X&amp;&amp;</p>
+</li>
+<li><p>A special rule for rvalue reference. When a left value is passed to a function whose argument is a right-valued reference, and this right-valued reference points to a template type argument (T&amp;&amp;), the compiler infers that the template argument type is a left-valued reference to the real parameter, as in </p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(T&amp;&amp;)</span></span>;</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">f(i)</span><br></pre></td></tr></table></figure>
+<p>T is int&amp; but not int. Again, according to the reference folding rule <code>void f(int&amp; &amp;&amp;)</code> will be inferred as <code>f(int&amp;)</code>, so f will be instantiated as: <code>f&lt;int&amp;&gt;(int&amp;)</code>. That make sense because we never intend to pass in a rvalue.</p>
+</li>
+<li><p><strong><em><code>std::forward</code>cast its parameter(here <code>p</code>) to a rvalue only when the parameter binds to a rvalue.</em></strong></p>
+<p>Here a example is better to illustrate the idea. For <em>THE standard</em> code,</p>
+<ul>
+<li><p>pass in as </p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i=<span class="number">0</span>; foo(i);</span><br></pre></td></tr></table></figure>
+<p>rule #2 is satisfied and <code>T = int&amp;</code>. <code>foo&lt;int&amp;&gt;(int&amp; &amp;&amp; p) -&gt; foo&lt;int&amp;&gt;(int&amp; p)</code> is called. Here parameter <code>p</code> is a rvalue and rvalue reference.</p>
+</li>
+<li><p>pass in as</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">foo(<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<p><code>T = int</code>, and <code>foo&lt;int&gt;(int&amp;&amp; p)</code> where <code>p</code> is a rvalue reference but lvalue itself. Passing to inner function as rvalue reference, we have to do <code>std::move(p)</code>.<br>A concise way to combine such 2 cases is <code>std::forward(p)</code>. What <code>std::forward(p)</code> returns is a lvalue or rvalue exactly the same as whatever the argument is. Let conclude with a complete example.</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;type_traits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;typeinfo&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    A(<span class="keyword">int</span>&amp;&amp; a) : _a(a) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;move , a=&quot;</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    A(<span class="keyword">int</span>&amp; a)  : _a(a) &#123;</span><br><span class="line">       <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;copy , a=&quot;</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span>:</span><br><span class="line">   <span class="keyword">int</span> _a;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T1</span>, <span class="keyword">class</span> <span class="title">T2</span>, <span class="keyword">class</span> <span class="title">T3</span>&gt;</span></span><br><span class="line">    B(T1 &amp;&amp; t1, T2 &amp;&amp; t2, T3 &amp;&amp; t3) :</span><br><span class="line">        a1_(<span class="built_in">std</span>::forward&lt;T1&gt;(t1)),</span><br><span class="line">        a2_(<span class="built_in">std</span>::forward&lt;T2&gt;(t2)),</span><br><span class="line">        a3_(<span class="built_in">std</span>::forward&lt;T3&gt;(t3)) &#123;&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    A a1_, a2_, a3_;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;class... U&gt;</span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">unique_ptr</span>&lt;B&gt; <span class="title">make_unique</span><span class="params">(U&amp;&amp;... u)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">std</span>::<span class="built_in">unique_ptr</span>&lt;B&gt;(<span class="keyword">new</span> B(<span class="built_in">std</span>::forward&lt;U&gt;(u)...));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">5</span>;</span><br><span class="line">    <span class="keyword">auto</span> p1 = make_unique(i, <span class="number">2</span>, <span class="built_in">std</span>::move(i));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// output</span></span><br><span class="line">copy , a=<span class="number">5</span></span><br><span class="line">move , a=<span class="number">2</span></span><br><span class="line">move , a=<span class="number">5</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>programming</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Why record_stream Matters: A Real CUDA Memory Bug in SGLang</title>
+    <url>/GPU/Why-record-stream-Matters-A-Real-CUDA-Memory-Bug-in-SGLang.html</url>
+    <content><![CDATA[<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>PyTorch’s CUDA memory caching allocator is designed to be fast — it recycles GPU memory aggressively based on Python reference counting. This works transparently most of the time, but it has a blind spot: <strong>it only tracks the stream on which a tensor was originally allocated</strong>.</p>
+<p>When a tensor is passed to a <em>different</em> CUDA stream, the allocator has no idea. If Python references to that tensor drop to zero at the wrong moment, the allocator can reclaim the memory while the second stream’s kernel is still reading it. The result is a silent use-after-free on the GPU: corrupted data, out-of-bounds crashes, or worse — wrong answers with no error at all.</p>
+<p>This exact bug was recently caught in <a href="https://github.com/sgl-project/sglang/issues/18744">SGLang’s speculative decoding (EAGLE v2)</a>, and fixed with a single call to <code>record_stream</code>.</p>
+<hr>
+<h2 id="The-Bug-Index-Out-of-Bounds-in-Speculative-Decoding"><a href="#The-Bug-Index-Out-of-Bounds-in-Speculative-Decoding" class="headerlink" title="The Bug: Index Out of Bounds in Speculative Decoding"></a>The Bug: Index Out of Bounds in Speculative Decoding</h2><h3 id="Symptom"><a href="#Symptom" class="headerlink" title="Symptom"></a>Symptom</h3><p>SGLang users running DeepSeek-R1 on 8× B200/GB200 GPUs with speculative decoding (EAGLE, 2 steps) at high concurrency (≥ 1024) saw intermittent crashes like:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vectorized_gather_kernel: block: [0,1,0], thread: [64,0,0]</span><br><span class="line">  Assertion &#96;ind &gt;&#x3D; 0 &amp;&amp; ind &lt; ind_dim_size&#96; failed</span><br><span class="line"></span><br><span class="line">IndexKernel.cu:111: operator():</span><br><span class="line">  Assertion &#96;-sizes[i] &lt;&#x3D; index &amp;&amp; index &lt; sizes[i]&#96; failed</span><br></pre></td></tr></table></figure>
+<p>The indices tensor used to gather from <code>topk_p_buf</code>, <code>topk_index_buf</code>, <code>hidden_states_buf</code>, etc. contained garbage — both negative values and values far exceeding the buffer size.</p>
+<h3 id="Root-Cause"><a href="#Root-Cause" class="headerlink" title="Root Cause"></a>Root Cause</h3><p>The race condition unfolds in this sequence:</p>
+<ol>
+<li>An <code>indices</code> tensor is <strong>allocated on PyTorch’s default stream</strong>.</li>
+<li>The object holding that tensor (<code>spec_info</code>) is <strong>replaced</strong> — <code>batch.spec_info</code> is assigned a new value, dropping the last Python reference to the old one.</li>
+<li>PyTorch’s caching allocator sees refcount → 0 and <strong>reclaims the GPU memory</strong>.</li>
+<li>Meanwhile, the <strong>forward/compute stream</strong> enqueues kernels that read from those same indices.</li>
+<li>The forward stream reads from memory that has already been freed and partially overwritten → <strong>corrupted indices → out-of-bounds crash</strong>.</li>
+</ol>
+<p>The key insight: steps 3 and 4 can race because they happen on <em>different streams</em> with no synchronization between them.</p>
+<h3 id="The-Fix-PR-18958"><a href="#The-Fix-PR-18958" class="headerlink" title="The Fix (PR #18958)"></a>The Fix (<a href="https://github.com/sgl-project/sglang/pull/18958">PR #18958</a>)</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Before (broken)</span></span><br><span class="line">draft_input.topk_p = self.topk_p_buf[draft_input.future_indices.indices]</span><br><span class="line"></span><br><span class="line"><span class="comment"># After (fixed)</span></span><br><span class="line">indices = draft_input.future_indices.indices</span><br><span class="line">indices.record_stream(torch.get_device_module(self.device).current_stream())</span><br><span class="line">draft_input.topk_p = self.topk_p_buf[indices]</span><br></pre></td></tr></table></figure>
+<p>One line. <code>indices.record_stream(stream)</code> tells the caching allocator: “the current stream is also using this tensor — don’t free it until this stream has passed this point.” The race is eliminated.</p>
+<hr>
+<h2 id="What-record-stream-Does"><a href="#What-record-stream-Does" class="headerlink" title="What record_stream Does"></a>What <code>record_stream</code> Does</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tensor.record_stream(stream)</span><br></pre></td></tr></table></figure>
+<p>Registers <code>stream</code> as a consumer of <code>tensor</code>‘s underlying GPU memory. The caching allocator will not reuse that memory until <strong>all enqueued operations on <code>stream</code></strong> at the time of the call have completed.</p>
+<p><strong>When you need it:</strong> any time a tensor is:</p>
+<ul>
+<li>allocated (or last used) on stream A</li>
+<li>then handed off to stream B for further GPU work</li>
+<li>and Python references may drop to zero before stream B finishes</li>
+</ul>
+<p><strong>When you don’t need it:</strong> if you hold a Python reference to the tensor until after stream B is done (e.g., you explicitly synchronize before releasing it), the reference itself keeps the memory alive.</p>
+<hr>
+<h2 id="Minimal-Reproducer"><a href="#Minimal-Reproducer" class="headerlink" title="Minimal Reproducer"></a>Minimal Reproducer</h2><!-- PASTE YOUR REPRODUCER CODE HERE -->
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> gc</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line">DEVICE = <span class="string">&quot;cuda:0&quot;</span></span><br><span class="line">N = <span class="number">32</span> * <span class="number">1024</span> * <span class="number">1024</span>  <span class="comment"># 128 MB</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">buggy</span>():</span></span><br><span class="line">    side = torch.cuda.Stream(DEVICE)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># ① Source tensor born on the DEFAULT stream.</span></span><br><span class="line">    src = torch.full((N,), <span class="number">1.0</span>, dtype=torch.float32, device=DEVICE)</span><br><span class="line">    torch.cuda.synchronize()</span><br><span class="line"></span><br><span class="line">    out = torch.empty(N, dtype=torch.float32, device=DEVICE)</span><br><span class="line">    <span class="keyword">with</span> torch.cuda.stream(side):</span><br><span class="line">        <span class="comment"># ② Burn GPU cycles on the side stream to delay the copy,</span></span><br><span class="line">        <span class="comment">#    giving the default stream time to recycle src&#x27;s memory.</span></span><br><span class="line">        delay = torch.zeros(<span class="number">4096</span>, <span class="number">4096</span>, device=DEVICE)</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">20</span>):</span><br><span class="line">            delay = torch.mm(delay + <span class="number">1e-6</span>, delay + <span class="number">1e-6</span>)</span><br><span class="line">        out.copy_(src)</span><br><span class="line">        <span class="comment"># ★ KEY FIX: tell the allocator src&#x27;s memory is live on `side`.</span></span><br><span class="line">        <span class="comment">#   The block will not be recycled until all work queued on `side`</span></span><br><span class="line">        <span class="comment">#   up to this point (including the copy) has completed.</span></span><br><span class="line">        <span class="comment">#   Both streams continue running concurrently — no serialization.</span></span><br><span class="line">        <span class="comment"># src.record_stream(side)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># ③ Python ref dropped. Allocator marks the block free for the default</span></span><br><span class="line">    <span class="comment">#    stream — unaware that the side stream will read it after the matmuls.</span></span><br><span class="line">    <span class="keyword">del</span> src</span><br><span class="line">    gc.collect()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># ④ Same-size allocation on the DEFAULT stream gets the recycled block</span></span><br><span class="line">    <span class="comment">#    and overwrites it with 2.0 while side stream is still in matmuls.</span></span><br><span class="line">    poison = torch.full((N,), <span class="number">2.0</span>, dtype=torch.float32, device=DEVICE)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Sync only to observe the result — the corruption already happened above.</span></span><br><span class="line">    torch.cuda.synchronize()</span><br><span class="line">    side.synchronize()</span><br><span class="line"></span><br><span class="line">    got = out[<span class="number">0</span>].item()</span><br><span class="line">    print(<span class="string">f&quot;[buggy ] expected=1.0  got=<span class="subst">&#123;got:<span class="number">.1</span>f&#125;</span>  &quot;</span></span><br><span class="line">          <span class="string">f&quot;→ <span class="subst">&#123;<span class="string">&#x27;CORRUPTED&#x27;</span> <span class="keyword">if</span> got != <span class="number">1.0</span> <span class="keyword">else</span> <span class="string">&#x27;OK (lucky this run)&#x27;</span>&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">del</span> poison, out</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">BUF_SIZE = <span class="number">32</span> * <span class="number">1024</span> * <span class="number">1024</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">not_succesful_buggy</span>():</span></span><br><span class="line">    side = torch.cuda.Stream(DEVICE)</span><br><span class="line"></span><br><span class="line">    buf = torch.arange(BUF_SIZE, dtype=torch.float32, device=DEVICE)  <span class="comment"># buf[i] == i</span></span><br><span class="line">    gate = torch.cuda.Event()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># ① Valid indices on DEFAULT stream: values in [0, BUF_SIZE).</span></span><br><span class="line">    indices = torch.randint(<span class="number">0</span>, BUF_SIZE, (N,), dtype=torch.int64, device=DEVICE)</span><br><span class="line">    torch.cuda.synchronize()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">with</span> torch.cuda.stream(side):</span><br><span class="line">        <span class="comment"># ② Delay gather so default stream can lap it.</span></span><br><span class="line">        delay = torch.zeros(<span class="number">4096</span>, <span class="number">4096</span>, device=DEVICE)</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">20</span>):</span><br><span class="line">            delay = torch.mm(delay + <span class="number">1e-6</span>, delay + <span class="number">1e-6</span>)</span><br><span class="line">        side.wait_event(gate)</span><br><span class="line">        out = buf[indices]   <span class="comment"># gather — reads indices after matmuls</span></span><br><span class="line"></span><br><span class="line">    indices_ptr = indices.data_ptr()</span><br><span class="line">    <span class="keyword">del</span> indices</span><br><span class="line">    gc.collect()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># ③ Recycle with OOB values — same dtype, same count.</span></span><br><span class="line">    poison = torch.full((N,), BUF_SIZE + <span class="number">9999</span>, dtype=torch.int64, device=DEVICE)</span><br><span class="line">    <span class="keyword">assert</span> poison.data_ptr() == indices_ptr, <span class="string">&quot;allocator did not reuse block&quot;</span></span><br><span class="line"></span><br><span class="line">    gate.record()</span><br><span class="line">    torch.cuda.synchronize()  <span class="comment"># poison write finishes</span></span><br><span class="line">    side.synchronize()        <span class="comment"># gather runs — reads OOB indices</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># With TORCH_USE_CUDA_DSA=1 + CUDA_LAUNCH_BLOCKING=1: assertion crash above.</span></span><br><span class="line">    <span class="comment"># Without: silent corruption — output should equal valid gathered values</span></span><br><span class="line">    <span class="comment">#          but instead reflects OOB reads (garbage or wrapped values).</span></span><br><span class="line">    got = out[<span class="number">0</span>].item()</span><br><span class="line">    expected = out[<span class="number">0</span>].item()  <span class="comment"># meaningless since buf[i]==i, just show it&#x27;s garbage</span></span><br><span class="line">    print(<span class="string">f&quot;[buggy ] out[0]=<span class="subst">&#123;got:<span class="number">.1</span>f&#125;</span>  (if corrupted, will not match any valid buf value)&quot;</span>)</span><br><span class="line">    <span class="keyword">del</span> poison, out, buf</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="keyword">assert</span> torch.cuda.is_available(), <span class="string">&quot;CUDA required&quot;</span></span><br><span class="line">    buggy()</span><br><span class="line">    not_succesful_buggy()</span><br></pre></td></tr></table></figure>
+<p>CUDA_LAUNCH_BLOCKING=1 python show_bug.py<br>Hides the bug;</p>
+<p>python show_bug.py<br>will display the difference. And src.record_stream(side) fixes it. Not sure why another cannot reproduce.</p>
+<hr>
+<h2 id="Key-Takeaways"><a href="#Key-Takeaways" class="headerlink" title="Key Takeaways"></a>Key Takeaways</h2><ul>
+<li><strong>The PyTorch caching allocator tracks allocation stream, not usage stream.</strong> Cross-stream tensor handoffs without <code>record_stream</code> are a latent use-after-free.</li>
+<li><strong>The bug is silent until it isn’t.</strong> At low concurrency or on slower hardware, the race window may never open. It took 8× B200s at 1024 concurrent requests to expose it reliably.</li>
+<li><strong>The fix is cheap.</strong> <code>record_stream</code> costs essentially nothing — it just registers a stream with the allocator’s internal bookkeeping.</li>
+<li><strong>Speculative decoding amplifies the risk.</strong> SGLang’s overlap scheduler runs prefill and decode on separate streams concurrently, and <code>spec_info</code> objects have short, non-obvious lifetimes — a perfect storm for this class of bug.</li>
+</ul>
+<hr>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="https://github.com/sgl-project/sglang/issues/18744">SGLang issue #18744</a> — original bug report</li>
+<li><a href="https://github.com/sgl-project/sglang/pull/18958">SGLang PR #18958</a> — the fix</li>
+<li><a href="https://pytorch.org/docs/stable/generated/torch.Tensor.record_stream.html">PyTorch docs: <code>Tensor.record_stream</code></a></li>
+<li><a href="https://pytorch.org/docs/stable/notes/cuda.html#memory-management">PyTorch CUDA memory management</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>GPU</category>
+      </categories>
+      <tags>
+        <tag>CUDA</tag>
+        <tag>PyTorch</tag>
+        <tag>GPU</tag>
+        <tag>debugging</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>How to achieve Inter-cta sync on Nvidia GPU</title>
+    <url>/GPU/inter-cta-sync.html</url>
+    <content><![CDATA[<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>　In many deep learning and scientific applications, inter-CTA-sync is a necessary pattern. But<br>even with CUDA9’s new feature coperative launch, inter-CTA-sync is never trivial. This blog will dive into this topic with a reduction as our model. </p>
+<p> Say we need to perform a reduction over a entire grid of threads and a natural idea is to reduce intra-block first and inter-block as a second step, so called two-step protocal. It is the best version in terms of performance and comprehensibility. The second step is what need to pay attention to because other blocks have to consume data my block produced in a safe way(Producer-Consumer model). Sure, two kernel launch can be a kill but not in our scope.   </p>
+<a id="more"></a>
+
+<h3 id="Sample-code"><a href="#Sample-code" class="headerlink" title="Sample code"></a>Sample code</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">__device__ int count&#x3D;0;</span><br><span class="line"> </span><br><span class="line">__global__ static void sum(int* data_gpu,int* block_gpu,int *sum_gpu,int length)</span><br><span class="line">&#123;</span><br><span class="line">    extern __shared__ int blocksum[];</span><br><span class="line">    __shared__ int islast;</span><br><span class="line">    int offset;</span><br><span class="line"> </span><br><span class="line">    const int tid&#x3D;threadIdx.x;</span><br><span class="line">    const int bid&#x3D;blockIdx.x;</span><br><span class="line">    blocksum[tid]&#x3D;0;</span><br><span class="line">    for(int i&#x3D;bid*THREAD_NUM+tid;i&lt;length;i+&#x3D;BLOCK_NUM*THREAD_NUM)</span><br><span class="line">        blocksum[tid]+&#x3D;data_gpu[i];</span><br><span class="line"> </span><br><span class="line">    __syncthreads();</span><br><span class="line">    offset&#x3D;THREAD_NUM&#x2F;2;</span><br><span class="line">    while(offset&gt;0)</span><br><span class="line">    &#123;</span><br><span class="line">        if(tid&lt;offset)  blocksum[tid]+&#x3D;blocksum[tid+offset];</span><br><span class="line">        offset&gt;&gt;&#x3D;1;</span><br><span class="line">        __syncthreads();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    if(tid&#x3D;&#x3D;0)</span><br><span class="line">    &#123;</span><br><span class="line">        block_gpu[bid]&#x3D;blocksum[0];</span><br><span class="line">        __threadfence();</span><br><span class="line"> </span><br><span class="line">        int value&#x3D;atomicAdd(&amp;count,1);</span><br><span class="line">        islast&#x3D;(value&#x3D;&#x3D;gridDim.x-1);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    __syncthreads();</span><br><span class="line"> </span><br><span class="line">    if(islast)</span><br><span class="line">    &#123;</span><br><span class="line">        if(tid&#x3D;&#x3D;0)</span><br><span class="line">        &#123;</span><br><span class="line">            int s&#x3D;0;</span><br><span class="line">            for(int i&#x3D;0;i&lt;BLOCK_NUM;i++)  s+&#x3D;block_gpu[i];</span><br><span class="line">            *sum_gpu&#x3D;s;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>The one-step reduction procedure presented in this section is mainly an example to show you how you can use the data generated by one or more other threads during the execution of one kernel, one or more threads. Let’s start with threadfence. First, threadfence has two main roles, and three levels of control: one role is to control the validity of accesses (writes only). The other is to control that the compiler does not over-optimize (for reads and writes) the top and bottom of the fence (from a line-of-code perspective) when generating instructions. This is actually a combination of hardware and software, the former being mainly hardware, the latter being mainly software (compiler behavior control). Let’s start with threadfence’s control of memory writes. It has a detail that is not specified here: it can suspend the thread (warp) that calls it for a certain period of time until the access writes made by that thread (warp) have reached a certain level. Then the execution of the thread (warp) can be resumed. That is, at what level of completion for the partner thread in the block, for other threads on the GPU, or globally (e.g., the CPU or other cards participating in P2P Access), as described in this section. This leads to the 3 levels of threadfence functions with different suffixes in this section:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">__threadfence_block();</span><br><span class="line">__threadfence();</span><br><span class="line">__threadfence_system();</span><br></pre></td></tr></table></figure>
+<p>Each of these three levels is higher than the other. When used, it causes threads (warp) to be suspended for longer and longer periods of time (suspension does not necessarily have a negative performance impact. This is because the hardware can choose to switch to another thread or warp during this time, which means it can be masked). If we look at it from the hardware point of view only, after the thread executes the instructions written by the access (generated by the compiler), it will continue to execute without the 3 functions (the corresponding instructions generated), and not wait for the access to complete.</p>
+<p>From a hardware perspective, if a thread executes the access-written instructions (generated by the compiler) without these three functions (generated instructions), it will continue to execute without waiting for the access to complete. With these three instructions, the thread will pause and wait for the writing process to complete to a point where it can be “seen” by other threads at different levels before continuing. This is why I emphasized that this is a write in the “control access (write)” brackets. This is because for reads, you can automatically wait when an operand is used. However, the write does not have this function. After the data (from the register) and the access instruction are submitted to the LSU in the SM, that is, after the access instruction is successfully issued, the thread continues to execute. These three functions, on the other hand, effectively introduce three different levels of delay, allowing multiple hardware pipelines to continue execution only after a certain level of write operation has been completed. This is useful in many scenarios (e.g. the example at the end of this chapter where a thread in a block reads data generated by a thread in another block). There is no information on how long this causes threads/warp to pause. One interesting thing is that, when a certain computational power card has a time error at a certain level of the instruction, then the compiler does a patch operation when generating a specific level of the pause instruction for that particular computational power card. (Two instructions are generated in a row to fix the worst-case timing problem and ensure that the write operation is executed properly somewhere).<br>And that’s not all, we all know that hardware can’t leave software, otherwise it’s a soulless corpse. Not only does the hardware have certain operations on the threadfence family of functions (the corresponding instructions), but the compiler, when encountering the three functions, besides generating the three corresponding instructions normally, also causes some behavioral changes: this is what the previous text said, causing some changes in the optimization behavior, which is also described in this section. In layman’s terms, this means separating the accesses before and after the threadfence family of functions,<br>The compiler will not cross the threadfence boundary and reorder the access statements,<br>to optimize performance while maintaining safety and logical correctness. This is why there are a lot of repetitive long sentences in this section.<br>The other part of the long sentence, which says, “A thread’s …. The write operation …. When and where it can be observed by whom (3 levels)…” is a change in the compiler’s behavior, plus a pause in control due to the 3 different instructions generated by the hardware. These are the two main points of threadfence. The user should see for himself the three levels. As mentioned before, the main difference is the pause time (not from official sources, from actual observation).<br>But these two points are not all, this chapter also talks about a volatile keyword.<br>It also happens to have two roles. It is also used in software and hardware. In the example at the end of this chapter, this keyword is indispensable. The software role is similar to that of the threadfence function, where compiler control and changes in behavior occur: this is actually familiar to everyone.<br>The compiler will not use an old value that already exists, such as a fixed p[offset] that has already been read. Instead, it generates a new access instruction to read it. The other point is hardware, as we all know that current cards (e.g. Pascal, GTX1080 with 6.1 computing power), have a uniform (logical) L2 cache, and a separate L1 cache for each SM. (also called unified cache in this computing power, may be different in other computing power, here unified cache), that is, the card has 1 L2 cache (in GPU), and 20 independent L1 cache (in each SM), once SM 10 Once SM 10 writes a value, changing the content of its L1 cache and/or global L2 cache (to the value just written), SM 9, if it still reads the normal access memory, may get the old content in SM 9’s L1 cache directly because it was there before, immediately. At this point, with the volatile keyword, the compiler will not only not use the case mentioned in point (1), but will issue a new access after the encounter, and will also control the cache control policy of the access instruction so that it can pass over the old value in the L1 of the current SM, to get the correct result. In other words, some cards with multiple L1s and unified L2s do not maintain consistency under certain circumstances. This is about volatile.<br>Then let’s talk about this example. This example is a simplified version, and some details have been removed. But it is still sufficient as an example here. If users want to see the full version, there are many online. From NV, from different authors. You can refer to it when the time comes. Let me start with the important point: the mix of normal access and atomic operations. First of all, as we said before, this is a single-step statute summing kernel. It only takes one kernel start, to find the final sum in parallel for a large amount of data on a buffer (a statute operation is a process that takes a large range of inputs and gives a small range of outputs, you can also think of it as a shadowing process from a large set to a small set). You can also think of it as a projection from a large set to a small set). Of course, this example is just a simple summation. Since the kernel only wants to do all the operations in one boot, the code is split into two parts, the first part is just the normal summation of the respective blocks, and then saved to the explicit memory. The second part is the last block elected, which does the second step, reading the internal sums of the previous blocks, and then finding the final sum. This completes the global summation of the single kernel. Because here involves, read the results of other threads, so use the previously mentioned volatile + threadfence, but here the threadfence also has an important role, is the common common access (result[…]) = … write) and atomic access (atomInc). There is no completion order between the normal access instruction and the atomic instruction. By inserting a threadfence function between the two instructions, this code causes all previously terminated kernels to run through the atomic operation only when they have paused long enough for the written part to be globally visible and successfully validated. This allows the final block to be read as soon as the result of the atomic operation is available (a successful election). This prevents a subsequent atomic operation from completing while the previous normal access (which holds the sum of the parts) is still on its way. That’s the main caveat here.<br>It is also important to note that there are two other versions of this common statute summation. Version 2 requires two kernel boots, but the code is much simpler. Version 2 of the kernel only internally calculates its own partial sum for each block, and saves its own partial sum (not written here, there are plenty of forums for that), which means that version 2 of the kernel only needs the first half of version 1 of the kernel. The second half is not needed. Then, by a simple trick (booting it twice in a row), the second boot only needs to set 1 block. This version of the code is simple (only half of it), and circumvents the threadfence operation, the atomInc operation, and the process of controlling the scope of the atomic operation inside the block here with an if (which is performed once collectively) and then broadcasting the result back in shared memory. This simplifies things considerably, but often results in better performance. So code 2 is highly recommended (the only thing you have to pay for is to boot the kernel twice. But the kernel itself has been greatly simplified)</p>
+]]></content>
+      <categories>
+        <category>GPU</category>
+      </categories>
+      <tags>
+        <tag>parallel computing</tag>
       </tags>
   </entry>
 </search>
