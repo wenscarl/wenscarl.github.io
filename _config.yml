@@ -38,8 +38,8 @@ i18n_dir: :lang
 skip_render:
 
 favicon: 
-  small: /images/android-chrome-192x192.png #把favicon名修改成你自己的
-  medium: /images/android-chrome-512x512.png
+  small: /images/avarme.jpg #把favicon名修改成你自己的
+  medium: /images/nuannuan.jpg
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -110,7 +110,7 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:wenscarl/wenscarl.github.io.git
+  repo: git@github-wenscarl:wenscarl/wenscarl.github.io.git
   branch: gh-pages
   message: hexo deploy
 
@@ -120,3 +120,22 @@ search:
   field: post
   format: html
   limit: 100
+
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true

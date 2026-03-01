@@ -2,6 +2,7 @@
 layout: post
 title: How to achieve Inter-cta sync on Nvidia GPU
 categories: GPU
+date: 2021-05-27
 tag: parallel computing
 ---   
 ## Background

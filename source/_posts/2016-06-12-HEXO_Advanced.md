@@ -1,6 +1,7 @@
 ---
 layout: post
 title: HEXO Advanced
+date: 2020-01-01
 tag: hexo
 ---
 
